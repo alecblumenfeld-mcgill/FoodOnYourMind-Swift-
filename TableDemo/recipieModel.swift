@@ -25,6 +25,7 @@ var chickenStew = recipie(recipieName: "Chicken Stew", recipieIngredients:  [chi
 
 
 class recipieList {
+    
     var recipieList =  [recipie]()
     init () {
         //in real app will be making api calls
@@ -33,6 +34,14 @@ class recipieList {
     }
     subscript(index: Int) -> recipie{
         return recipieList[index]
+    }
+    subscript(name : String) ->recipie?{
+        for recipie in recipieList{
+            if name == recipie.name{
+                return recipie
+            }
+        }
+        return nil
     }
     
     func getAllTypes()-> [String: [ingredient]] {
@@ -108,10 +117,29 @@ class recipieList {
         return toRet
     }
     
+    func add (Name : String, Amount: String , Unit: String, Type :String  ) {
+    
+        var temp = ingredient(Name: "\(Name)", Amount: "\(Amount) \(Unit)", ingredientType: "\(Type)")
+        if self["Other"] != nil{
+            self["Other"]?.ingredients.append(temp)
+        }
+        else{
+            var Other = recipie(recipieName: "Other", recipieIngredients:  [temp] )
+            recipieList.append(Other)
+        
+        }
+            
+        
+        
+            
+    }
+    
+}
+    
    
 
 
-}
+
     
 
 
