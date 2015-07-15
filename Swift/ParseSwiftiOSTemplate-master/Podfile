@@ -1,0 +1,14 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'FoodOnYourMind(Swift)' do
+
+use_frameworks!
+	pod 'IQDropDownTextField'
+	pod 'AERecord'
+end
+
+target 'FoodOnYourMind(Swift)Tests' do
+
+end
+

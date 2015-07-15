@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2BC3970E1AADE837001ABDF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3970D1AADE837001ABDF2 /* AppDelegate.swift */; };
-		2BC397101AADE837001ABDF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3970F1AADE837001ABDF2 /* ViewController.swift */; };
-		2BC397131AADE837001ABDF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC397111AADE837001ABDF2 /* Main.storyboard */; };
+		2BC397101AADE837001ABDF2 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3970F1AADE837001ABDF2 /* ViewController1.swift */; };
 		2BC397151AADE837001ABDF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC397141AADE837001ABDF2 /* Images.xcassets */; };
 		2BC397181AADE837001ABDF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC397161AADE837001ABDF2 /* LaunchScreen.xib */; };
 		2BC397241AADE837001ABDF2 /* ParseiOSTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC397231AADE837001ABDF2 /* ParseiOSTemplateTests.swift */; };
@@ -27,6 +26,15 @@
 		2BC397451AADE8C4001ABDF2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC397441AADE8C4001ABDF2 /* Parse.framework */; };
 		2BC397471AADE8CE001ABDF2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC397461AADE8CE001ABDF2 /* Bolts.framework */; };
 		705FFC981B56A4C100000399 /* FoodOnYourMindData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC961B56A4C100000399 /* FoodOnYourMindData.xcdatamodeld */; };
+		705FFC9A1B570EB500000399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705FFC991B570EB500000399 /* Main.storyboard */; };
+		705FFCA01B570EF200000399 /* listCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9B1B570EF200000399 /* listCell.swift */; };
+		705FFCA11B570EF200000399 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9C1B570EF200000399 /* AddViewController.swift */; };
+		705FFCA21B570EF200000399 /* recipieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9D1B570EF200000399 /* recipieModel.swift */; };
+		705FFCA31B570EF200000399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9E1B570EF200000399 /* ViewController.swift */; };
+		705FFCA41B570EF200000399 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9F1B570EF200000399 /* SettingsViewController.swift */; };
+		707826441B57114A004F641C /* IQDropDownTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 707826431B57114A004F641C /* IQDropDownTextField.m */; };
+		707826461B5711CC004F641C /* AERecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707826451B5711CC004F641C /* AERecord.swift */; };
+		FF00859DA6F3342E7C891216 /* Pods_FoodOnYourMind_Swift_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B43B3FFFE10775C8574C5D /* Pods_FoodOnYourMind_Swift_.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E7E1EA4981B913B506D6DAE /* Pods-FoodOnYourMind(Swift).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodOnYourMind(Swift).release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodOnYourMind(Swift)/Pods-FoodOnYourMind(Swift).release.xcconfig"; sourceTree = "<group>"; };
 		2BC397081AADE837001ABDF2 /* FoodOnYourMind(Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodOnYourMind(Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC3970C1AADE837001ABDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BC3970D1AADE837001ABDF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2BC3970F1AADE837001ABDF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2BC397121AADE837001ABDF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BC3970F1AADE837001ABDF2 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		2BC397141AADE837001ABDF2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2BC397171AADE837001ABDF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2BC3971D1AADE837001ABDF2 /* FoodOnYourMind(Swift)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FoodOnYourMind(Swift)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +73,18 @@
 		2BC397461AADE8CE001ABDF2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		2BC397481AADE8ED001ABDF2 /* ParseiOSTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseiOSTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
 		705FFC971B56A4C100000399 /* FoodOnYourMindData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodOnYourMindData.xcdatamodel; sourceTree = "<group>"; };
+		705FFC991B570EB500000399 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		705FFC9B1B570EF200000399 /* listCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listCell.swift; sourceTree = "<group>"; };
+		705FFC9C1B570EF200000399 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		705FFC9D1B570EF200000399 /* recipieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipieModel.swift; sourceTree = "<group>"; };
+		705FFC9E1B570EF200000399 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		705FFC9F1B570EF200000399 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		707826401B5710DB004F641C /* Food On Your Mind Shoping List-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Food On Your Mind Shoping List-Bridging-Header.h"; sourceTree = "<group>"; };
+		707826421B57114A004F641C /* IQDropDownTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQDropDownTextField.h; sourceTree = "<group>"; };
+		707826431B57114A004F641C /* IQDropDownTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQDropDownTextField.m; sourceTree = "<group>"; };
+		707826451B5711CC004F641C /* AERecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AERecord.swift; sourceTree = "<group>"; };
+		97B43B3FFFE10775C8574C5D /* Pods_FoodOnYourMind_Swift_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodOnYourMind_Swift_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9F94619D883451ECBA9FA46 /* Pods-FoodOnYourMind(Swift).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodOnYourMind(Swift).debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodOnYourMind(Swift)/Pods-FoodOnYourMind(Swift).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +105,7 @@
 				2BC3972F1AADE859001ABDF2 /* AudioToolbox.framework in Frameworks */,
 				2BC397451AADE8C4001ABDF2 /* Parse.framework in Frameworks */,
 				2BC397311AADE860001ABDF2 /* CFNetwork.framework in Frameworks */,
+				FF00859DA6F3342E7C891216 /* Pods_FoodOnYourMind_Swift_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,9 +123,10 @@
 			isa = PBXGroup;
 			children = (
 				2BC3972D1AADE845001ABDF2 /* Frameworks */,
-				2BC3970A1AADE837001ABDF2 /* ParseiOSTemplate */,
+				2BC3970A1AADE837001ABDF2 /* FoodOnYourMind */,
 				2BC397201AADE837001ABDF2 /* ParseiOSTemplateTests */,
 				2BC397091AADE837001ABDF2 /* Products */,
+				97C4A4D799B10EE0E04BA1D2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,18 +139,26 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2BC3970A1AADE837001ABDF2 /* ParseiOSTemplate */ = {
+		2BC3970A1AADE837001ABDF2 /* FoodOnYourMind */ = {
 			isa = PBXGroup;
 			children = (
 				2BC3970D1AADE837001ABDF2 /* AppDelegate.swift */,
+				705FFC9B1B570EF200000399 /* listCell.swift */,
+				707826401B5710DB004F641C /* Food On Your Mind Shoping List-Bridging-Header.h */,
+				705FFC9C1B570EF200000399 /* AddViewController.swift */,
+				707826411B57113B004F641C /* lib */,
+				705FFC9D1B570EF200000399 /* recipieModel.swift */,
+				705FFC9E1B570EF200000399 /* ViewController.swift */,
+				705FFC9F1B570EF200000399 /* SettingsViewController.swift */,
 				705FFC961B56A4C100000399 /* FoodOnYourMindData.xcdatamodeld */,
-				2BC3970F1AADE837001ABDF2 /* ViewController.swift */,
-				2BC397111AADE837001ABDF2 /* Main.storyboard */,
+				2BC3970F1AADE837001ABDF2 /* ViewController1.swift */,
+				705FFC991B570EB500000399 /* Main.storyboard */,
 				2BC397141AADE837001ABDF2 /* Images.xcassets */,
 				2BC397161AADE837001ABDF2 /* LaunchScreen.xib */,
 				2BC3970B1AADE837001ABDF2 /* Supporting Files */,
 				2BC397481AADE8ED001ABDF2 /* ParseiOSTemplate-Bridging-Header.h */,
 			);
+			name = FoodOnYourMind;
 			path = ParseiOSTemplate;
 			sourceTree = "<group>";
 		};
@@ -173,8 +203,28 @@
 				2BC397321AADE86C001ABDF2 /* libz.dylib */,
 				2BC397301AADE85F001ABDF2 /* CFNetwork.framework */,
 				2BC3972E1AADE859001ABDF2 /* AudioToolbox.framework */,
+				97B43B3FFFE10775C8574C5D /* Pods_FoodOnYourMind_Swift_.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		707826411B57113B004F641C /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				707826421B57114A004F641C /* IQDropDownTextField.h */,
+				707826451B5711CC004F641C /* AERecord.swift */,
+				707826431B57114A004F641C /* IQDropDownTextField.m */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		97C4A4D799B10EE0E04BA1D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9F94619D883451ECBA9FA46 /* Pods-FoodOnYourMind(Swift).debug.xcconfig */,
+				0E7E1EA4981B913B506D6DAE /* Pods-FoodOnYourMind(Swift).release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BC397271AADE837001ABDF2 /* Build configuration list for PBXNativeTarget "FoodOnYourMind(Swift)" */;
 			buildPhases = (
+				67DC624869D5680A8A0AF2CD /* Check Pods Manifest.lock */,
 				2BC397041AADE837001ABDF2 /* Sources */,
 				2BC397051AADE837001ABDF2 /* Frameworks */,
 				2BC397061AADE837001ABDF2 /* Resources */,
+				5F25CE970CC1F7F47ECCB61E /* Embed Pods Frameworks */,
+				B09569FEEADC1F7F03422CBD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,9 +310,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BC397131AADE837001ABDF2 /* Main.storyboard in Resources */,
 				2BC397181AADE837001ABDF2 /* LaunchScreen.xib in Resources */,
 				2BC397151AADE837001ABDF2 /* Images.xcassets in Resources */,
+				705FFC9A1B570EB500000399 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,14 +325,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5F25CE970CC1F7F47ECCB61E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodOnYourMind(Swift)/Pods-FoodOnYourMind(Swift)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67DC624869D5680A8A0AF2CD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B09569FEEADC1F7F03422CBD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodOnYourMind(Swift)/Pods-FoodOnYourMind(Swift)-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2BC397041AADE837001ABDF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BC397101AADE837001ABDF2 /* ViewController.swift in Sources */,
+				707826461B5711CC004F641C /* AERecord.swift in Sources */,
+				705FFCA11B570EF200000399 /* AddViewController.swift in Sources */,
+				705FFCA21B570EF200000399 /* recipieModel.swift in Sources */,
+				2BC397101AADE837001ABDF2 /* ViewController1.swift in Sources */,
+				705FFCA01B570EF200000399 /* listCell.swift in Sources */,
+				705FFCA31B570EF200000399 /* ViewController.swift in Sources */,
 				2BC3970E1AADE837001ABDF2 /* AppDelegate.swift in Sources */,
+				707826441B57114A004F641C /* IQDropDownTextField.m in Sources */,
 				705FFC981B56A4C100000399 /* FoodOnYourMindData.xcdatamodeld in Sources */,
+				705FFCA41B570EF200000399 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,14 +410,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2BC397111AADE837001ABDF2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2BC397121AADE837001ABDF2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2BC397161AADE837001ABDF2 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -400,6 +500,7 @@
 		};
 		2BC397281AADE837001ABDF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9F94619D883451ECBA9FA46 /* Pods-FoodOnYourMind(Swift).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -417,6 +518,7 @@
 		};
 		2BC397291AADE837001ABDF2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E7E1EA4981B913B506D6DAE /* Pods-FoodOnYourMind(Swift).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

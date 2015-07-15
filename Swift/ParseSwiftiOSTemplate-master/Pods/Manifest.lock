@@ -1,0 +1,13 @@
+PODS:
+  - AERecord (1.1.1)
+  - IQDropDownTextField (1.0.5)
+
+DEPENDENCIES:
+  - AERecord
+  - IQDropDownTextField
+
+SPEC CHECKSUMS:
+  AERecord: ffc7f75e8269d1cf2db3d2870c97dc277d431ea9
+  IQDropDownTextField: 055600e77e85cccdda17debbe14203057858ea8a
+
+COCOAPODS: 0.38.0.beta.2

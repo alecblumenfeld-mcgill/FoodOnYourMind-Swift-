@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>3E14C5AA-F499-4CC3-93FA-23894E5CA478</string>
+	<string>C5EC529E-F11E-4B0B-8586-ADF59FE550BB</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Food On Your Mind Shoping List</string>
+	<string>FoodOnYourMind(Swift)</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>8C738B23D7378BF558683A6FF2F9B6ED60501448</key>
 		<string>https://github.com/alecblumenfeld-mcgill/FoodOnYourMind-Swift-.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>archive/Food On Your Mind Shoping List.xcworkspace</string>
+	<string>Swift/ParseSwiftiOSTemplate-master/FoodOnYourMind(Swift).xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>8C738B23D7378BF558683A6FF2F9B6ED60501448</key>
-		<string>../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/alecblumenfeld-mcgill/FoodOnYourMind-Swift-.git</string>
