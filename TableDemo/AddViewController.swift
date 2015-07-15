@@ -9,7 +9,7 @@
 import UIKit
 
 class AddViewController: UIViewController {
-
+    
     @IBOutlet weak var qtyFeild: IQDropDownTextField!
     @IBOutlet weak var unitField: IQDropDownTextField!
     @IBOutlet weak var catField: IQDropDownTextField!
@@ -19,6 +19,7 @@ class AddViewController: UIViewController {
         unitField.itemList = ["Cups", "Ozs", "Grams", ]
         catField.isOptionalDropDown = false
         catField.itemList = ["Fruit", "Dairy", "Meat"]
+        
 
         // Do any additional setup after loading the view.
     }
@@ -29,12 +30,19 @@ class AddViewController: UIViewController {
     }
     @IBAction func Save(sender: AnyObject) {
 
-        recipieList.add("test", Amount: "7" , Unit: "cuups", Type :"Food" )
+           dismissViewControllerAnimated(true, completion: nil)
+        //recipieList.add("test", Amount: "7" , Unit: "cuups", Type :"Food" )
+        navigationController!.popViewControllerAnimated(true)
+
         
         
     }
     
     
+    @IBAction func goBack(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+        navigationController!.popViewControllerAnimated(true)
+    }
 
     /*
     // MARK: - Navigation

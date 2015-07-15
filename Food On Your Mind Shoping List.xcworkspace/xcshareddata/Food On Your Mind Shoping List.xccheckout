@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3E14C5AA-F499-4CC3-93FA-23894E5CA478</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Food On Your Mind Shoping List</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8C738B23D7378BF558683A6FF2F9B6ED60501448</key>
+		<string>https://github.com/alecblumenfeld-mcgill/FoodOnYourMind-Swift-.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Food On Your Mind Shoping List.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8C738B23D7378BF558683A6FF2F9B6ED60501448</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/alecblumenfeld-mcgill/FoodOnYourMind-Swift-.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8C738B23D7378BF558683A6FF2F9B6ED60501448</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8C738B23D7378BF558683A6FF2F9B6ED60501448</string>
+			<key>IDESourceControlWCCName</key>
+			<string>food%20on%20your%20mind%20shoping%20list</string>
+		</dict>
+	</array>
+</dict>
+</plist>

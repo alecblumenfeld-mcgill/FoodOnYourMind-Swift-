@@ -10,9 +10,10 @@
 		707E41CB1B377B0300F95552 /* listCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E41CA1B377B0300F95552 /* listCell.swift */; };
 		70BC78201B34EED90068B35C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC781F1B34EED90068B35C /* AppDelegate.swift */; };
 		70BC78221B34EED90068B35C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC78211B34EED90068B35C /* ViewController.swift */; };
-		70BC78251B34EED90068B35C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BC78231B34EED90068B35C /* Main.storyboard */; };
 		70BC78271B34EED90068B35C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BC78261B34EED90068B35C /* Images.xcassets */; };
 		70BC78361B34EED90068B35C /* TableDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC78351B34EED90068B35C /* TableDemoTests.swift */; };
+		70E2C66E1B5609F6009CD7B8 /* FoodOnYOurMindCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70E2C66C1B5609F6009CD7B8 /* FoodOnYOurMindCoreData.xcdatamodeld */; };
+		70E2C66F1B560EB8009CD7B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BC78231B34EED90068B35C /* Main.storyboard */; };
 		70E8BA701B35C98E003CF4EF /* recipieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E8BA6F1B35C98E003CF4EF /* recipieModel.swift */; };
 		70ECBDF41B54063F00C391E6 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ECBDF31B54063F00C391E6 /* AddViewController.swift */; };
 		70F67EBE1B506A0E00BB09E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70F67EBD1B506A0E00BB09E0 /* LaunchScreen.xib */; };
@@ -40,6 +41,7 @@
 		70BC782F1B34EED90068B35C /* Food On Your Mind Shoping ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Food On Your Mind Shoping ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BC78341B34EED90068B35C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70BC78351B34EED90068B35C /* TableDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDemoTests.swift; sourceTree = "<group>"; };
+		70E2C66D1B5609F6009CD7B8 /* FoodOnYOurMindCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodOnYOurMindCoreData.xcdatamodel; sourceTree = "<group>"; };
 		70E8BA6F1B35C98E003CF4EF /* recipieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipieModel.swift; sourceTree = "<group>"; };
 		70ECBDE51B53F70F00C391E6 /* Food On Your Mind Shoping List-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Food On Your Mind Shoping List-Bridging-Header.h"; sourceTree = "<group>"; };
 		70ECBDF31B54063F00C391E6 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				707E41CA1B377B0300F95552 /* listCell.swift */,
 				70ECBDF31B54063F00C391E6 /* AddViewController.swift */,
 				70BC781F1B34EED90068B35C /* AppDelegate.swift */,
+				70E2C66C1B5609F6009CD7B8 /* FoodOnYOurMindCoreData.xcdatamodeld */,
 				70E8BA6F1B35C98E003CF4EF /* recipieModel.swift */,
 				70BC78211B34EED90068B35C /* ViewController.swift */,
 				70BC78231B34EED90068B35C /* Main.storyboard */,
@@ -231,8 +234,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E2C66F1B560EB8009CD7B8 /* Main.storyboard in Resources */,
 				70F67EBE1B506A0E00BB09E0 /* LaunchScreen.xib in Resources */,
-				70BC78251B34EED90068B35C /* Main.storyboard in Resources */,
 				70BC78271B34EED90068B35C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E2C66E1B5609F6009CD7B8 /* FoodOnYOurMindCoreData.xcdatamodeld in Sources */,
 				70BC78221B34EED90068B35C /* ViewController.swift in Sources */,
 				707E41CB1B377B0300F95552 /* listCell.swift in Sources */,
 				70ECBDF41B54063F00C391E6 /* AddViewController.swift in Sources */,
@@ -497,6 +501,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		70E2C66C1B5609F6009CD7B8 /* FoodOnYOurMindCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				70E2C66D1B5609F6009CD7B8 /* FoodOnYOurMindCoreData.xcdatamodel */,
+			);
+			currentVersion = 70E2C66D1B5609F6009CD7B8 /* FoodOnYOurMindCoreData.xcdatamodel */;
+			path = FoodOnYOurMindCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 70BC78121B34EED90068B35C /* Project object */;
 }
