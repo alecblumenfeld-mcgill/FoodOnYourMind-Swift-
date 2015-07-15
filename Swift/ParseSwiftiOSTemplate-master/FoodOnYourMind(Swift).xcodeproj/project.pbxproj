@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BC3970E1AADE837001ABDF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3970D1AADE837001ABDF2 /* AppDelegate.swift */; };
+		2BC397101AADE837001ABDF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3970F1AADE837001ABDF2 /* ViewController.swift */; };
+		2BC397131AADE837001ABDF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC397111AADE837001ABDF2 /* Main.storyboard */; };
+		2BC397151AADE837001ABDF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC397141AADE837001ABDF2 /* Images.xcassets */; };
+		2BC397181AADE837001ABDF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC397161AADE837001ABDF2 /* LaunchScreen.xib */; };
+		2BC397241AADE837001ABDF2 /* ParseiOSTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC397231AADE837001ABDF2 /* ParseiOSTemplateTests.swift */; };
+		2BC3972F1AADE859001ABDF2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC3972E1AADE859001ABDF2 /* AudioToolbox.framework */; };
+		2BC397311AADE860001ABDF2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC397301AADE85F001ABDF2 /* CFNetwork.framework */; };
+		2BC397331AADE86C001ABDF2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC397321AADE86C001ABDF2 /* libz.dylib */; };
+		2BC397351AADE871001ABDF2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC397341AADE871001ABDF2 /* libsqlite3.dylib */; };
+		2BC397371AADE875001ABDF2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC397361AADE875001ABDF2 /* CoreLocation.framework */; };
+		2BC397391AADE87A001ABDF2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC397381AADE87A001ABDF2 /* CoreGraphics.framework */; };
+		2BC3973B1AADE886001ABDF2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC3973A1AADE886001ABDF2 /* StoreKit.framework */; };
+		2BC3973D1AADE88C001ABDF2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC3973C1AADE88C001ABDF2 /* Security.framework */; };
+		2BC3973F1AADE895001ABDF2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC3973E1AADE895001ABDF2 /* SystemConfiguration.framework */; };
+		2BC397411AADE8A0001ABDF2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC397401AADE8A0001ABDF2 /* MobileCoreServices.framework */; };
+		2BC397431AADE8A4001ABDF2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC397421AADE8A4001ABDF2 /* QuartzCore.framework */; };
+		2BC397451AADE8C4001ABDF2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC397441AADE8C4001ABDF2 /* Parse.framework */; };
+		2BC397471AADE8CE001ABDF2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC397461AADE8CE001ABDF2 /* Bolts.framework */; };
+		705FFC981B56A4C100000399 /* FoodOnYourMindData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC961B56A4C100000399 /* FoodOnYourMindData.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BC3971E1AADE837001ABDF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BC397001AADE837001ABDF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BC397071AADE837001ABDF2;
+			remoteInfo = ParseiOSTemplate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2BC397081AADE837001ABDF2 /* FoodOnYourMind(Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodOnYourMind(Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC3970C1AADE837001ABDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC3970D1AADE837001ABDF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BC3970F1AADE837001ABDF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2BC397121AADE837001ABDF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BC397141AADE837001ABDF2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2BC397171AADE837001ABDF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2BC3971D1AADE837001ABDF2 /* FoodOnYourMind(Swift)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FoodOnYourMind(Swift)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC397221AADE837001ABDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC397231AADE837001ABDF2 /* ParseiOSTemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseiOSTemplateTests.swift; sourceTree = "<group>"; };
+		2BC3972E1AADE859001ABDF2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2BC397301AADE85F001ABDF2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2BC397321AADE86C001ABDF2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		2BC397341AADE871001ABDF2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		2BC397361AADE875001ABDF2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2BC397381AADE87A001ABDF2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2BC3973A1AADE886001ABDF2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		2BC3973C1AADE88C001ABDF2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2BC3973E1AADE895001ABDF2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2BC397401AADE8A0001ABDF2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2BC397421AADE8A4001ABDF2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2BC397441AADE8C4001ABDF2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		2BC397461AADE8CE001ABDF2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		2BC397481AADE8ED001ABDF2 /* ParseiOSTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseiOSTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
+		705FFC971B56A4C100000399 /* FoodOnYourMindData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodOnYourMindData.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BC397051AADE837001ABDF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC397431AADE8A4001ABDF2 /* QuartzCore.framework in Frameworks */,
+				2BC397411AADE8A0001ABDF2 /* MobileCoreServices.framework in Frameworks */,
+				2BC3973F1AADE895001ABDF2 /* SystemConfiguration.framework in Frameworks */,
+				2BC3973D1AADE88C001ABDF2 /* Security.framework in Frameworks */,
+				2BC3973B1AADE886001ABDF2 /* StoreKit.framework in Frameworks */,
+				2BC397391AADE87A001ABDF2 /* CoreGraphics.framework in Frameworks */,
+				2BC397371AADE875001ABDF2 /* CoreLocation.framework in Frameworks */,
+				2BC397471AADE8CE001ABDF2 /* Bolts.framework in Frameworks */,
+				2BC397351AADE871001ABDF2 /* libsqlite3.dylib in Frameworks */,
+				2BC397331AADE86C001ABDF2 /* libz.dylib in Frameworks */,
+				2BC3972F1AADE859001ABDF2 /* AudioToolbox.framework in Frameworks */,
+				2BC397451AADE8C4001ABDF2 /* Parse.framework in Frameworks */,
+				2BC397311AADE860001ABDF2 /* CFNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC3971A1AADE837001ABDF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BC396FF1AADE837001ABDF2 = {
+			isa = PBXGroup;
+			children = (
+				2BC3972D1AADE845001ABDF2 /* Frameworks */,
+				2BC3970A1AADE837001ABDF2 /* ParseiOSTemplate */,
+				2BC397201AADE837001ABDF2 /* ParseiOSTemplateTests */,
+				2BC397091AADE837001ABDF2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BC397091AADE837001ABDF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BC397081AADE837001ABDF2 /* FoodOnYourMind(Swift).app */,
+				2BC3971D1AADE837001ABDF2 /* FoodOnYourMind(Swift)Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BC3970A1AADE837001ABDF2 /* ParseiOSTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				2BC3970D1AADE837001ABDF2 /* AppDelegate.swift */,
+				705FFC961B56A4C100000399 /* FoodOnYourMindData.xcdatamodeld */,
+				2BC3970F1AADE837001ABDF2 /* ViewController.swift */,
+				2BC397111AADE837001ABDF2 /* Main.storyboard */,
+				2BC397141AADE837001ABDF2 /* Images.xcassets */,
+				2BC397161AADE837001ABDF2 /* LaunchScreen.xib */,
+				2BC3970B1AADE837001ABDF2 /* Supporting Files */,
+				2BC397481AADE8ED001ABDF2 /* ParseiOSTemplate-Bridging-Header.h */,
+			);
+			path = ParseiOSTemplate;
+			sourceTree = "<group>";
+		};
+		2BC3970B1AADE837001ABDF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BC3970C1AADE837001ABDF2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2BC397201AADE837001ABDF2 /* ParseiOSTemplateTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BC397231AADE837001ABDF2 /* ParseiOSTemplateTests.swift */,
+				2BC397211AADE837001ABDF2 /* Supporting Files */,
+			);
+			path = ParseiOSTemplateTests;
+			sourceTree = "<group>";
+		};
+		2BC397211AADE837001ABDF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BC397221AADE837001ABDF2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2BC3972D1AADE845001ABDF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BC397461AADE8CE001ABDF2 /* Bolts.framework */,
+				2BC397441AADE8C4001ABDF2 /* Parse.framework */,
+				2BC397421AADE8A4001ABDF2 /* QuartzCore.framework */,
+				2BC397401AADE8A0001ABDF2 /* MobileCoreServices.framework */,
+				2BC3973E1AADE895001ABDF2 /* SystemConfiguration.framework */,
+				2BC3973C1AADE88C001ABDF2 /* Security.framework */,
+				2BC3973A1AADE886001ABDF2 /* StoreKit.framework */,
+				2BC397381AADE87A001ABDF2 /* CoreGraphics.framework */,
+				2BC397361AADE875001ABDF2 /* CoreLocation.framework */,
+				2BC397341AADE871001ABDF2 /* libsqlite3.dylib */,
+				2BC397321AADE86C001ABDF2 /* libz.dylib */,
+				2BC397301AADE85F001ABDF2 /* CFNetwork.framework */,
+				2BC3972E1AADE859001ABDF2 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BC397071AADE837001ABDF2 /* FoodOnYourMind(Swift) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC397271AADE837001ABDF2 /* Build configuration list for PBXNativeTarget "FoodOnYourMind(Swift)" */;
+			buildPhases = (
+				2BC397041AADE837001ABDF2 /* Sources */,
+				2BC397051AADE837001ABDF2 /* Frameworks */,
+				2BC397061AADE837001ABDF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FoodOnYourMind(Swift)";
+			productName = ParseiOSTemplate;
+			productReference = 2BC397081AADE837001ABDF2 /* FoodOnYourMind(Swift).app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BC3971C1AADE837001ABDF2 /* FoodOnYourMind(Swift)Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC3972A1AADE837001ABDF2 /* Build configuration list for PBXNativeTarget "FoodOnYourMind(Swift)Tests" */;
+			buildPhases = (
+				2BC397191AADE837001ABDF2 /* Sources */,
+				2BC3971A1AADE837001ABDF2 /* Frameworks */,
+				2BC3971B1AADE837001ABDF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BC3971F1AADE837001ABDF2 /* PBXTargetDependency */,
+			);
+			name = "FoodOnYourMind(Swift)Tests";
+			productName = ParseiOSTemplateTests;
+			productReference = 2BC3971D1AADE837001ABDF2 /* FoodOnYourMind(Swift)Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BC397001AADE837001ABDF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Computer;
+				TargetAttributes = {
+					2BC397071AADE837001ABDF2 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					2BC3971C1AADE837001ABDF2 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 2BC397071AADE837001ABDF2;
+					};
+				};
+			};
+			buildConfigurationList = 2BC397031AADE837001ABDF2 /* Build configuration list for PBXProject "FoodOnYourMind(Swift)" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BC396FF1AADE837001ABDF2;
+			productRefGroup = 2BC397091AADE837001ABDF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BC397071AADE837001ABDF2 /* FoodOnYourMind(Swift) */,
+				2BC3971C1AADE837001ABDF2 /* FoodOnYourMind(Swift)Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BC397061AADE837001ABDF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC397131AADE837001ABDF2 /* Main.storyboard in Resources */,
+				2BC397181AADE837001ABDF2 /* LaunchScreen.xib in Resources */,
+				2BC397151AADE837001ABDF2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC3971B1AADE837001ABDF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BC397041AADE837001ABDF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC397101AADE837001ABDF2 /* ViewController.swift in Sources */,
+				2BC3970E1AADE837001ABDF2 /* AppDelegate.swift in Sources */,
+				705FFC981B56A4C100000399 /* FoodOnYourMindData.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC397191AADE837001ABDF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC397241AADE837001ABDF2 /* ParseiOSTemplateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BC3971F1AADE837001ABDF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BC397071AADE837001ABDF2 /* FoodOnYourMind(Swift) */;
+			targetProxy = 2BC3971E1AADE837001ABDF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BC397111AADE837001ABDF2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BC397121AADE837001ABDF2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BC397161AADE837001ABDF2 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BC397171AADE837001ABDF2 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BC397251AADE837001ABDF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BC397261AADE837001ABDF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BC397281AADE837001ABDF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = ParseiOSTemplate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "FoodOnYourMind(Swift)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ParseiOSTemplate/ParseiOSTemplate-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BC397291AADE837001ABDF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = ParseiOSTemplate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "FoodOnYourMind(Swift)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ParseiOSTemplate/ParseiOSTemplate-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		2BC3972B1AADE837001ABDF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ParseiOSTemplateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "FoodOnYourMind(Swift)Tests";
+			};
+			name = Debug;
+		};
+		2BC3972C1AADE837001ABDF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ParseiOSTemplateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "FoodOnYourMind(Swift)Tests";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BC397031AADE837001ABDF2 /* Build configuration list for PBXProject "FoodOnYourMind(Swift)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC397251AADE837001ABDF2 /* Debug */,
+				2BC397261AADE837001ABDF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BC397271AADE837001ABDF2 /* Build configuration list for PBXNativeTarget "FoodOnYourMind(Swift)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC397281AADE837001ABDF2 /* Debug */,
+				2BC397291AADE837001ABDF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BC3972A1AADE837001ABDF2 /* Build configuration list for PBXNativeTarget "FoodOnYourMind(Swift)Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC3972B1AADE837001ABDF2 /* Debug */,
+				2BC3972C1AADE837001ABDF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		705FFC961B56A4C100000399 /* FoodOnYourMindData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				705FFC971B56A4C100000399 /* FoodOnYourMindData.xcdatamodel */,
+			);
+			currentVersion = 705FFC971B56A4C100000399 /* FoodOnYourMindData.xcdatamodel */;
+			path = FoodOnYourMindData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2BC397001AADE837001ABDF2 /* Project object */;
+}
