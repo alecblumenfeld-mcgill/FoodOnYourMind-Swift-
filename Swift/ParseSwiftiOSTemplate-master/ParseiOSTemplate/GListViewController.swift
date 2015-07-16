@@ -9,7 +9,7 @@
 import UIKit
 //import Parse
 
-class ViewController: UIViewController, UITableViewDataSource {
+class GListViewController: UIViewController, UITableViewDataSource {
     //segment controll
     @IBOutlet var listSelector: [UISegmentedControl]!
     @IBOutlet weak var tableView: UITableView!

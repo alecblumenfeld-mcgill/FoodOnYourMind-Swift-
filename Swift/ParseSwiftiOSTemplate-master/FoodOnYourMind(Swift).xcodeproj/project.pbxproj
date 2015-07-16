@@ -30,10 +30,13 @@
 		705FFCA01B570EF200000399 /* listCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9B1B570EF200000399 /* listCell.swift */; };
 		705FFCA11B570EF200000399 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9C1B570EF200000399 /* AddViewController.swift */; };
 		705FFCA21B570EF200000399 /* recipieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9D1B570EF200000399 /* recipieModel.swift */; };
-		705FFCA31B570EF200000399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9E1B570EF200000399 /* ViewController.swift */; };
+		705FFCA31B570EF200000399 /* GListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9E1B570EF200000399 /* GListViewController.swift */; };
 		705FFCA41B570EF200000399 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9F1B570EF200000399 /* SettingsViewController.swift */; };
 		707826441B57114A004F641C /* IQDropDownTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 707826431B57114A004F641C /* IQDropDownTextField.m */; };
 		707826461B5711CC004F641C /* AERecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707826451B5711CC004F641C /* AERecord.swift */; };
+		707826481B57133C004F641C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707826471B57133C004F641C /* LoginViewController.swift */; };
+		7078264A1B571D4F004F641C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707826491B571D4F004F641C /* RegisterViewController.swift */; };
+		7078264C1B572461004F641C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7078264B1B572461004F641C /* WelcomeViewController.swift */; };
 		FF00859DA6F3342E7C891216 /* Pods_FoodOnYourMind_Swift_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B43B3FFFE10775C8574C5D /* Pods_FoodOnYourMind_Swift_.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -77,12 +80,15 @@
 		705FFC9B1B570EF200000399 /* listCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listCell.swift; sourceTree = "<group>"; };
 		705FFC9C1B570EF200000399 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		705FFC9D1B570EF200000399 /* recipieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipieModel.swift; sourceTree = "<group>"; };
-		705FFC9E1B570EF200000399 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		705FFC9E1B570EF200000399 /* GListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GListViewController.swift; sourceTree = "<group>"; };
 		705FFC9F1B570EF200000399 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		707826401B5710DB004F641C /* Food On Your Mind Shoping List-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Food On Your Mind Shoping List-Bridging-Header.h"; sourceTree = "<group>"; };
 		707826421B57114A004F641C /* IQDropDownTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQDropDownTextField.h; sourceTree = "<group>"; };
 		707826431B57114A004F641C /* IQDropDownTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQDropDownTextField.m; sourceTree = "<group>"; };
 		707826451B5711CC004F641C /* AERecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AERecord.swift; sourceTree = "<group>"; };
+		707826471B57133C004F641C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		707826491B571D4F004F641C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		7078264B1B572461004F641C /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		97B43B3FFFE10775C8574C5D /* Pods_FoodOnYourMind_Swift_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodOnYourMind_Swift_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F94619D883451ECBA9FA46 /* Pods-FoodOnYourMind(Swift).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodOnYourMind(Swift).debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodOnYourMind(Swift)/Pods-FoodOnYourMind(Swift).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,11 +154,14 @@
 				705FFC9C1B570EF200000399 /* AddViewController.swift */,
 				707826411B57113B004F641C /* lib */,
 				705FFC9D1B570EF200000399 /* recipieModel.swift */,
-				705FFC9E1B570EF200000399 /* ViewController.swift */,
+				705FFC9E1B570EF200000399 /* GListViewController.swift */,
 				705FFC9F1B570EF200000399 /* SettingsViewController.swift */,
 				705FFC961B56A4C100000399 /* FoodOnYourMindData.xcdatamodeld */,
 				2BC3970F1AADE837001ABDF2 /* ViewController1.swift */,
 				705FFC991B570EB500000399 /* Main.storyboard */,
+				707826491B571D4F004F641C /* RegisterViewController.swift */,
+				7078264B1B572461004F641C /* WelcomeViewController.swift */,
+				707826471B57133C004F641C /* LoginViewController.swift */,
 				2BC397141AADE837001ABDF2 /* Images.xcassets */,
 				2BC397161AADE837001ABDF2 /* LaunchScreen.xib */,
 				2BC3970B1AADE837001ABDF2 /* Supporting Files */,
@@ -381,13 +390,16 @@
 				707826461B5711CC004F641C /* AERecord.swift in Sources */,
 				705FFCA11B570EF200000399 /* AddViewController.swift in Sources */,
 				705FFCA21B570EF200000399 /* recipieModel.swift in Sources */,
+				7078264A1B571D4F004F641C /* RegisterViewController.swift in Sources */,
 				2BC397101AADE837001ABDF2 /* ViewController1.swift in Sources */,
 				705FFCA01B570EF200000399 /* listCell.swift in Sources */,
-				705FFCA31B570EF200000399 /* ViewController.swift in Sources */,
+				7078264C1B572461004F641C /* WelcomeViewController.swift in Sources */,
+				705FFCA31B570EF200000399 /* GListViewController.swift in Sources */,
 				2BC3970E1AADE837001ABDF2 /* AppDelegate.swift in Sources */,
 				707826441B57114A004F641C /* IQDropDownTextField.m in Sources */,
 				705FFC981B56A4C100000399 /* FoodOnYourMindData.xcdatamodeld in Sources */,
 				705FFCA41B570EF200000399 /* SettingsViewController.swift in Sources */,
+				707826481B57133C004F641C /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
