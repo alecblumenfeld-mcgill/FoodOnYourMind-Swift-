@@ -25,13 +25,14 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func signUpUser(sender: AnyObject) {
+    
+    func parseSignup(){
         var userEmailAddress = email.text
         var userPassword = passWord.text
         var username = userName.text
         var firstname = firstName.text
         userEmailAddress = userEmailAddress.lowercaseString
-
+        
         //Add Agrement
         
         var user = PFUser()
@@ -43,7 +44,16 @@ class RegisterViewController: UIViewController {
             if error == nil {
                 
                 dispatch_async(dispatch_get_main_queue()) {
-                    println("Success")
+                    let alertController = UIAlertController(title: nil, message:
+                        "Success! Lets Get Cooking.", preferredStyle: UIAlertControllerStyle.Alert)
+                    
+                    //alert actions
+                    let ok: UIAlertAction = UIAlertAction(title: "Ok", style: .Default) { action -> Void in
+                        
+                    }
+                    
+                    alertController.addAction(ok)
+                    self.presentViewController(alertController, animated: true, completion: nil)
                     
                     //Add Success Modal
                     //addsave to coredata username
@@ -51,9 +61,38 @@ class RegisterViewController: UIViewController {
                 
             } else {
                 //Add failure pop up
-                println("ERROR")
+                let alertController = UIAlertController(title: nil, message:
+                    "There was a Problem Registering your account", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                //alert actions
+                let ok: UIAlertAction = UIAlertAction(title: "Ok", style: .Default) { action -> Void in
+                    
+                }
+              
+                alertController.addAction(ok)
+                self.presentViewController(alertController, animated: true, completion: nil)
             }
         }
+    
+    }
+    @IBAction func signUpUser(sender: AnyObject) {
+        
+        let alertController = UIAlertController(title: nil, message:
+            "Please Read The EULA", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        //alert actions
+        let signup: UIAlertAction = UIAlertAction(title: "Signup", style: .Default) { action -> Void in
+            self.parseSignup()
+        }
+        let cancel: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) {action -> Void in
+            
+        }
+        alertController.addAction(cancel)
+        alertController.addAction(signup)
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
+        
+        
     }
 
     @IBAction func goBack(sender: AnyObject) {
