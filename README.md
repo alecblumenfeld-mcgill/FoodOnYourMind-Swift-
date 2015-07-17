@@ -1,9 +1,11 @@
 # FoodOnYourMind-Swift-
 
 # todo
-- [ ] import login from source
-- [ ] setup data model for parse and core data
-- [ ] import exitiing swift code
+- [x] import login from source
+- [x] setup data model for parse and core data
+- [x] import exitiing swift code
 - [ ] make add pop up as modal rather than a complete view
 - [ ] auto complete
-- [ ] podfile configuration
+- [x] podfile configuration
+- [ ] work on settings 
+- [ ] Auto Layout
