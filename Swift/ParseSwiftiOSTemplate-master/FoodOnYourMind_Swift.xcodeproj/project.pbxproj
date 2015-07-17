@@ -31,6 +31,10 @@
 		705FFCA21B570EF200000399 /* recipieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9D1B570EF200000399 /* recipieModel.swift */; };
 		705FFCA31B570EF200000399 /* GListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9E1B570EF200000399 /* GListViewController.swift */; };
 		705FFCA41B570EF200000399 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9F1B570EF200000399 /* SettingsViewController.swift */; };
+		706277221B58AB9B0071E338 /* Manifest.lock in Resources */ = {isa = PBXBuildFile; fileRef = D9F94619D883451ECBA9FA46 /* Manifest.lock */; };
+		706277241B58ABD30071E338 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		706277251B58ABD40071E338 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		706277261B58ABDE0071E338 /* Manifest.lock in Resources */ = {isa = PBXBuildFile; fileRef = D9F94619D883451ECBA9FA46 /* Manifest.lock */; };
 		707826441B57114A004F641C /* IQDropDownTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 707826431B57114A004F641C /* IQDropDownTextField.m */; };
 		707826461B5711CC004F641C /* AERecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707826451B5711CC004F641C /* AERecord.swift */; };
 		707826481B57133C004F641C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707826471B57133C004F641C /* LoginViewController.swift */; };
@@ -38,7 +42,6 @@
 		7078264C1B572461004F641C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7078264B1B572461004F641C /* WelcomeViewController.swift */; };
 		70FDA4D41B589DC500D40063 /* CoreModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70FDA4D21B589DC500D40063 /* CoreModel.xcdatamodeld */; };
 		70FDA4D61B589E4200D40063 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDA4D51B589E4200D40063 /* User.swift */; };
-		FF00859DA6F3342E7C891216 /* Pods_FoodOnYourMind_Swift_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B43B3FFFE10775C8574C5D /* Pods_FoodOnYourMind_Swift_.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +55,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E7E1EA4981B913B506D6DAE /* Pods-FoodOnYourMind(Swift).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodOnYourMind(Swift).release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodOnYourMind(Swift)/Pods-FoodOnYourMind(Swift).release.xcconfig"; sourceTree = "<group>"; };
 		2BC397081AADE837001ABDF2 /* FoodOnYourMind_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodOnYourMind_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC3970C1AADE837001ABDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BC3970D1AADE837001ABDF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,8 +92,7 @@
 		7078264B1B572461004F641C /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		70FDA4D31B589DC500D40063 /* CoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreModel.xcdatamodel; sourceTree = "<group>"; };
 		70FDA4D51B589E4200D40063 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		97B43B3FFFE10775C8574C5D /* Pods_FoodOnYourMind_Swift_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodOnYourMind_Swift_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9F94619D883451ECBA9FA46 /* Pods-FoodOnYourMind(Swift).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodOnYourMind(Swift).debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodOnYourMind(Swift)/Pods-FoodOnYourMind(Swift).debug.xcconfig"; sourceTree = "<group>"; };
+		D9F94619D883451ECBA9FA46 /* Manifest.lock */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Manifest.lock; path = Pods/Manifest.lock; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +113,6 @@
 				2BC3972F1AADE859001ABDF2 /* AudioToolbox.framework in Frameworks */,
 				2BC397451AADE8C4001ABDF2 /* Parse.framework in Frameworks */,
 				2BC397311AADE860001ABDF2 /* CFNetwork.framework in Frameworks */,
-				FF00859DA6F3342E7C891216 /* Pods_FoodOnYourMind_Swift_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +211,6 @@
 				2BC397321AADE86C001ABDF2 /* libz.dylib */,
 				2BC397301AADE85F001ABDF2 /* CFNetwork.framework */,
 				2BC3972E1AADE859001ABDF2 /* AudioToolbox.framework */,
-				97B43B3FFFE10775C8574C5D /* Pods_FoodOnYourMind_Swift_.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -239,8 +238,7 @@
 		97C4A4D799B10EE0E04BA1D2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D9F94619D883451ECBA9FA46 /* Pods-FoodOnYourMind(Swift).debug.xcconfig */,
-				0E7E1EA4981B913B506D6DAE /* Pods-FoodOnYourMind(Swift).release.xcconfig */,
+				D9F94619D883451ECBA9FA46 /* Manifest.lock */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -252,12 +250,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BC397271AADE837001ABDF2 /* Build configuration list for PBXNativeTarget "FoodOnYourMind_Swift" */;
 			buildPhases = (
-				67DC624869D5680A8A0AF2CD /* Check Pods Manifest.lock */,
 				2BC397041AADE837001ABDF2 /* Sources */,
 				2BC397051AADE837001ABDF2 /* Frameworks */,
 				2BC397061AADE837001ABDF2 /* Resources */,
-				5F25CE970CC1F7F47ECCB61E /* Embed Pods Frameworks */,
-				B09569FEEADC1F7F03422CBD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,8 +324,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BC397181AADE837001ABDF2 /* LaunchScreen.xib in Resources */,
+				706277241B58ABD30071E338 /* (null) in Resources */,
 				2BC397151AADE837001ABDF2 /* Images.xcassets in Resources */,
 				705FFC9A1B570EB500000399 /* Main.storyboard in Resources */,
+				706277221B58AB9B0071E338 /* Manifest.lock in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,58 +335,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				706277251B58ABD40071E338 /* (null) in Resources */,
+				706277261B58ABDE0071E338 /* Manifest.lock in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5F25CE970CC1F7F47ECCB61E /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodOnYourMind(Swift)/Pods-FoodOnYourMind(Swift)-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		67DC624869D5680A8A0AF2CD /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B09569FEEADC1F7F03422CBD /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodOnYourMind(Swift)/Pods-FoodOnYourMind(Swift)-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2BC397041AADE837001ABDF2 /* Sources */ = {
@@ -522,7 +473,7 @@
 		};
 		2BC397281AADE837001ABDF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9F94619D883451ECBA9FA46 /* Pods-FoodOnYourMind(Swift).debug.xcconfig */;
+			baseConfigurationReference = D9F94619D883451ECBA9FA46 /* Manifest.lock */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -540,7 +491,6 @@
 		};
 		2BC397291AADE837001ABDF2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E7E1EA4981B913B506D6DAE /* Pods-FoodOnYourMind(Swift).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

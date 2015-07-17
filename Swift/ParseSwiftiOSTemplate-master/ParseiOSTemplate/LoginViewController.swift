@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AERecord
 import CoreData
 class LoginViewController: UIViewController {
 

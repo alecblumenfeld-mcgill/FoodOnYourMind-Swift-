@@ -3,14 +3,9 @@
 
 target 'FoodOnYourMind_Swift' do
 
-use_frameworks!
-	pod 'IQDropDownTextField'
-	pod 'AERecord'
-	pod 'PonyDebugger', '~> 0.4.3'
-
 end
 
-target 'FoodOnYourMind(Swift)Tests' do
+target 'FoodOnYourMind_SwiftTests' do
 
 end
 

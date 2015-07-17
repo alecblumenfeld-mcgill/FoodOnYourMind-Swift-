@@ -6,307 +6,43 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		0D1887D1CB501D3BC0E8094B613F73FA /* AERecord-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FD9C07D8DA372DC7E51A62D2E3D420 /* AERecord-dummy.m */; };
-		2468642D2F81B5D6CD167362B5DEA5B8 /* AERecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E739EAC0166E35F776CED17A4FFFF45 /* AERecord.swift */; };
-		27574D129A810E7E5E912C047BEE75C3 /* IQDropDownTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13BBE9C42DE8884B24974B51DCCDB8B2 /* IQDropDownTextField-dummy.m */; };
-		31EFFBB4D40231B628D3C5BF593A9608 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACD94D6E7C1F3C4A825B80E3BCD5DE2 /* Foundation.framework */; };
-		531BE61D033866BD3090EE2E1FB020C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACD94D6E7C1F3C4A825B80E3BCD5DE2 /* Foundation.framework */; };
-		6E949A6495F370D51E196C56A0E862F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACD94D6E7C1F3C4A825B80E3BCD5DE2 /* Foundation.framework */; };
-		71FFC39C868BDE80CBF3763FA4532EE9 /* AERecord-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E517F48605DFA54C262ED9367ADEA18 /* AERecord-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BA0B93CB6185F54A346431D067A5FCD /* Pods-FoodOnYourMind(Swift)-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 925E6869E6910EE067D8B02B6492829D /* Pods-FoodOnYourMind(Swift)-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A17FFABE7174C68D8C1E3640D2D0B118 /* IQDropDownTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 455322A24A68EC3A925A546D57A61FF7 /* IQDropDownTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA57772C49C5F2512119429C74649730 /* IQDropDownTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5781B3A558397E7E83FE445274CAC1 /* IQDropDownTextField.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		EC7EE171175C2010379DEAEFB372E7BD /* IQDropDownTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 49D32D22123D0D3E80C2CBACA8A3B611 /* IQDropDownTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F381DF0F6E17559396B0900FCDC7BD8F /* Pods-FoodOnYourMind(Swift)-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD09E404F6985D032D06B2831D7382A /* Pods-FoodOnYourMind(Swift)-dummy.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		72F8036589E4BAEB380E0724CE66445F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CD424C93E6A9327E53B5A8CDCEC00D80;
-			remoteInfo = IQDropDownTextField;
-		};
-		9E1D2E2C1350FF3EE883A90B0E312FF1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0F66493D5B2F5F9A24C60DCB20A04BC7;
-			remoteInfo = AERecord;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		13BBE9C42DE8884B24974B51DCCDB8B2 /* IQDropDownTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQDropDownTextField-dummy.m"; sourceTree = "<group>"; };
-		1DCDC189A7B97CD1FCAAB8A5BDE21206 /* AERecord-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AERecord-prefix.pch"; sourceTree = "<group>"; };
-		24FD9C07D8DA372DC7E51A62D2E3D420 /* AERecord-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AERecord-dummy.m"; sourceTree = "<group>"; };
-		2A748DBD27AF1481D2843178203DA9F1 /* Pods-FoodOnYourMind(Swift)-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodOnYourMind(Swift)-acknowledgements.plist"; sourceTree = "<group>"; };
-		3404859016D1B1074796A292B1E3E7F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		341FF922A59ACA279E7884945CEA56A5 /* IQDropDownTextField-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "IQDropDownTextField-Private.xcconfig"; sourceTree = "<group>"; };
-		39E8922CE52CE31509392AC73D66AC86 /* AERecord-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "AERecord-Private.xcconfig"; sourceTree = "<group>"; };
-		3BD09E404F6985D032D06B2831D7382A /* Pods-FoodOnYourMind(Swift)-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodOnYourMind(Swift)-dummy.m"; sourceTree = "<group>"; };
-		44B34B0E9EDA846EE87E4FFF2165EAD2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		455322A24A68EC3A925A546D57A61FF7 /* IQDropDownTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQDropDownTextField.h; path = IQDropDownTextField/IQDropDownTextField.h; sourceTree = "<group>"; };
-		49D32D22123D0D3E80C2CBACA8A3B611 /* IQDropDownTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQDropDownTextField-umbrella.h"; sourceTree = "<group>"; };
-		4ACD94D6E7C1F3C4A825B80E3BCD5DE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4D6198D6CCC43E6FA7075A098E70A1C4 /* Pods-FoodOnYourMind(Swift).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodOnYourMind(Swift).debug.xcconfig"; sourceTree = "<group>"; };
-		5948C45B236554F27420CC3A7275B393 /* AERecord.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AERecord.xcconfig; sourceTree = "<group>"; };
-		5BF029DF3D2CCB95D77B6556EA381513 /* IQDropDownTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQDropDownTextField.xcconfig; sourceTree = "<group>"; };
-		7CD7E5630480FCBADA801ED60E977892 /* Pods-FoodOnYourMind(Swift).modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FoodOnYourMind(Swift).modulemap"; sourceTree = "<group>"; };
-		7E517F48605DFA54C262ED9367ADEA18 /* AERecord-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AERecord-umbrella.h"; sourceTree = "<group>"; };
-		7E6C43B967720DC02FAA01A7B1873A17 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		854CF78B65B7ABDF7976FCF19476D0DC /* AERecord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AERecord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CC1AE921BDD11D456B9A4123B80280A /* IQDropDownTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = IQDropDownTextField.modulemap; sourceTree = "<group>"; };
-		8E739EAC0166E35F776CED17A4FFFF45 /* AERecord.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AERecord.swift; path = AERecord/AERecord.swift; sourceTree = "<group>"; };
-		925E6869E6910EE067D8B02B6492829D /* Pods-FoodOnYourMind(Swift)-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FoodOnYourMind(Swift)-umbrella.h"; sourceTree = "<group>"; };
-		A28836F70846A406F52AB11EAD155141 /* Pods-FoodOnYourMind(Swift)-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodOnYourMind(Swift)-resources.sh"; sourceTree = "<group>"; };
-		BAF11F6C6380E320A853B0A40BDF69AA /* Pods-FoodOnYourMind(Swift).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodOnYourMind(Swift).release.xcconfig"; sourceTree = "<group>"; };
-		BF658CA63A05B39455A80DF087093EFC /* IQDropDownTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQDropDownTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88113A79685B4EFEE7BAD12896829F7 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CD680EF67AEA13EDABCCFEBB471E6030 /* Pods-FoodOnYourMind(Swift)-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FoodOnYourMind(Swift)-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D3649A07F23E25779975EDACDC0D948B /* Pods-FoodOnYourMind(Swift)-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FoodOnYourMind(Swift)-frameworks.sh"; sourceTree = "<group>"; };
-		DD5781B3A558397E7E83FE445274CAC1 /* IQDropDownTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQDropDownTextField.m; path = IQDropDownTextField/IQDropDownTextField.m; sourceTree = "<group>"; };
-		DF830761BA88B66A88185941B9313E4D /* Pods_FoodOnYourMind_Swift_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodOnYourMind_Swift_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7D9C92EC32EECBAC59806F06B920958 /* AERecord.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AERecord.modulemap; sourceTree = "<group>"; };
-		EF0F5B193F966746AFF2C25E09C3A268 /* IQDropDownTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQDropDownTextField-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFrameworksBuildPhase section */
-		68437F56937120AC10CCAD151B4F6234 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				531BE61D033866BD3090EE2E1FB020C1 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6A1599D27A9B395069D0EAFE89E72C71 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				31EFFBB4D40231B628D3C5BF593A9608 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A0A91DB2793660064568D2ABCE66CB55 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6E949A6495F370D51E196C56A0E862F1 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
-		22FAD31FDDBCFE8B914EB2FE8C206418 /* IQDropDownTextField */ = {
+		57CCB606BD8439F949A19E19D80DFDC9 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				455322A24A68EC3A925A546D57A61FF7 /* IQDropDownTextField.h */,
-				DD5781B3A558397E7E83FE445274CAC1 /* IQDropDownTextField.m */,
-				D248A0FB6262D0DC570703BF4B51227A /* Support Files */,
 			);
-			path = IQDropDownTextField;
-			sourceTree = "<group>";
-		};
-		2F414954F87ED957BE121A1660094A49 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3FF515EA846E636917295A5BFAD3FEE6 /* AERecord */,
-				22FAD31FDDBCFE8B914EB2FE8C206418 /* IQDropDownTextField */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		33A2DFA941E11F4B5B7E005D2FE0A3E5 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				4ACD94D6E7C1F3C4A825B80E3BCD5DE2 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		3FF515EA846E636917295A5BFAD3FEE6 /* AERecord */ = {
-			isa = PBXGroup;
-			children = (
-				8E739EAC0166E35F776CED17A4FFFF45 /* AERecord.swift */,
-				BE2C8C3A01261C6223A1955DDA019517 /* Support Files */,
-			);
-			path = AERecord;
-			sourceTree = "<group>";
-		};
-		5E1F3384B1B39575144FEBFCF3210CCC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				33A2DFA941E11F4B5B7E005D2FE0A3E5 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6933F40E553D078460B9CD3C7A908623 /* Pods-FoodOnYourMind(Swift) */ = {
-			isa = PBXGroup;
-			children = (
-				3404859016D1B1074796A292B1E3E7F0 /* Info.plist */,
-				7CD7E5630480FCBADA801ED60E977892 /* Pods-FoodOnYourMind(Swift).modulemap */,
-				CD680EF67AEA13EDABCCFEBB471E6030 /* Pods-FoodOnYourMind(Swift)-acknowledgements.markdown */,
-				2A748DBD27AF1481D2843178203DA9F1 /* Pods-FoodOnYourMind(Swift)-acknowledgements.plist */,
-				3BD09E404F6985D032D06B2831D7382A /* Pods-FoodOnYourMind(Swift)-dummy.m */,
-				D3649A07F23E25779975EDACDC0D948B /* Pods-FoodOnYourMind(Swift)-frameworks.sh */,
-				A28836F70846A406F52AB11EAD155141 /* Pods-FoodOnYourMind(Swift)-resources.sh */,
-				925E6869E6910EE067D8B02B6492829D /* Pods-FoodOnYourMind(Swift)-umbrella.h */,
-				4D6198D6CCC43E6FA7075A098E70A1C4 /* Pods-FoodOnYourMind(Swift).debug.xcconfig */,
-				BAF11F6C6380E320A853B0A40BDF69AA /* Pods-FoodOnYourMind(Swift).release.xcconfig */,
-			);
-			name = "Pods-FoodOnYourMind(Swift)";
-			path = "Target Support Files/Pods-FoodOnYourMind(Swift)";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				C88113A79685B4EFEE7BAD12896829F7 /* Podfile */,
-				5E1F3384B1B39575144FEBFCF3210CCC /* Frameworks */,
-				2F414954F87ED957BE121A1660094A49 /* Pods */,
+				E8E7A1E700AFB6A16B7F239586656FFA /* Frameworks */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
-				848A6CE8DA3504A266A17F635DC3683A /* Targets Support Files */,
+				57CCB606BD8439F949A19E19D80DFDC9 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		848A6CE8DA3504A266A17F635DC3683A /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6933F40E553D078460B9CD3C7A908623 /* Pods-FoodOnYourMind(Swift) */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		BE2C8C3A01261C6223A1955DDA019517 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E7D9C92EC32EECBAC59806F06B920958 /* AERecord.modulemap */,
-				5948C45B236554F27420CC3A7275B393 /* AERecord.xcconfig */,
-				39E8922CE52CE31509392AC73D66AC86 /* AERecord-Private.xcconfig */,
-				24FD9C07D8DA372DC7E51A62D2E3D420 /* AERecord-dummy.m */,
-				1DCDC189A7B97CD1FCAAB8A5BDE21206 /* AERecord-prefix.pch */,
-				7E517F48605DFA54C262ED9367ADEA18 /* AERecord-umbrella.h */,
-				44B34B0E9EDA846EE87E4FFF2165EAD2 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/AERecord";
 			sourceTree = "<group>";
 		};
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				854CF78B65B7ABDF7976FCF19476D0DC /* AERecord.framework */,
-				BF658CA63A05B39455A80DF087093EFC /* IQDropDownTextField.framework */,
-				DF830761BA88B66A88185941B9313E4D /* Pods_FoodOnYourMind_Swift_.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D248A0FB6262D0DC570703BF4B51227A /* Support Files */ = {
+		E8E7A1E700AFB6A16B7F239586656FFA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8CC1AE921BDD11D456B9A4123B80280A /* IQDropDownTextField.modulemap */,
-				5BF029DF3D2CCB95D77B6556EA381513 /* IQDropDownTextField.xcconfig */,
-				341FF922A59ACA279E7884945CEA56A5 /* IQDropDownTextField-Private.xcconfig */,
-				13BBE9C42DE8884B24974B51DCCDB8B2 /* IQDropDownTextField-dummy.m */,
-				EF0F5B193F966746AFF2C25E09C3A268 /* IQDropDownTextField-prefix.pch */,
-				49D32D22123D0D3E80C2CBACA8A3B611 /* IQDropDownTextField-umbrella.h */,
-				7E6C43B967720DC02FAA01A7B1873A17 /* Info.plist */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/IQDropDownTextField";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		678AF7E37CF47B7AEAF216A7528E7E63 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				71FFC39C868BDE80CBF3763FA4532EE9 /* AERecord-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E6A9F58F975BE1996E4395E414BAF3A2 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9BA0B93CB6185F54A346431D067A5FCD /* Pods-FoodOnYourMind(Swift)-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FF274E5F65EB96BDDFD0A972D185692E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EC7EE171175C2010379DEAEFB372E7BD /* IQDropDownTextField-umbrella.h in Headers */,
-				A17FFABE7174C68D8C1E3640D2D0B118 /* IQDropDownTextField.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		0F66493D5B2F5F9A24C60DCB20A04BC7 /* AERecord */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB72BEA20456DE062E41578FF1EB3305 /* Build configuration list for PBXNativeTarget "AERecord" */;
-			buildPhases = (
-				F80DEDD9E88941A861E2002824102F13 /* Sources */,
-				A0A91DB2793660064568D2ABCE66CB55 /* Frameworks */,
-				678AF7E37CF47B7AEAF216A7528E7E63 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AERecord;
-			productName = AERecord;
-			productReference = 854CF78B65B7ABDF7976FCF19476D0DC /* AERecord.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		86903B7B47E03B7990A5AB084DA8F721 /* Pods-FoodOnYourMind(Swift) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F4B9519D70956B7FE27E3D971963C6B1 /* Build configuration list for PBXNativeTarget "Pods-FoodOnYourMind(Swift)" */;
-			buildPhases = (
-				06AF2DF7F65D7AE0BCFC88B6EF47863B /* Sources */,
-				6A1599D27A9B395069D0EAFE89E72C71 /* Frameworks */,
-				E6A9F58F975BE1996E4395E414BAF3A2 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				43C5713DB6CB79F2C5E8F11589C7AD41 /* PBXTargetDependency */,
-				3D7064D145DE61225EC3CA2AA1C64157 /* PBXTargetDependency */,
-			);
-			name = "Pods-FoodOnYourMind(Swift)";
-			productName = "Pods-FoodOnYourMind(Swift)";
-			productReference = DF830761BA88B66A88185941B9313E4D /* Pods_FoodOnYourMind_Swift_.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		CD424C93E6A9327E53B5A8CDCEC00D80 /* IQDropDownTextField */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A6EBE50ED3B9CE14071A5AB4A3C94CE9 /* Build configuration list for PBXNativeTarget "IQDropDownTextField" */;
-			buildPhases = (
-				A2A055257522AD2C05183B2461641B18 /* Sources */,
-				68437F56937120AC10CCAD151B4F6234 /* Frameworks */,
-				FF274E5F65EB96BDDFD0A972D185692E /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = IQDropDownTextField;
-			productName = IQDropDownTextField;
-			productReference = BF658CA63A05B39455A80DF087093EFC /* IQDropDownTextField.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
@@ -327,115 +63,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0F66493D5B2F5F9A24C60DCB20A04BC7 /* AERecord */,
-				CD424C93E6A9327E53B5A8CDCEC00D80 /* IQDropDownTextField */,
-				86903B7B47E03B7990A5AB084DA8F721 /* Pods-FoodOnYourMind(Swift) */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		06AF2DF7F65D7AE0BCFC88B6EF47863B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F381DF0F6E17559396B0900FCDC7BD8F /* Pods-FoodOnYourMind(Swift)-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A2A055257522AD2C05183B2461641B18 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27574D129A810E7E5E912C047BEE75C3 /* IQDropDownTextField-dummy.m in Sources */,
-				BA57772C49C5F2512119429C74649730 /* IQDropDownTextField.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F80DEDD9E88941A861E2002824102F13 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0D1887D1CB501D3BC0E8094B613F73FA /* AERecord-dummy.m in Sources */,
-				2468642D2F81B5D6CD167362B5DEA5B8 /* AERecord.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3D7064D145DE61225EC3CA2AA1C64157 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = IQDropDownTextField;
-			target = CD424C93E6A9327E53B5A8CDCEC00D80 /* IQDropDownTextField */;
-			targetProxy = 72F8036589E4BAEB380E0724CE66445F /* PBXContainerItemProxy */;
-		};
-		43C5713DB6CB79F2C5E8F11589C7AD41 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AERecord;
-			target = 0F66493D5B2F5F9A24C60DCB20A04BC7 /* AERecord */;
-			targetProxy = 9E1D2E2C1350FF3EE883A90B0E312FF1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		4372EA7230C3E8ECF0B7A443F94DB6C2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D6198D6CCC43E6FA7075A098E70A1C4 /* Pods-FoodOnYourMind(Swift).debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-FoodOnYourMind(Swift)/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-FoodOnYourMind(Swift)/Pods-FoodOnYourMind(Swift).modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_FoodOnYourMind_Swift_;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5EA97B96AF108590A024E5BA2B5FED62 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 341FF922A59ACA279E7884945CEA56A5 /* IQDropDownTextField-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/IQDropDownTextField/IQDropDownTextField-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/IQDropDownTextField/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/IQDropDownTextField/IQDropDownTextField.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = IQDropDownTextField;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		A3A1B1F70BBCCA0197144E66DB8B18D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -475,89 +107,6 @@
 			};
 			name = Debug;
 		};
-		AB4CC7026BBED69DC97BC2013E052C2B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 341FF922A59ACA279E7884945CEA56A5 /* IQDropDownTextField-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/IQDropDownTextField/IQDropDownTextField-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/IQDropDownTextField/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/IQDropDownTextField/IQDropDownTextField.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = IQDropDownTextField;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		ACD8A9035BE3EB380D1FB4547F9C8B33 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39E8922CE52CE31509392AC73D66AC86 /* AERecord-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AERecord/AERecord-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AERecord/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AERecord/AERecord.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = AERecord;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B23D0A5D89B3E0B71CA99C5F392C2EB0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAF11F6C6380E320A853B0A40BDF69AA /* Pods-FoodOnYourMind(Swift).release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-FoodOnYourMind(Swift)/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-FoodOnYourMind(Swift)/Pods-FoodOnYourMind(Swift).modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_FoodOnYourMind_Swift_;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		B352EEC06EA1F566BA21287662A33E2B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -592,34 +141,6 @@
 			};
 			name = Release;
 		};
-		DF83AC4B31FF98B2E728A583B382DA32 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39E8922CE52CE31509392AC73D66AC86 /* AERecord-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AERecord/AERecord-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AERecord/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AERecord/AERecord.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = AERecord;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -628,33 +149,6 @@
 			buildConfigurations = (
 				A3A1B1F70BBCCA0197144E66DB8B18D5 /* Debug */,
 				B352EEC06EA1F566BA21287662A33E2B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A6EBE50ED3B9CE14071A5AB4A3C94CE9 /* Build configuration list for PBXNativeTarget "IQDropDownTextField" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5EA97B96AF108590A024E5BA2B5FED62 /* Debug */,
-				AB4CC7026BBED69DC97BC2013E052C2B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB72BEA20456DE062E41578FF1EB3305 /* Build configuration list for PBXNativeTarget "AERecord" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DF83AC4B31FF98B2E728A583B382DA32 /* Debug */,
-				ACD8A9035BE3EB380D1FB4547F9C8B33 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F4B9519D70956B7FE27E3D971963C6B1 /* Build configuration list for PBXNativeTarget "Pods-FoodOnYourMind(Swift)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4372EA7230C3E8ECF0B7A443F94DB6C2 /* Debug */,
-				B23D0A5D89B3E0B71CA99C5F392C2EB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
