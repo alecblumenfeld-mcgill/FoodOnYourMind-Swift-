@@ -15,19 +15,16 @@ class WelcomeViewController: UIViewController {
         
         let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedObjectContext:NSManagedObjectContext = appDel.managedObjectContext!
-
-        let newEntity = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: managedObjectContext) as! User
-        // Set properties
-        newEntity.loggedIn = false
-        newEntity.name = "alec"
-        managedObjectContext.save(nil)
         
         let fetchRequest = NSFetchRequest(entityName: "User")
-        let fetchedEntities = managedObjectContext.executeFetchRequest(fetchRequest, error: nil)
+        let fetchedEntities = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [User]
         
-        // Do something with entities
+        // Delete all user that may be in sql table
+        for entity in fetchedEntities {
+            managedObjectContext.deleteObject(entity)
+        }
+        managedObjectContext.save(nil)
         
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
