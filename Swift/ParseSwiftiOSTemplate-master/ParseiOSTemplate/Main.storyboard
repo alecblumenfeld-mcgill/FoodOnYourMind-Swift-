@@ -9,7 +9,7 @@
         <!--Grocery List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="GroceryList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="GListViewController" customModule="FoodOnYourMind_Swift_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroceryList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="GListViewController" customModule="FoodOnYourMind_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -37,7 +37,7 @@
                                 <color key="tintColor" red="0.45882352941176469" green="0.81176470588235294" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell" textLabel="YOv-KW-TNf" detailTextLabel="Omt-0B-IuU" imageView="W9A-Ge-p1Z" style="IBUITableViewCellStyleSubtitle" id="h9y-yh-G5l" customClass="listCell" customModule="FoodOnYourMind_Swift_" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell" textLabel="YOv-KW-TNf" detailTextLabel="Omt-0B-IuU" imageView="W9A-Ge-p1Z" style="IBUITableViewCellStyleSubtitle" id="h9y-yh-G5l" customClass="listCell" customModule="FoodOnYourMind_Swift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h9y-yh-G5l" id="JF1-Ya-yxI">
@@ -46,7 +46,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YOv-KW-TNf">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Omt-0B-IuU">
@@ -125,7 +125,7 @@
         <!--Add Ingredient -->
         <scene sceneID="EN4-BY-Mvd">
             <objects>
-                <viewController title="Add Ingredient " id="vaP-6y-44O" customClass="AddViewController" customModule="FoodOnYourMind_Swift_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Ingredient " id="vaP-6y-44O" customClass="AddViewController" customModule="FoodOnYourMind_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aEY-Ms-a2u"/>
                         <viewControllerLayoutGuide type="bottom" id="T8m-jq-arr"/>
@@ -143,7 +143,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QTY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbh-jI-94L">
                                 <rect key="frame" x="16" y="95" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLY-MT-taW" customClass="IQDropDownTextField">
@@ -164,7 +164,7 @@
                                     <constraint firstAttribute="width" constant="300" id="fH8-a2-5eH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Wo-De-hwv" customClass="IQDropDownTextField">
@@ -179,13 +179,13 @@
                                     <constraint firstAttribute="height" constant="21" id="pIT-dh-aZT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Units/Measurements" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VU-d1-ehw">
                                 <rect key="frame" x="344" y="94" width="159" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -253,7 +253,7 @@
         <!--Settings-->
         <scene sceneID="lag-2b-Ath">
             <objects>
-                <viewController id="C3l-NH-w3D" customClass="SettingsViewController" customModule="FoodOnYourMind_Swift_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="C3l-NH-w3D" customClass="SettingsViewController" customModule="FoodOnYourMind_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T8d-2J-tdO"/>
                         <viewControllerLayoutGuide type="bottom" id="2wO-bB-dhA"/>
@@ -279,7 +279,7 @@
         <!--Navigation Controller-->
         <scene sceneID="3S6-tP-IgU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fvr-qD-MHn" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigation" automaticallyAdjustsScrollViewInsets="NO" id="Fvr-qD-MHn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZmI-BV-uOJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -300,7 +300,7 @@
         <!--Welcome-->
         <scene sceneID="CoL-cU-Me7">
             <objects>
-                <viewController storyboardIdentifier="WViewController" title="Welcome" id="BgD-5L-xzT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WViewController" title="Welcome" id="BgD-5L-xzT" customClass="WelcomeViewController" customModule="FoodOnYourMind_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fUW-83-PNz"/>
                         <viewControllerLayoutGuide type="bottom" id="9PK-nv-Ece"/>
@@ -365,7 +365,7 @@
         <!--Register-->
         <scene sceneID="CE9-q5-xim">
             <objects>
-                <viewController storyboardIdentifier="RegisterViewController" title="Register" id="4XW-Om-tZF" customClass="RegisterViewController" customModule="FoodOnYourMind_Swift_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" title="Register" id="4XW-Om-tZF" customClass="RegisterViewController" customModule="FoodOnYourMind_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tt3-Ht-cj7"/>
                         <viewControllerLayoutGuide type="bottom" id="xH2-kS-CID"/>
@@ -499,8 +499,7 @@
         <!--Login-->
         <scene sceneID="LoM-TE-rXz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ggp-lQ-z80" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="LoginViewController" title="Login" id="8lO-Ew-fpE" customClass="LoginViewController" customModule="FoodOnYourMind_Swift_" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="Login" id="8lO-Ew-fpE" customClass="LoginViewController" customModule="FoodOnYourMind_Swift" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="05u-UY-wkH"/>
                         <viewControllerLayoutGuide type="bottom" id="DCc-dA-ILL"/>
@@ -587,10 +586,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="password" destination="s3W-FU-P03" id="ab9-jy-mEz"/>
-                        <outlet property="username" destination="AWK-wZ-W2I" id="ahe-J2-z64"/>
+                        <outlet property="passwordFeild" destination="s3W-FU-P03" id="Neb-t0-wv5"/>
+                        <outlet property="usernameFeild" destination="AWK-wZ-W2I" id="odU-bJ-mbK"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggp-lQ-z80" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="485" y="-1944"/>
         </scene>

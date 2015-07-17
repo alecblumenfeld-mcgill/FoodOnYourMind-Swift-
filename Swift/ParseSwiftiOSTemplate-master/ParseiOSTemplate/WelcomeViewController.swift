@@ -7,17 +7,26 @@
 //
 
 import UIKit
-
+import CoreData
 class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var label = UILabel(frame: CGRectMake(0, 0, 200, 21))
-        label.center = CGPointMake(160, 284)
-        label.textAlignment = NSTextAlignment.Center
-        label.text = "I'am a test label"
-        self.view.addSubview(label)
+        
+        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedObjectContext:NSManagedObjectContext = appDel.managedObjectContext!
 
+        let newEntity = NSEntityDescription.insertNewObjectForEntityForName("User", inManagedObjectContext: managedObjectContext) as! User
+        // Set properties
+        newEntity.loggedIn = false
+        newEntity.name = "alec"
+        managedObjectContext.save(nil)
+        
+        let fetchRequest = NSFetchRequest(entityName: "User")
+        let fetchedEntities = managedObjectContext.executeFetchRequest(fetchRequest, error: nil)
+        
+        // Do something with entities
+        
         // Do any additional setup after loading the view.
     }
 

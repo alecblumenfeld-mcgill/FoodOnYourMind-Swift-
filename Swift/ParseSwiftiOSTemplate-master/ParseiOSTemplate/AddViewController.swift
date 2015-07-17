@@ -30,18 +30,18 @@ class AddViewController: UIViewController {
     }
     @IBAction func Save(sender: AnyObject) {
 
-           dismissViewControllerAnimated(true, completion: nil)
-        //recipieList.add("test", Amount: "7" , Unit: "cuups", Type :"Food" )
-        navigationController!.popViewControllerAnimated(true)
-
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("MainNavigation") as! UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
         
         
     }
     
     
     @IBAction func goBack(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-        navigationController!.popViewControllerAnimated(true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("MainNavigation") as! UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
     }
 
     /*

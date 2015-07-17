@@ -7,18 +7,18 @@
 //
 
 import UIKit
-
+import AERecord
+import CoreData
 class LoginViewController: UIViewController {
 
- 
-    @IBOutlet weak var username: UITextField!
+
+    
+    @IBOutlet weak var usernameFeild: UITextField!
   
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var passwordFeild: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-
 
         // Do any additional setup after loading the view.
     }
@@ -30,9 +30,9 @@ class LoginViewController: UIViewController {
     
     @IBAction func login(sender: AnyObject) {
         
-        var userEmailAddress = username.text.lowercaseString
+        var userEmailAddress = usernameFeild.text.lowercaseString
 
-        var userPassword = password.text
+        var userPassword = passwordFeild.text
         
         
         switch userEmailAddress.rangeOfString("@"){
@@ -43,8 +43,28 @@ class LoginViewController: UIViewController {
                     (user: PFUser?, error: NSError?) -> Void in
                     if user != nil {
                         dispatch_async(dispatch_get_main_queue()) {
-                            //self.performSegueWithIdentifier("signInToNavigation", sender: self)
-                            println(user)
+                            
+                            //set up of core data, fuck core data
+                            let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                            let context:NSManagedObjectContext = appDel.managedObjectContext!
+                            let ent = NSEntityDescription.entityForName("User", inManagedObjectContext: context)
+                            
+                            var newUser = User(entity:ent!, insertIntoManagedObjectContext: context)
+                            
+                            //applying data to model
+                            newUser.username = user!.username!
+                            newUser.email = user!.email!
+                            newUser.loggedIn = true
+                            
+                            context.save(nil)
+                            
+                            //print(newUser.loggedIn)
+                            
+                            //
+                            //switich to recipe list
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            let vc = storyboard.instantiateViewControllerWithIdentifier("MainNavigation") as! UIViewController
+                            self.presentViewController(vc, animated: true, completion: nil)
                         }
                     } else {
                         if let message: AnyObject = error!.userInfo!["error"] {
@@ -69,6 +89,7 @@ class LoginViewController: UIViewController {
                         dispatch_async(dispatch_get_main_queue()) {
                             //self.performSegueWithIdentifier("signInToNavigation", sender: self)
                             println(user)
+                            
                             
                         }
                     } else {

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2BC3970E1AADE837001ABDF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3970D1AADE837001ABDF2 /* AppDelegate.swift */; };
-		2BC397101AADE837001ABDF2 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC3970F1AADE837001ABDF2 /* ViewController1.swift */; };
 		2BC397151AADE837001ABDF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC397141AADE837001ABDF2 /* Images.xcassets */; };
 		2BC397181AADE837001ABDF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC397161AADE837001ABDF2 /* LaunchScreen.xib */; };
 		2BC397241AADE837001ABDF2 /* ParseiOSTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC397231AADE837001ABDF2 /* ParseiOSTemplateTests.swift */; };
@@ -37,6 +36,8 @@
 		707826481B57133C004F641C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707826471B57133C004F641C /* LoginViewController.swift */; };
 		7078264A1B571D4F004F641C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707826491B571D4F004F641C /* RegisterViewController.swift */; };
 		7078264C1B572461004F641C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7078264B1B572461004F641C /* WelcomeViewController.swift */; };
+		70FDA4D41B589DC500D40063 /* CoreModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70FDA4D21B589DC500D40063 /* CoreModel.xcdatamodeld */; };
+		70FDA4D61B589E4200D40063 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDA4D51B589E4200D40063 /* User.swift */; };
 		FF00859DA6F3342E7C891216 /* Pods_FoodOnYourMind_Swift_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B43B3FFFE10775C8574C5D /* Pods_FoodOnYourMind_Swift_.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -52,13 +53,12 @@
 
 /* Begin PBXFileReference section */
 		0E7E1EA4981B913B506D6DAE /* Pods-FoodOnYourMind(Swift).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodOnYourMind(Swift).release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodOnYourMind(Swift)/Pods-FoodOnYourMind(Swift).release.xcconfig"; sourceTree = "<group>"; };
-		2BC397081AADE837001ABDF2 /* FoodOnYourMind(Swift).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodOnYourMind(Swift).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC397081AADE837001ABDF2 /* FoodOnYourMind_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodOnYourMind_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC3970C1AADE837001ABDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BC3970D1AADE837001ABDF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2BC3970F1AADE837001ABDF2 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		2BC397141AADE837001ABDF2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2BC397171AADE837001ABDF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		2BC3971D1AADE837001ABDF2 /* FoodOnYourMind(Swift)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FoodOnYourMind(Swift)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC3971D1AADE837001ABDF2 /* FoodOnYourMind_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodOnYourMind_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC397221AADE837001ABDF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BC397231AADE837001ABDF2 /* ParseiOSTemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseiOSTemplateTests.swift; sourceTree = "<group>"; };
 		2BC3972E1AADE859001ABDF2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -82,13 +82,14 @@
 		705FFC9D1B570EF200000399 /* recipieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipieModel.swift; sourceTree = "<group>"; };
 		705FFC9E1B570EF200000399 /* GListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GListViewController.swift; sourceTree = "<group>"; };
 		705FFC9F1B570EF200000399 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		707826401B5710DB004F641C /* Food On Your Mind Shoping List-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Food On Your Mind Shoping List-Bridging-Header.h"; sourceTree = "<group>"; };
 		707826421B57114A004F641C /* IQDropDownTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQDropDownTextField.h; sourceTree = "<group>"; };
 		707826431B57114A004F641C /* IQDropDownTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQDropDownTextField.m; sourceTree = "<group>"; };
 		707826451B5711CC004F641C /* AERecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AERecord.swift; sourceTree = "<group>"; };
 		707826471B57133C004F641C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		707826491B571D4F004F641C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7078264B1B572461004F641C /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		70FDA4D31B589DC500D40063 /* CoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreModel.xcdatamodel; sourceTree = "<group>"; };
+		70FDA4D51B589E4200D40063 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		97B43B3FFFE10775C8574C5D /* Pods_FoodOnYourMind_Swift_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodOnYourMind_Swift_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F94619D883451ECBA9FA46 /* Pods-FoodOnYourMind(Swift).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodOnYourMind(Swift).debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodOnYourMind(Swift)/Pods-FoodOnYourMind(Swift).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,8 +140,8 @@
 		2BC397091AADE837001ABDF2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2BC397081AADE837001ABDF2 /* FoodOnYourMind(Swift).app */,
-				2BC3971D1AADE837001ABDF2 /* FoodOnYourMind(Swift)Tests.xctest */,
+				2BC397081AADE837001ABDF2 /* FoodOnYourMind_Swift.app */,
+				2BC3971D1AADE837001ABDF2 /* FoodOnYourMind_SwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,15 +150,13 @@
 			isa = PBXGroup;
 			children = (
 				2BC3970D1AADE837001ABDF2 /* AppDelegate.swift */,
-				705FFC9B1B570EF200000399 /* listCell.swift */,
-				707826401B5710DB004F641C /* Food On Your Mind Shoping List-Bridging-Header.h */,
+				7078264D1B574474004F641C /* Model */,
 				705FFC9C1B570EF200000399 /* AddViewController.swift */,
 				707826411B57113B004F641C /* lib */,
-				705FFC9D1B570EF200000399 /* recipieModel.swift */,
 				705FFC9E1B570EF200000399 /* GListViewController.swift */,
 				705FFC9F1B570EF200000399 /* SettingsViewController.swift */,
+				70FDA4D21B589DC500D40063 /* CoreModel.xcdatamodeld */,
 				705FFC961B56A4C100000399 /* FoodOnYourMindData.xcdatamodeld */,
-				2BC3970F1AADE837001ABDF2 /* ViewController1.swift */,
 				705FFC991B570EB500000399 /* Main.storyboard */,
 				707826491B571D4F004F641C /* RegisterViewController.swift */,
 				7078264B1B572461004F641C /* WelcomeViewController.swift */,
@@ -227,6 +226,16 @@
 			name = lib;
 			sourceTree = "<group>";
 		};
+		7078264D1B574474004F641C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70FDA4D51B589E4200D40063 /* User.swift */,
+				705FFC9D1B570EF200000399 /* recipieModel.swift */,
+				705FFC9B1B570EF200000399 /* listCell.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		97C4A4D799B10EE0E04BA1D2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,9 +248,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2BC397071AADE837001ABDF2 /* FoodOnYourMind(Swift) */ = {
+		2BC397071AADE837001ABDF2 /* FoodOnYourMind_Swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2BC397271AADE837001ABDF2 /* Build configuration list for PBXNativeTarget "FoodOnYourMind(Swift)" */;
+			buildConfigurationList = 2BC397271AADE837001ABDF2 /* Build configuration list for PBXNativeTarget "FoodOnYourMind_Swift" */;
 			buildPhases = (
 				67DC624869D5680A8A0AF2CD /* Check Pods Manifest.lock */,
 				2BC397041AADE837001ABDF2 /* Sources */,
@@ -254,14 +263,14 @@
 			);
 			dependencies = (
 			);
-			name = "FoodOnYourMind(Swift)";
+			name = FoodOnYourMind_Swift;
 			productName = ParseiOSTemplate;
-			productReference = 2BC397081AADE837001ABDF2 /* FoodOnYourMind(Swift).app */;
+			productReference = 2BC397081AADE837001ABDF2 /* FoodOnYourMind_Swift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2BC3971C1AADE837001ABDF2 /* FoodOnYourMind(Swift)Tests */ = {
+		2BC3971C1AADE837001ABDF2 /* FoodOnYourMind_SwiftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2BC3972A1AADE837001ABDF2 /* Build configuration list for PBXNativeTarget "FoodOnYourMind(Swift)Tests" */;
+			buildConfigurationList = 2BC3972A1AADE837001ABDF2 /* Build configuration list for PBXNativeTarget "FoodOnYourMind_SwiftTests" */;
 			buildPhases = (
 				2BC397191AADE837001ABDF2 /* Sources */,
 				2BC3971A1AADE837001ABDF2 /* Frameworks */,
@@ -272,9 +281,9 @@
 			dependencies = (
 				2BC3971F1AADE837001ABDF2 /* PBXTargetDependency */,
 			);
-			name = "FoodOnYourMind(Swift)Tests";
+			name = FoodOnYourMind_SwiftTests;
 			productName = ParseiOSTemplateTests;
-			productReference = 2BC3971D1AADE837001ABDF2 /* FoodOnYourMind(Swift)Tests.xctest */;
+			productReference = 2BC3971D1AADE837001ABDF2 /* FoodOnYourMind_SwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -295,7 +304,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2BC397031AADE837001ABDF2 /* Build configuration list for PBXProject "FoodOnYourMind(Swift)" */;
+			buildConfigurationList = 2BC397031AADE837001ABDF2 /* Build configuration list for PBXProject "FoodOnYourMind_Swift" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -308,8 +317,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2BC397071AADE837001ABDF2 /* FoodOnYourMind(Swift) */,
-				2BC3971C1AADE837001ABDF2 /* FoodOnYourMind(Swift)Tests */,
+				2BC397071AADE837001ABDF2 /* FoodOnYourMind_Swift */,
+				2BC3971C1AADE837001ABDF2 /* FoodOnYourMind_SwiftTests */,
 			);
 		};
 /* End PBXProject section */
@@ -391,14 +400,15 @@
 				705FFCA11B570EF200000399 /* AddViewController.swift in Sources */,
 				705FFCA21B570EF200000399 /* recipieModel.swift in Sources */,
 				7078264A1B571D4F004F641C /* RegisterViewController.swift in Sources */,
-				2BC397101AADE837001ABDF2 /* ViewController1.swift in Sources */,
 				705FFCA01B570EF200000399 /* listCell.swift in Sources */,
 				7078264C1B572461004F641C /* WelcomeViewController.swift in Sources */,
 				705FFCA31B570EF200000399 /* GListViewController.swift in Sources */,
+				70FDA4D61B589E4200D40063 /* User.swift in Sources */,
 				2BC3970E1AADE837001ABDF2 /* AppDelegate.swift in Sources */,
 				707826441B57114A004F641C /* IQDropDownTextField.m in Sources */,
 				705FFC981B56A4C100000399 /* FoodOnYourMindData.xcdatamodeld in Sources */,
 				705FFCA41B570EF200000399 /* SettingsViewController.swift in Sources */,
+				70FDA4D41B589DC500D40063 /* CoreModel.xcdatamodeld in Sources */,
 				707826481B57133C004F641C /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,7 +426,7 @@
 /* Begin PBXTargetDependency section */
 		2BC3971F1AADE837001ABDF2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2BC397071AADE837001ABDF2 /* FoodOnYourMind(Swift) */;
+			target = 2BC397071AADE837001ABDF2 /* FoodOnYourMind_Swift */;
 			targetProxy = 2BC3971E1AADE837001ABDF2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -522,7 +532,7 @@
 				);
 				INFOPLIST_FILE = ParseiOSTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "FoodOnYourMind(Swift)";
+				PRODUCT_NAME = FoodOnYourMind_Swift;
 				SWIFT_OBJC_BRIDGING_HEADER = "ParseiOSTemplate/ParseiOSTemplate-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -540,7 +550,7 @@
 				);
 				INFOPLIST_FILE = ParseiOSTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "FoodOnYourMind(Swift)";
+				PRODUCT_NAME = FoodOnYourMind_Swift;
 				SWIFT_OBJC_BRIDGING_HEADER = "ParseiOSTemplate/ParseiOSTemplate-Bridging-Header.h";
 			};
 			name = Release;
@@ -559,7 +569,7 @@
 				);
 				INFOPLIST_FILE = ParseiOSTemplateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "FoodOnYourMind(Swift)Tests";
+				PRODUCT_NAME = FoodOnYourMind_SwiftTests;
 			};
 			name = Debug;
 		};
@@ -573,14 +583,14 @@
 				);
 				INFOPLIST_FILE = ParseiOSTemplateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "FoodOnYourMind(Swift)Tests";
+				PRODUCT_NAME = FoodOnYourMind_SwiftTests;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2BC397031AADE837001ABDF2 /* Build configuration list for PBXProject "FoodOnYourMind(Swift)" */ = {
+		2BC397031AADE837001ABDF2 /* Build configuration list for PBXProject "FoodOnYourMind_Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BC397251AADE837001ABDF2 /* Debug */,
@@ -589,7 +599,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2BC397271AADE837001ABDF2 /* Build configuration list for PBXNativeTarget "FoodOnYourMind(Swift)" */ = {
+		2BC397271AADE837001ABDF2 /* Build configuration list for PBXNativeTarget "FoodOnYourMind_Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BC397281AADE837001ABDF2 /* Debug */,
@@ -598,7 +608,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2BC3972A1AADE837001ABDF2 /* Build configuration list for PBXNativeTarget "FoodOnYourMind(Swift)Tests" */ = {
+		2BC3972A1AADE837001ABDF2 /* Build configuration list for PBXNativeTarget "FoodOnYourMind_SwiftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2BC3972B1AADE837001ABDF2 /* Debug */,
@@ -617,6 +627,16 @@
 			);
 			currentVersion = 705FFC971B56A4C100000399 /* FoodOnYourMindData.xcdatamodel */;
 			path = FoodOnYourMindData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		70FDA4D21B589DC500D40063 /* CoreModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				70FDA4D31B589DC500D40063 /* CoreModel.xcdatamodel */,
+			);
+			currentVersion = 70FDA4D31B589DC500D40063 /* CoreModel.xcdatamodel */;
+			path = CoreModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

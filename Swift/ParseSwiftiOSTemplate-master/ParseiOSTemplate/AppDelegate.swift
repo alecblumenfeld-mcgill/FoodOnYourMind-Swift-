@@ -53,7 +53,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource("DataModelName", withExtension: "momd")!
+        let modelURL = NSBundle.mainBundle().URLForResource("CoreModel", withExtension: "momd")!
+        print(modelURL)
+        
         return NSManagedObjectModel(contentsOfURL: modelURL)!
         }()
     
