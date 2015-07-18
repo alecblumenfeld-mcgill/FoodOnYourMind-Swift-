@@ -16,4 +16,5 @@ class User: NSManagedObject {
     @NSManaged var email: String
     @NSManaged var username: String
 
+    
 }

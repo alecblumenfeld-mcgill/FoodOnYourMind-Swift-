@@ -9,10 +9,48 @@
 import UIKit
 import CoreData
 class WelcomeViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+        }
         
+        
+    override func viewDidLayoutSubviews() {
+        if(checkIfLoggedin()){
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("MainNavigation") as! UIViewController
+            self.presentViewController(vc, animated: true, completion: nil)
+
+        }
+        else{
+            clearUsers()
+        }
+        
+    }
+    
+    func checkIfLoggedin()->Bool{
+        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedObjectContext:NSManagedObjectContext = appDel.managedObjectContext!
+        let fetchRequest = NSFetchRequest(entityName: "User")
+
+        let fetchedUser = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [User]
+        
+        
+        if  fetchedUser.count > 0 {
+            for user in fetchedUser {
+                return  Bool(user.loggedIn )
+            }
+           
+        }
+        else{
+            //no users found
+            return false
+        }
+        
+        return false
+    }
+    
+    func clearUsers(){
         let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedObjectContext:NSManagedObjectContext = appDel.managedObjectContext!
         
@@ -24,7 +62,6 @@ class WelcomeViewController: UIViewController {
             managedObjectContext.deleteObject(entity)
         }
         managedObjectContext.save(nil)
-        
     }
 
     override func didReceiveMemoryWarning() {

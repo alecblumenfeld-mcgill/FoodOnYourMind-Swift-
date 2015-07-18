@@ -51,11 +51,11 @@ class RegisterViewController: UIViewController {
                     let ok: UIAlertAction = UIAlertAction(title: "Ok", style: .Default) { action -> Void in
                         
                     }
-                    
+                    //Add Success Modal
                     alertController.addAction(ok)
                     self.presentViewController(alertController, animated: true, completion: nil)
                     
-                    //Add Success Modal
+                   
                     //addsave to coredata username
                 }
                 
