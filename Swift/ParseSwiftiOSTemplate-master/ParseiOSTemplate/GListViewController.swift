@@ -25,6 +25,7 @@ class GListViewController: UIViewController, UITableViewDataSource {
         selector = sender.selectedSegmentIndex
         updateList(sender.selectedSegmentIndex)
     }
+    
     func updateList( newSelector : Int){
         selector = newSelector
         switch selector{

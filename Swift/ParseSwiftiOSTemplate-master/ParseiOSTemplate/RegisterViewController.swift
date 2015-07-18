@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RegisterViewController: UIViewController {
 
@@ -44,12 +45,38 @@ class RegisterViewController: UIViewController {
             if error == nil {
                 
                 dispatch_async(dispatch_get_main_queue()) {
+                    //make personal list for user 
+                    var newList = PFObject(className:"PersonalLists")
+                    newList["owner"] = username
+                    newList.saveInBackgroundWithBlock {
+                        (success: Bool, error: NSError?) -> Void in
+                        if (success) {
+                            println("Personal List Created for user \(username)")
+                        } else {
+                             println("ERROR: Personal List nor Created for user \(username)")
+                        }
+                    }
+                    
+                    //save login to core data
+                    let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                    let context:NSManagedObjectContext = appDel.managedObjectContext!
+                    let ent = NSEntityDescription.entityForName("User", inManagedObjectContext: context)
+                    var newUser = User(entity:ent!, insertIntoManagedObjectContext: context)
+                    //applying data to model
+                    newUser.username = username
+                    newUser.email = userEmailAddress
+                    newUser.loggedIn = true
+                    context.save(nil)
+
+                    
+                    
                     let alertController = UIAlertController(title: nil, message:
                         "Success! Lets Get Cooking.", preferredStyle: UIAlertControllerStyle.Alert)
-                    
-                    //alert actions
                     let ok: UIAlertAction = UIAlertAction(title: "Ok", style: .Default) { action -> Void in
-                        
+                        //ok go to main story
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let vc = storyboard.instantiateViewControllerWithIdentifier("MainNavigation") as! UIViewController
+                        self.presentViewController(vc, animated: true, completion: nil)
                     }
                     //Add Success Modal
                     alertController.addAction(ok)
@@ -57,6 +84,7 @@ class RegisterViewController: UIViewController {
                     
                    
                     //addsave to coredata username
+                    
                 }
                 
             } else {
