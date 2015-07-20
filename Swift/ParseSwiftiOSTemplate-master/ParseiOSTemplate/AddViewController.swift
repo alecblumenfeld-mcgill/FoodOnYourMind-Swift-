@@ -7,10 +7,11 @@
 //
 
 import UIKit
-
-class AddViewController: UIViewController {
+import CoreData
+class AddViewController: UIViewController  {
     
-    @IBOutlet weak var qtyFeild: IQDropDownTextField!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var qtyField: UITextField!
     @IBOutlet weak var unitField: IQDropDownTextField!
     @IBOutlet weak var catField: IQDropDownTextField!
     override func viewDidLoad() {
@@ -29,7 +30,51 @@ class AddViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func Save(sender: AnyObject) {
+        //get username
+        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedObjectContext:NSManagedObjectContext = appDel.managedObjectContext!
+        let fetchRequest = NSFetchRequest(entityName: "User")
+        
+        let fetchedUser = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [User]
+        var username: String = ""
+        
+        if  fetchedUser.count > 0 {
+            for user in fetchedUser {
+                username = user.username
+            }
+        }
+        
+        //append ingredient
+        var query = PFQuery(className:"PersonalLists")
+        
+        query.whereKey("owner", equalTo: username)
+        let list = query.getFirstObject()
+        
+        
+        
+        
+        
+        var ingredientList = list["ingredients"] as! [ingredient]
+        
+        var new = [ingredient(Name: self.nameField.text , Amount: "\(self.qtyField.text) \(self.unitField.text)", ingredientType: self.catField.text)]
 
+       ingredientList += new
+        list["ingredients"] = ingredientList
+        list.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                // The score key has been incremented
+            } else {
+                // There was a problem, check error.description
+            }
+        }
+        println(list)
+        
+        
+        
+        
+        
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("MainNavigation") as! UIViewController
         self.presentViewController(vc, animated: true, completion: nil)

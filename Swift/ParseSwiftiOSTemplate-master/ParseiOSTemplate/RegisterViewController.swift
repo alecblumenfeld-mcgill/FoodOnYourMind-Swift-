@@ -48,6 +48,7 @@ class RegisterViewController: UIViewController {
                     //make personal list for user 
                     var newList = PFObject(className:"PersonalLists")
                     newList["owner"] = username
+                    newList["ingredients"] = ["number": "27", "string": "test"]
                     newList.saveInBackgroundWithBlock {
                         (success: Bool, error: NSError?) -> Void in
                         if (success) {
@@ -56,6 +57,7 @@ class RegisterViewController: UIViewController {
                              println("ERROR: Personal List nor Created for user \(username)")
                         }
                     }
+                    
                     
                     //save login to core data
                     let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

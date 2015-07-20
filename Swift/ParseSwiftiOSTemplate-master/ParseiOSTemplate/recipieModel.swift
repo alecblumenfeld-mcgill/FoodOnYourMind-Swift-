@@ -7,6 +7,11 @@
 //
 
 import Foundation
+import Parse
+import CoreData
+
+
+
 //define new cell where recipie is linked in the cell value
 var potato = ingredient(Name: "potato", Amount: "1 lb", ingredientType: "vegtable")
 var tomato = ingredient(Name: "tomato", Amount: "1 lb", ingredientType: "vegtable")
@@ -26,9 +31,53 @@ var chickenStew = recipie(recipieName: "Chicken Stew", recipieIngredients:  [chi
 
 class recipieList {
     
+    
+    
+    
     var recipieList =  [recipie]()
     init () {
-        //in real app will be making api calls
+        //get user name
+ 
+        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedObjectContext:NSManagedObjectContext = appDel.managedObjectContext!
+        let fetchRequest = NSFetchRequest(entityName: "User")
+        
+        let fetchedUser = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [User]
+        var username: String = ""
+    
+        if  fetchedUser.count > 0 {
+            for user in fetchedUser {
+                username = user.username
+            }
+        }
+
+        
+        //Get personal List
+        var query = PFQuery(className:"PersonalList")
+        query.whereKey("Owner", equalTo:username)
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                // The find succeeded.
+                println("Successfully retrieved \(objects!.count) list.")
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        println(object.objectId)
+                    }
+                }
+            } else {
+                // Log details of the failure
+                println("Error: \(error!) ")
+            }
+        }
+
+        
+        
+        
+        
+        
         self.recipieList.append(cornBeef)
         self.recipieList.append(chickenStew)
     }

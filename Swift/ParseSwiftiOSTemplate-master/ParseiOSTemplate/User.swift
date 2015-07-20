@@ -10,11 +10,9 @@ import Foundation
 import CoreData
 @objc(User)
 class User: NSManagedObject {
-
     @NSManaged var name: String
     @NSManaged var loggedIn: NSNumber
     @NSManaged var email: String
     @NSManaged var username: String
-
     
 }

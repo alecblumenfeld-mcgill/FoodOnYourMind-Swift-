@@ -40,6 +40,7 @@
 		707826481B57133C004F641C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707826471B57133C004F641C /* LoginViewController.swift */; };
 		7078264A1B571D4F004F641C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707826491B571D4F004F641C /* RegisterViewController.swift */; };
 		7078264C1B572461004F641C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7078264B1B572461004F641C /* WelcomeViewController.swift */; };
+		70990E011B5C744B000A38F0 /* ingredientNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70990E001B5C744B000A38F0 /* ingredientNameViewController.swift */; };
 		70FDA4D41B589DC500D40063 /* CoreModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70FDA4D21B589DC500D40063 /* CoreModel.xcdatamodeld */; };
 		70FDA4D61B589E4200D40063 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDA4D51B589E4200D40063 /* User.swift */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,7 @@
 		707826471B57133C004F641C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		707826491B571D4F004F641C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7078264B1B572461004F641C /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		70990E001B5C744B000A38F0 /* ingredientNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ingredientNameViewController.swift; sourceTree = "<group>"; };
 		70FDA4D31B589DC500D40063 /* CoreModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreModel.xcdatamodel; sourceTree = "<group>"; };
 		70FDA4D51B589E4200D40063 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D9F94619D883451ECBA9FA46 /* Manifest.lock */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Manifest.lock; path = Pods/Manifest.lock; sourceTree = "<group>"; };
@@ -149,22 +151,23 @@
 		2BC3970A1AADE837001ABDF2 /* FoodOnYourMind */ = {
 			isa = PBXGroup;
 			children = (
-				2BC3970D1AADE837001ABDF2 /* AppDelegate.swift */,
-				7078264D1B574474004F641C /* Model */,
 				705FFC9C1B570EF200000399 /* AddViewController.swift */,
-				707826411B57113B004F641C /* lib */,
-				705FFC9E1B570EF200000399 /* GListViewController.swift */,
-				705FFC9F1B570EF200000399 /* SettingsViewController.swift */,
+				2BC3970D1AADE837001ABDF2 /* AppDelegate.swift */,
 				70FDA4D21B589DC500D40063 /* CoreModel.xcdatamodeld */,
 				705FFC961B56A4C100000399 /* FoodOnYourMindData.xcdatamodeld */,
-				705FFC991B570EB500000399 /* Main.storyboard */,
-				707826491B571D4F004F641C /* RegisterViewController.swift */,
-				7078264B1B572461004F641C /* WelcomeViewController.swift */,
-				707826471B57133C004F641C /* LoginViewController.swift */,
+				705FFC9E1B570EF200000399 /* GListViewController.swift */,
 				2BC397141AADE837001ABDF2 /* Images.xcassets */,
 				2BC397161AADE837001ABDF2 /* LaunchScreen.xib */,
-				2BC3970B1AADE837001ABDF2 /* Supporting Files */,
+				707826411B57113B004F641C /* lib */,
+				707826471B57133C004F641C /* LoginViewController.swift */,
+				705FFC991B570EB500000399 /* Main.storyboard */,
+				70990E001B5C744B000A38F0 /* ingredientNameViewController.swift */,
+				7078264D1B574474004F641C /* Model */,
 				2BC397481AADE8ED001ABDF2 /* ParseiOSTemplate-Bridging-Header.h */,
+				707826491B571D4F004F641C /* RegisterViewController.swift */,
+				705FFC9F1B570EF200000399 /* SettingsViewController.swift */,
+				2BC3970B1AADE837001ABDF2 /* Supporting Files */,
+				7078264B1B572461004F641C /* WelcomeViewController.swift */,
 			);
 			name = FoodOnYourMind;
 			path = ParseiOSTemplate;
@@ -353,6 +356,7 @@
 				7078264A1B571D4F004F641C /* RegisterViewController.swift in Sources */,
 				705FFCA01B570EF200000399 /* listCell.swift in Sources */,
 				7078264C1B572461004F641C /* WelcomeViewController.swift in Sources */,
+				70990E011B5C744B000A38F0 /* ingredientNameViewController.swift in Sources */,
 				705FFCA31B570EF200000399 /* GListViewController.swift in Sources */,
 				70FDA4D61B589E4200D40063 /* User.swift in Sources */,
 				2BC3970E1AADE837001ABDF2 /* AppDelegate.swift in Sources */,
