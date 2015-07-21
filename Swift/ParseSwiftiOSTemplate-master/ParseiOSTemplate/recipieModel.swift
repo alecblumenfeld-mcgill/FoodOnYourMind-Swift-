@@ -235,18 +235,31 @@ class recipie {
     
     
 }
-class ingredient{
+class ingredient : PFObject, PFSubclassing {
     var name : String
     var amount : String
     var type : String
     var recipieName = ""
-
+    var displayName: String? {
+        get {
+            return self["displayName"] as? String
+        }
+        set {
+            self["displayName"] = newValue
+        }
+    }
+    class func parseClassName() -> String {
+        return "Ingredeint"
+    }
     var checked :Bool = false
     
     init(Name:String, Amount:String, ingredientType: String){
+        //self.super.init()
         name = Name
         amount = Amount
         type = ingredientType
+        super.init()
     }
-    
+   
+
 }

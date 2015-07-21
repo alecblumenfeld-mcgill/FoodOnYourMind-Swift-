@@ -53,21 +53,8 @@ class AddViewController: UIViewController  {
         
         
         
+        //list.addUniqueObject(<#object: AnyObject!#>, forKey: <#String!#>)
         
-        var ingredientList = list["ingredients"] as! [ingredient]
-        
-        var new = [ingredient(Name: self.nameField.text , Amount: "\(self.qtyField.text) \(self.unitField.text)", ingredientType: self.catField.text)]
-
-       ingredientList += new
-        list["ingredients"] = ingredientList
-        list.saveInBackgroundWithBlock {
-            (success: Bool, error: NSError?) -> Void in
-            if (success) {
-                // The score key has been incremented
-            } else {
-                // There was a problem, check error.description
-            }
-        }
         println(list)
         
         

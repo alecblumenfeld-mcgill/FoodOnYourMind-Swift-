@@ -45,30 +45,21 @@ class RegisterViewController: UIViewController {
             if error == nil {
                 
                 dispatch_async(dispatch_get_main_queue()) {
-                    //make personal list for user 
-                    var newList = PFObject(className:"PersonalLists")
-                    newList["owner"] = username
-                    newList["ingredients"] = ["number": "27", "string": "test"]
-                    newList.saveInBackgroundWithBlock {
-                        (success: Bool, error: NSError?) -> Void in
-                        if (success) {
-                            println("Personal List Created for user \(username)")
-                        } else {
-                             println("ERROR: Personal List nor Created for user \(username)")
-                        }
-                    }
+
+                    let pointer = PFObject(withoutDataWithClassName:"PersonalLists", objectId: "xyz")
+                    user["UsersPersonalList"] = pointer
+                    user.saveInBackgroundWithBlock { (succeeded: Bool, error: NSError?) -> Void in }
                     
-                    
-                    //save login to core data
-                    let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                    let context:NSManagedObjectContext = appDel.managedObjectContext!
-                    let ent = NSEntityDescription.entityForName("User", inManagedObjectContext: context)
-                    var newUser = User(entity:ent!, insertIntoManagedObjectContext: context)
-                    //applying data to model
-                    newUser.username = username
-                    newUser.email = userEmailAddress
-                    newUser.loggedIn = true
-                    context.save(nil)
+//                    //save login to core data
+//                    let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//                    let context:NSManagedObjectContext = appDel.managedObjectContext!
+//                    let ent = NSEntityDescription.entityForName("User", inManagedObjectContext: context)
+//                    var newUser = User(entity:ent!, insertIntoManagedObjectContext: context)
+//                    //applying data to model
+//                    newUser.username = username
+//                    newUser.email = userEmailAddress
+//                    newUser.loggedIn = true
+//                    context.save(nil)
 
                     
                     
@@ -85,7 +76,6 @@ class RegisterViewController: UIViewController {
                     self.presentViewController(alertController, animated: true, completion: nil)
                     
                    
-                    //addsave to coredata username
                     
                 }
                 

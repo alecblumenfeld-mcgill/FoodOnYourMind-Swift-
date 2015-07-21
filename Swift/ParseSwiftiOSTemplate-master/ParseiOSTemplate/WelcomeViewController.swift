@@ -11,6 +11,8 @@ import CoreData
 class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        var currentUser = PFUser.currentUser()
+        PFUser.logOut()
      
         }
         
@@ -29,39 +31,50 @@ class WelcomeViewController: UIViewController {
     }
     
     func checkIfLoggedin()->Bool{
-        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedObjectContext:NSManagedObjectContext = appDel.managedObjectContext!
-        let fetchRequest = NSFetchRequest(entityName: "User")
-
-        let fetchedUser = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [User]
-        
-        
-        if  fetchedUser.count > 0 {
-            for user in fetchedUser {
-                return  Bool(user.loggedIn )
-            }
-           
-        }
-        else{
-            //no users found
+        var currentUser = PFUser.currentUser()
+        if currentUser != nil {
+            return true
+            // Do stuff with the user
+        } else {
+     
             return false
+
+            // Show the signup or login screen
         }
-        
-        return false
+
+//        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        let managedObjectContext:NSManagedObjectContext = appDel.managedObjectContext!
+//        let fetchRequest = NSFetchRequest(entityName: "User")
+//
+//        let fetchedUser = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [User]
+//        
+//        
+//        if  fetchedUser.count > 0 {
+//            for user in fetchedUser {
+//                return  Bool(user.loggedIn )
+//            }
+//           
+//        }
+//        else{
+//            //no users found
+//            return false
+//        }
+//        
+//        return false
     }
     
     func clearUsers(){
-        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedObjectContext:NSManagedObjectContext = appDel.managedObjectContext!
-        
-        let fetchRequest = NSFetchRequest(entityName: "User")
-        let fetchedEntities = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [User]
-        
-        // Delete all user that may be in sql table
-        for entity in fetchedEntities {
-            managedObjectContext.deleteObject(entity)
-        }
-        managedObjectContext.save(nil)
+//        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        let managedObjectContext:NSManagedObjectContext = appDel.managedObjectContext!
+//        
+//        let fetchRequest = NSFetchRequest(entityName: "User")
+//        let fetchedEntities = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [User]
+//        
+//        // Delete all user that may be in sql table
+//        for entity in fetchedEntities {
+//            managedObjectContext.deleteObject(entity)
+//        }
+//        managedObjectContext.save(nil)
     }
 
     override func didReceiveMemoryWarning() {
