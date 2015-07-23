@@ -14,6 +14,8 @@ class AddViewController: UIViewController  {
     @IBOutlet weak var qtyField: UITextField!
     @IBOutlet weak var unitField: IQDropDownTextField!
     @IBOutlet weak var catField: IQDropDownTextField!
+    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         unitField.isOptionalDropDown = false
@@ -31,35 +33,52 @@ class AddViewController: UIViewController  {
     }
     @IBAction func Save(sender: AnyObject) {
         //get username
-        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedObjectContext:NSManagedObjectContext = appDel.managedObjectContext!
-        let fetchRequest = NSFetchRequest(entityName: "User")
+//        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//        let managedObjectContext:NSManagedObjectContext = appDel.managedObjectContext!
+//        let fetchRequest = NSFetchRequest(entityName: "User")
+//        
+//        let fetchedUser = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [User]
+//        var username: String = ""
+//        
+//        if  fetchedUser.count > 0 {
+//            for user in fetchedUser {
+//                username = user.username
+//            }
+//        }
+//        
+        //append ingredient
+//        var query = PFQuery(className:"PersonalLists")
+//        
+//        query.whereKey("owner", equalTo: username)
+//        let list = query.getFirstObject()
+//        
+//        
+//        
+//        
+//        //list.addUniqueObject(<#object: AnyObject!#>, forKey: <#String!#>)
+//        
+//        println(list)
+//        
         
-        let fetchedUser = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [User]
-        var username: String = ""
         
-        if  fetchedUser.count > 0 {
-            for user in fetchedUser {
-                username = user.username
+        var currentUser = PFUser.currentUser()
+        let personalListID = currentUser["UsersPersonalList"].objectId //as! String
+        var query = PFQuery(className:"PersonalLists")
+        query.getObjectInBackgroundWithId(personalListID) {
+            (personalList: PFObject?, error: NSError?) -> Void in
+            if error == nil && personalList != nil {
+                var newIngredient = PFObject(className:"Ingredients")
+                newIngredient["ingredientType"] = self.catField.text
+                //newIngredient["ingredient"] = self.nameField.text
+                newIngredient.save()
+                //newIngredient.objectId
+                personalList?.addUniqueObject(newIngredient, forKey: "ingredients")
+                personalList?.save()
+                
+            } else {
+                println(error)
             }
         }
-        
-        //append ingredient
-        var query = PFQuery(className:"PersonalLists")
-        
-        query.whereKey("owner", equalTo: username)
-        let list = query.getFirstObject()
-        
-        
-        
-        
-        //list.addUniqueObject(<#object: AnyObject!#>, forKey: <#String!#>)
-        
-        println(list)
-        
-        
-        
-        
         
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

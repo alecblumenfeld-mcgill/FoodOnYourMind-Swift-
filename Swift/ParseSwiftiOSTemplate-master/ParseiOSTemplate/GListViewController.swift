@@ -133,6 +133,12 @@ class GListViewController: UIViewController, UITableViewDataSource {
         alertController.addAction(remove)
         self.presentViewController(alertController, animated: true, completion: nil)
     }
+    @IBAction func AddButtonClicked(sender: AnyObject) {
+        var addView = storyboard!.instantiateViewControllerWithIdentifier("AddViewController") as! UIViewController
+        //addView.view.
+        addView.view.frame = CGRectMake(20,80,220,220)
+        self.view.addSubview(addView.view)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         var gesture: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressGestureRecognized:")

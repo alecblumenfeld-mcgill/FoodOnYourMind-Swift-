@@ -28,6 +28,8 @@ var peach = ingredient(Name: "peach", Amount: "3 peaches", ingredientType: "frui
 var cornBeef = recipie(recipieName: "Corned Beef", recipieIngredients:  [beef, corn] )
 var chickenStew = recipie(recipieName: "Chicken Stew", recipieIngredients:  [chicken, tomato, potato] )
 
+//personal List
+var personalList = recipie(recipieName: "Personal List", recipieIngredients:  [] )
 
 class recipieList {
     
@@ -36,51 +38,14 @@ class recipieList {
     
     var recipieList =  [recipie]()
     init () {
-        //get user name
- 
-        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedObjectContext:NSManagedObjectContext = appDel.managedObjectContext!
-        let fetchRequest = NSFetchRequest(entityName: "User")
-        
-        let fetchedUser = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [User]
-        var username: String = ""
-    
-        if  fetchedUser.count > 0 {
-            for user in fetchedUser {
-                username = user.username
-            }
-        }
 
-        
-        //Get personal List
-        var query = PFQuery(className:"PersonalList")
-        query.whereKey("Owner", equalTo:username)
-        query.findObjectsInBackgroundWithBlock {
-            (objects: [AnyObject]?, error: NSError?) -> Void in
-            
-            if error == nil {
-                // The find succeeded.
-                println("Successfully retrieved \(objects!.count) list.")
-                // Do something with the found objects
-                if let objects = objects as? [PFObject] {
-                    for object in objects {
-                        println(object.objectId)
-                    }
-                }
-            } else {
-                // Log details of the failure
-                println("Error: \(error!) ")
-            }
-        }
 
-        
-        
-        
-        
-        
+        self.updatePersonalList()
         self.recipieList.append(cornBeef)
         self.recipieList.append(chickenStew)
     }
+    
+    
     subscript(index: Int) -> recipie{
         return recipieList[index]
     }
@@ -91,6 +56,28 @@ class recipieList {
             }
         }
         return nil
+    }
+    func updatePersonalList(){
+        var currentUser = PFUser.currentUser()
+        let personalListID = currentUser["UsersPersonalList"].objectId //as! String
+        var query = PFQuery(className:"PersonalLists")
+        query.getObjectInBackgroundWithId(personalListID) {
+            (personalList: PFObject?, error: NSError?) -> Void in
+            if error == nil && personalList != nil {
+                //let listcount = personalList["ingredients"].count
+                //println("\(listcount) ")
+//                for ingredient in personalList["ingredients"] as! NSArray {
+//                    
+//                    print(ingredient)
+//                    
+//                }
+
+            } else {
+                println(error)
+            }
+        }
+
+        
     }
     
     func getAllTypes()-> [String: [ingredient]] {

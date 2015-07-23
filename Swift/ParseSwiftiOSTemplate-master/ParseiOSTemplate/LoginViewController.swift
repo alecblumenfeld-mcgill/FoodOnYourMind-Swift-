@@ -43,24 +43,7 @@ class LoginViewController: UIViewController {
                     if user != nil {
                         dispatch_async(dispatch_get_main_queue()) {
                             
-                            //set up of core data, fuck core data
-                            let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                            let context:NSManagedObjectContext = appDel.managedObjectContext!
-                            let ent = NSEntityDescription.entityForName("User", inManagedObjectContext: context)
-                            
-                            var newUser = User(entity:ent!, insertIntoManagedObjectContext: context)
-                            
-                            //applying data to model
-                            newUser.username = user!.username!
-                            newUser.email = user!.email!
-                            newUser.loggedIn = true
-                            
-                            context.save(nil)
-                            
-                            //print(newUser.loggedIn)
-                            
-                            //
-                            //switich to recipe list
+                          
                             let storyboard = UIStoryboard(name: "Main", bundle: nil)
                             let vc = storyboard.instantiateViewControllerWithIdentifier("MainNavigation") as! UIViewController
                             self.presentViewController(vc, animated: true, completion: nil)

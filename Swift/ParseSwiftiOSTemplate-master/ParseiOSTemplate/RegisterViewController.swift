@@ -43,24 +43,25 @@ class RegisterViewController: UIViewController {
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
             if error == nil {
+                //save login to core data
+                let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                let context:NSManagedObjectContext = appDel.managedObjectContext!
+                let ent = NSEntityDescription.entityForName("User", inManagedObjectContext: context)
+                var newUser = User(entity:ent!, insertIntoManagedObjectContext: context)
+                //applying data to model
+                newUser.username = username
+                newUser.email = userEmailAddress
+                newUser.loggedIn = true
+                newUser.id = user.objectId
+                context.save(nil)
                 
+                
+                //async save personal list
                 dispatch_async(dispatch_get_main_queue()) {
-
-                    let pointer = PFObject(withoutDataWithClassName:"PersonalLists", objectId: "xyz")
+                    let pointer = PFObject(className:"PersonalLists")
+                    
                     user["UsersPersonalList"] = pointer
                     user.saveInBackgroundWithBlock { (succeeded: Bool, error: NSError?) -> Void in }
-                    
-//                    //save login to core data
-//                    let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//                    let context:NSManagedObjectContext = appDel.managedObjectContext!
-//                    let ent = NSEntityDescription.entityForName("User", inManagedObjectContext: context)
-//                    var newUser = User(entity:ent!, insertIntoManagedObjectContext: context)
-//                    //applying data to model
-//                    newUser.username = username
-//                    newUser.email = userEmailAddress
-//                    newUser.loggedIn = true
-//                    context.save(nil)
-
                     
                     
                     let alertController = UIAlertController(title: nil, message:

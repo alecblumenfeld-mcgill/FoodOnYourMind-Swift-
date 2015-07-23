@@ -14,5 +14,6 @@ class User: NSManagedObject {
     @NSManaged var loggedIn: NSNumber
     @NSManaged var email: String
     @NSManaged var username: String
+    @NSManaged var id: String
     
 }

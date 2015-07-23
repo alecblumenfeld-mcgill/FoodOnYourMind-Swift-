@@ -108,7 +108,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ahR-Nc-ZXl">
                             <connections>
-                                <segue destination="vaP-6y-44O" kind="show" identifier="Add Ingredient" id="v1G-aK-LSD"/>
+                                <action selector="AddButtonClicked:" destination="BYZ-38-t0r" id="SIT-V8-h25"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -125,7 +125,7 @@
         <!--Add Ingredient -->
         <scene sceneID="EN4-BY-Mvd">
             <objects>
-                <viewController title="Add Ingredient " id="vaP-6y-44O" customClass="AddViewController" customModule="FoodOnYourMind_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddViewController" title="Add Ingredient " id="vaP-6y-44O" customClass="AddViewController" customModule="FoodOnYourMind_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aEY-Ms-a2u"/>
                         <viewControllerLayoutGuide type="bottom" id="T8m-jq-arr"/>
@@ -233,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Iy-hG-r4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2420" y="-369"/>
+            <point key="canvasLocation" x="2296" y="-387"/>
         </scene>
         <!--Ingredient Names-->
         <scene sceneID="UCX-Up-SaK">
