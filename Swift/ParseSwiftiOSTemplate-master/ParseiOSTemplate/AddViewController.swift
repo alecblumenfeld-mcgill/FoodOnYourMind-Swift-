@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CoreData
+import RealmSwift
 class AddViewController: UIViewController  {
     
     @IBOutlet weak var nameField: UITextField!
@@ -24,7 +24,6 @@ class AddViewController: UIViewController  {
         catField.itemList = ["Fruit", "Dairy", "Meat"]
         
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,46 +31,22 @@ class AddViewController: UIViewController  {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func Save(sender: AnyObject) {
-        //get username
-//        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//        let managedObjectContext:NSManagedObjectContext = appDel.managedObjectContext!
-//        let fetchRequest = NSFetchRequest(entityName: "User")
-//        
-//        let fetchedUser = managedObjectContext.executeFetchRequest(fetchRequest, error: nil) as! [User]
-//        var username: String = ""
-//        
-//        if  fetchedUser.count > 0 {
-//            for user in fetchedUser {
-//                username = user.username
-//            }
-//        }
-//        
-        //append ingredient
-//        var query = PFQuery(className:"PersonalLists")
-//        
-//        query.whereKey("owner", equalTo: username)
-//        let list = query.getFirstObject()
-//        
-//        
-//        
-//        
-//        //list.addUniqueObject(<#object: AnyObject!#>, forKey: <#String!#>)
-//        
-//        println(list)
-//        
+        //generate object under parse
+        //get current user and add ingredient to the parse object
+        let users = Realm(path: Realm.defaultPath).objects(User)
+        let currentUser = users[0]
+        println(currentUser)
         
         
-        var currentUser = PFUser.currentUser()
-        let personalListID = currentUser["UsersPersonalList"].objectId //as! String
+        
+        let personalListID = currentUser["UsersPersonalList"]!.objectId //as! String
         var query = PFQuery(className:"PersonalLists")
         query.getObjectInBackgroundWithId(personalListID) {
             (personalList: PFObject?, error: NSError?) -> Void in
             if error == nil && personalList != nil {
                 var newIngredient = PFObject(className:"Ingredients")
                 newIngredient["ingredientType"] = self.catField.text
-                //newIngredient["ingredient"] = self.nameField.text
                 newIngredient.save()
-                //newIngredient.objectId
                 personalList?.addUniqueObject(newIngredient, forKey: "ingredients")
                 personalList?.save()
                 
@@ -81,6 +56,19 @@ class AddViewController: UIViewController  {
         }
         
         
+        //save new ingred to realm
+        let newIng = ingred()
+        newIng.name = self.nameField.text
+        newIng.type = self.catField.text
+        // Get the default Realm
+        let realm = Realm()
+        // Add to the Realm inside a transaction
+        realm.write {
+            realm.add(newIng)
+        }
+        
+        
+        //go back to list
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("MainNavigation") as! UIViewController
         self.presentViewController(vc, animated: true, completion: nil)

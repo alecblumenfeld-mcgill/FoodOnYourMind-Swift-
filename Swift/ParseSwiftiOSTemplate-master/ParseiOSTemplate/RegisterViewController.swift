@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import RealmSwift
 
 class RegisterViewController: UIViewController {
 
@@ -40,30 +41,47 @@ class RegisterViewController: UIViewController {
         user.username = username
         user.password = userPassword
         user.email = userEmailAddress
+        
+        
+        let newUser = User()
+
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
             if error == nil {
-                //save login to core data
-                let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                let context:NSManagedObjectContext = appDel.managedObjectContext!
-                let ent = NSEntityDescription.entityForName("User", inManagedObjectContext: context)
-                var newUser = User(entity:ent!, insertIntoManagedObjectContext: context)
-                //applying data to model
-                newUser.username = username
-                newUser.email = userEmailAddress
-                newUser.loggedIn = true
-                newUser.id = user.objectId
-                context.save(nil)
+
+              
+                // You only need to do this once (per thread)
                 
+                // Add to the Realm inside a transaction
                 
                 //async save personal list
                 dispatch_async(dispatch_get_main_queue()) {
                     let pointer = PFObject(className:"PersonalLists")
                     
                     user["UsersPersonalList"] = pointer
-                    user.saveInBackgroundWithBlock { (succeeded: Bool, error: NSError?) -> Void in }
+                    user.saveInBackgroundWithBlock { (succeeded: Bool, error: NSError?) -> Void in
+                        newUser.name = firstname
+                        newUser.username = username
+                        newUser.email = userEmailAddress
+                        newUser.id = user.objectId
+                        newUser.personalListID = pointer.objectId as String
+                        // Get the default Realm
+                        let realm = Realm()
+                        //write user to db
+                        
+                        realm.write {
+                            realm.add(newUser)
+                        }
+
                     
                     
+                    }
+                    
+                    
+                    
+                    
+                    
+
                     let alertController = UIAlertController(title: nil, message:
                         "Success! Lets Get Cooking.", preferredStyle: UIAlertControllerStyle.Alert)
                     let ok: UIAlertAction = UIAlertAction(title: "Ok", style: .Default) { action -> Void in
@@ -72,6 +90,13 @@ class RegisterViewController: UIViewController {
                         let vc = storyboard.instantiateViewControllerWithIdentifier("MainNavigation") as! UIViewController
                         self.presentViewController(vc, animated: true, completion: nil)
                     }
+                    println(user)
+                    
+                    
+                    
+                    
+                   
+                    
                     //Add Success Modal
                     alertController.addAction(ok)
                     self.presentViewController(alertController, animated: true, completion: nil)

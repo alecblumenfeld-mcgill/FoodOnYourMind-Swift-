@@ -8,19 +8,24 @@
 
 import UIKit
 import CoreData
+import RealmSwift
+
 class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
+        
+        println(Realm.defaultPath )
         }
         
         
     override func viewDidLayoutSubviews() {
         if(checkIfLoggedin()){
+            
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewControllerWithIdentifier("MainNavigation") as! UIViewController
             self.presentViewController(vc, animated: true, completion: nil)
-
+            
         }
         else{
             clearUsers()
@@ -29,19 +34,23 @@ class WelcomeViewController: UIViewController {
     }
     
     func checkIfLoggedin()->Bool{
-        var currentUser = PFUser.currentUser()
-        if currentUser != nil {
-            // Do stuff with the user
-        } else {
-            // Show the signup or login screen
-        }
-
         
-        return false
+        let users = Realm(path: Realm.defaultPath).objects(User)
+        if users.count == 1 {
+            return true
+        }
+        else{
+            return false
+        }
     }
     
     func clearUsers(){
-
+        let realm = Realm()
+        let users = Realm(path: Realm.defaultPath).objects(User)
+        realm.write{
+            realm.deleteAll()
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

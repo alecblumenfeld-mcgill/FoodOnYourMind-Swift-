@@ -9,7 +9,7 @@
 import Foundation
 import Parse
 import CoreData
-
+import RealmSwift
 
 
 //define new cell where recipie is linked in the cell value
@@ -31,6 +31,13 @@ var chickenStew = recipie(recipieName: "Chicken Stew", recipieIngredients:  [chi
 //personal List
 var personalList = recipie(recipieName: "Personal List", recipieIngredients:  [] )
 
+
+class GListBrain {
+
+    func updatePersonalList(){
+    
+    }
+}
 class recipieList {
     
     
@@ -58,24 +65,17 @@ class recipieList {
         return nil
     }
     func updatePersonalList(){
-        var currentUser = PFUser.currentUser()
-        let personalListID = currentUser["UsersPersonalList"].objectId //as! String
-        var query = PFQuery(className:"PersonalLists")
-        query.getObjectInBackgroundWithId(personalListID) {
-            (personalList: PFObject?, error: NSError?) -> Void in
-            if error == nil && personalList != nil {
-                //let listcount = personalList["ingredients"].count
-                //println("\(listcount) ")
-//                for ingredient in personalList["ingredients"] as! NSArray {
-//                    
-//                    print(ingredient)
-//                    
-//                }
-
-            } else {
-                println(error)
-            }
-        }
+//        var currentUser = PFUser.currentUser()
+//        let personalListID = currentUser["UsersPersonalList"].objectId
+//        var query = PFQuery(className:"PersonalLists")
+//        query.getObjectInBackgroundWithId(personalListID) {
+//            (personalList: PFObject?, error: NSError?) -> Void in
+//            if error == nil && personalList != nil {
+//
+//            } else {
+//                println(error)
+//            }
+//        }
 
         
     }
@@ -249,4 +249,16 @@ class ingredient : PFObject, PFSubclassing {
     }
    
 
+}
+
+class ingred: Object {
+    dynamic var name = ""
+    dynamic var type = ""
+    dynamic var quanity = ""
+    dynamic var id = ""
+    dynamic var owner: recip? // Can be optional
+}
+class recip: Object {
+    dynamic var name = ""
+    let ingredients = List<ingred>()
 }

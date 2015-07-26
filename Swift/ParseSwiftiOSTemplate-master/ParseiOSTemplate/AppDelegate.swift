@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-
+import RealmSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,8 +16,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        Parse.enableLocalDatastore()
+        
+        
+        
+        // Notice setSchemaVersion is set to 1, this is always set manually. It must be
+        // higher than the previous version (oldSchemaVersion) or an RLMException is thrown
+        setSchemaVersion(1, Realm.defaultPath, { migration, oldSchemaVersion in
+            // We haven’t migrated anything yet, so oldSchemaVersion == 0
+            if oldSchemaVersion < 1 {
+                
+                // Nothing to do!
+                // Realm will automatically detect new properties and removed properties
+                // And will update the schema on disk automatically
+            }
+        })
         // Override point for customization after application launch.
+        
+        
+        
         Parse.setApplicationId("gkrMlgsnQKrDrSByXgOBTD1XfzaKau9PSzygvIdK", clientKey: "IcWNeDSBKsE9ABoU9Y27wmxyUzdFJjCPqiW4O6Ne")
         return true
     }

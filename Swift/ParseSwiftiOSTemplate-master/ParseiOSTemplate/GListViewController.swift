@@ -11,6 +11,7 @@ import UIKit
 
 class GListViewController: UIViewController, UITableViewDataSource {
     //segment controll
+    
     @IBOutlet var listSelector: [UISegmentedControl]!
     @IBOutlet weak var tableView: UITableView!
    
@@ -117,7 +118,7 @@ class GListViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.cellForRowAtIndexPath(indexPath!) as UITableViewCell?
         
         //alert controller init
-        let alertController = UIAlertController(title: nil, message:
+        let alertController = UIAlertController(title: nil, message:    
             "Are you sure that you want to remove \(cell!.textLabel!.text!) from your shoping list?", preferredStyle: UIAlertControllerStyle.Alert)
         
        //alert actions
@@ -133,12 +134,7 @@ class GListViewController: UIViewController, UITableViewDataSource {
         alertController.addAction(remove)
         self.presentViewController(alertController, animated: true, completion: nil)
     }
-    @IBAction func AddButtonClicked(sender: AnyObject) {
-        var addView = storyboard!.instantiateViewControllerWithIdentifier("AddViewController") as! UIViewController
-        //addView.view.
-        addView.view.frame = CGRectMake(20,80,220,220)
-        self.view.addSubview(addView.view)
-    }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         var gesture: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressGestureRecognized:")
