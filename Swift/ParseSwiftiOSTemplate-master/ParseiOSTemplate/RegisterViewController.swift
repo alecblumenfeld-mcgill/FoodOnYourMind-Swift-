@@ -68,7 +68,6 @@ class RegisterViewController: UIViewController {
                         // Get the default Realm
                         let realm = Realm()
                         //write user to db
-                        
                         realm.write {
                             realm.add(newUser)
                         }
@@ -78,10 +77,7 @@ class RegisterViewController: UIViewController {
                     }
                     
                     
-                    
-                    
-                    
-
+                
                     let alertController = UIAlertController(title: nil, message:
                         "Success! Lets Get Cooking.", preferredStyle: UIAlertControllerStyle.Alert)
                     let ok: UIAlertAction = UIAlertAction(title: "Ok", style: .Default) { action -> Void in

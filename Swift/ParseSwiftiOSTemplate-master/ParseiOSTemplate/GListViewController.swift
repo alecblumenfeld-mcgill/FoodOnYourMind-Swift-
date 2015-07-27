@@ -18,9 +18,15 @@ class GListViewController: UIViewController, UITableViewDataSource {
     //initalize list
     var list =  recipieList()
     //initilize catagory list
-    var typesList = recipieList().getAllTypes()
+    var typesList = GListBrain().getAllTypes()
     //keep track of slector
     var selector = 0
+    
+    
+    
+    
+    var gList = GListBrain().getAllTypes()
+    
     
     @IBAction func indexChanged(sender: UISegmentedControl) {
         selector = sender.selectedSegmentIndex
@@ -31,9 +37,10 @@ class GListViewController: UIViewController, UITableViewDataSource {
         selector = newSelector
         switch selector{
         case 0:
-            typesList = list.getAllTypes()
+            typesList = gList
         default:
-            typesList = list.getUncheckedTypes()
+            var foo = "bar"
+            //typesList = list.getUncheckedTypes()
         }
         self.tableView.reloadData()
     }
@@ -71,8 +78,8 @@ class GListViewController: UIViewController, UITableViewDataSource {
                      cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! listCell
                     let ingredient = Array(typesList.values)[indexPath.section][indexPath.row]
                     cell.textLabel!.text = ingredient.name
-                    cell.detailTextLabel?.text = ingredient.amount
-                    if ingredient.checked == true{
+                    //if ingredient.checked == true
+                        if false{
                         cell.checkedImage.image = UIImage(named: "icon-check-green")
                         cell.backgroundColor = UIColor.lightGrayColor()
                         cell.textLabel!.alpha = 0.4
@@ -141,11 +148,11 @@ class GListViewController: UIViewController, UITableViewDataSource {
         gesture.minimumPressDuration = 1.0
         self.view.addGestureRecognizer(gesture)
         
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            println("Object has been saved.")
-        }
+        
+        var brain =  GListBrain()
+        
+        brain.updatePersonalList()
+        var gList = brain.getAllTypes()
 
     }
 

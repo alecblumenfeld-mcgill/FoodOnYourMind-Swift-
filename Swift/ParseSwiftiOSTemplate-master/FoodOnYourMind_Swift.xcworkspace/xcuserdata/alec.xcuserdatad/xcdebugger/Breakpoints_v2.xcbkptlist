@@ -455,11 +455,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParseiOSTemplate/recipieModel.swift"
-            timestampString = "459624456.299195"
+            timestampString = "459732491.327964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "254"
-            endingLineNumber = "254"
+            startingLineNumber = "330"
+            endingLineNumber = "330"
             landmarkName = "ingred"
             landmarkType = "3">
          </BreakpointContent>
@@ -535,11 +535,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParseiOSTemplate/AddViewController.swift"
-            timestampString = "459629818.255455"
+            timestampString = "459636074.704955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "Save(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -551,11 +551,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParseiOSTemplate/AddViewController.swift"
-            timestampString = "459630214.929249"
+            timestampString = "459732359.792612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "Save(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -567,11 +567,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParseiOSTemplate/RegisterViewController.swift"
-            timestampString = "459630714.729704"
+            timestampString = "459635709.097375"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "parseSignup()"
             landmarkType = "5">
          </BreakpointContent>
@@ -583,12 +583,236 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParseiOSTemplate/RegisterViewController.swift"
-            timestampString = "459630714.729704"
+            timestampString = "459635709.097375"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "parseSignup()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParseiOSTemplate/recipieModel.swift"
+            timestampString = "459731631.830627"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "updatePersonalList()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodOnYourMind_Swift.GListBrain.(updatePersonalList (FoodOnYourMind_Swift.GListBrain) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "FoodOnYourMind_Swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alec/Documents/food%20on%20your%20mind%20shoping%20list/Swift/ParseSwiftiOSTemplate-master/ParseiOSTemplate/recipieModel.swift"
+                  timestampString = "459731632.825563"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "4884">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodOnYourMind_Swift.GListBrain.(updatePersonalList (FoodOnYourMind_Swift.GListBrain) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "FoodOnYourMind_Swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alec/Documents/food%20on%20your%20mind%20shoping%20list/Swift/ParseSwiftiOSTemplate-master/ParseiOSTemplate/recipieModel.swift"
+                  timestampString = "459731632.825833"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "4893">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParseiOSTemplate/recipieModel.swift"
+            timestampString = "459731681.606395"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "updatePersonalList()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParseiOSTemplate/recipieModel.swift"
+            timestampString = "459731681.606395"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "updatePersonalList()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParseiOSTemplate/recipieModel.swift"
+            timestampString = "459731681.606395"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "updatePersonalList()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParseiOSTemplate/recipieModel.swift"
+            timestampString = "459731681.606395"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "updatePersonalList()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParseiOSTemplate/recipieModel.swift"
+            timestampString = "459731670.950001"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "updatePersonalList()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParseiOSTemplate/recipieModel.swift"
+            timestampString = "459732491.327964"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "GListBrain"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParseiOSTemplate/recipieModel.swift"
+            timestampString = "459731675.102538"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "updatePersonalList()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodOnYourMind_Swift.GListBrain.(updatePersonalList (FoodOnYourMind_Swift.GListBrain) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "FoodOnYourMind_Swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alec/Documents/food%20on%20your%20mind%20shoping%20list/Swift/ParseSwiftiOSTemplate-master/ParseiOSTemplate/recipieModel.swift"
+                  timestampString = "459731675.104971"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "4726">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodOnYourMind_Swift.GListBrain.(updatePersonalList (FoodOnYourMind_Swift.GListBrain) -&gt; () -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "FoodOnYourMind_Swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alec/Documents/food%20on%20your%20mind%20shoping%20list/Swift/ParseSwiftiOSTemplate-master/ParseiOSTemplate/recipieModel.swift"
+                  timestampString = "459731675.105199"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParseiOSTemplate/recipieModel.swift"
+            timestampString = "459732491.327964"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "recipieList"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParseiOSTemplate/recipieModel.swift"
+            timestampString = "459732485.70128"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "getAllTypes()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

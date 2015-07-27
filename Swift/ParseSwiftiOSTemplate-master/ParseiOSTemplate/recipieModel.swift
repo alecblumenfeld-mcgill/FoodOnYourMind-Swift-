@@ -35,9 +35,85 @@ var personalList = recipie(recipieName: "Personal List", recipieIngredients:  []
 class GListBrain {
 
     func updatePersonalList(){
+        let users = Realm(path: Realm.defaultPath).objects(User)
+        let currentUser = users[0]
+        
+        var query = PFQuery(className:"PersonalLists")
+        query.whereKey("objectId", equalTo: currentUser.personalListID)
+        query.includeKey("ingredients")
+
+      
+        
+        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) in
+            if (error == nil){
+                var toAddtoDB = [ingred]()
+                let realm = Realm()
+
+                for cardset in objects {
+                    
+                    
+                    if let ingredients = cardset["ingredients"] as? [PFObject]{
+                        for ingredient in ingredients{
+                            var toSave = ingred()
+                            toSave.id = ingredient.objectId
+                            
+                            if let ingredName = ingredient["ingredient"] as? String{
+                                toSave.name = ingredName
+                            }
+                            
+                            if let ingredType =  ingredient["ingredientType"] as? String{
+                                 toSave.type = ingredType
+                            }
+                          
+                            toAddtoDB += [toSave]
+                        }
+                        
+                    }
+                    for toSave in toAddtoDB{
+                        let exisists = realm.objects(ingred).filter("id = \(toSave.id)")
+                        println(exisists.count)
+                        if exisists.count > 0{
+                            
+                           
+                        
+                        }
+                        
+                        
+                        realm.write {
+                            println(toSave)
+                            realm.add(toSave)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+        func getAllTypes()-> [String: [ingred]] {
+            let ingredFromDB = Realm(path: Realm.defaultPath).objects(ingred)
+            println(ingredFromDB)
+            var typeList = [String: [ingred]]()
+                for ingredient in ingredFromDB{
+                    
+                    if let val =  typeList[ingredient.type]{
+                        typeList[ingredient.type]?.append(ingredient)
+                    }
+                    else{
+                        typeList[ingredient.type as String] = [ingredient]
+                    }
+                    
+                }
+            
+            return typeList
+        }
+        
+        
+        
+        
+        
     
     }
-}
+
 class recipieList {
     
     
