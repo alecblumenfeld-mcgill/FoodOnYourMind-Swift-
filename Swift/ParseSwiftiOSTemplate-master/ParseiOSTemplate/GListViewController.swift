@@ -16,16 +16,15 @@ class GListViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
    
     //initalize list
-    var list =  recipieList()
     //initilize catagory list
-    var typesList = GListBrain().getAllTypes()
+    var typesList = GListModel().getAllTypes()
     //keep track of slector
     var selector = 0
     
     
     
-    
-    var gList = GListBrain().getAllTypes()
+    var gModel = GListModel()
+    var gList = GListModel().getAllTypes()
     
     
     @IBAction func indexChanged(sender: UISegmentedControl) {
@@ -55,12 +54,10 @@ class GListViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch selector{
-        case 0,1:
+       
             return Array(typesList.values)[section].count
-        default:
-            return list.recipieList.count
-        }
+  
+        
     }
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch selector{
@@ -71,15 +68,16 @@ class GListViewController: UIViewController, UITableViewDataSource {
         }
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //this is the section that i am having trouble with, i need to protype a new cell for the
         var cell: listCell
         switch selector{
                 case 0,1:
                      cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! listCell
-                    let ingredient = Array(typesList.values)[indexPath.section][indexPath.row]
-                    cell.textLabel!.text = ingredient.name
+                    let ingred = Array(typesList.values)[indexPath.section][indexPath.row]
+                    cell.textLabel!.text = ingred.name
+                    cell.id = ingred.id 
+                     
                     //if ingredient.checked == true
-                        if false{
+                    if ingred.checked{
                         cell.checkedImage.image = UIImage(named: "icon-check-green")
                         cell.backgroundColor = UIColor.lightGrayColor()
                         cell.textLabel!.alpha = 0.4
@@ -107,10 +105,10 @@ class GListViewController: UIViewController, UITableViewDataSource {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
        
         var currentCell = tableView.cellForRowAtIndexPath(indexPath) as UITableViewCell?
-        //currentCell.checkedImage.image = UIImage(named: "icon-check-green")
         let cellName = (currentCell!.textLabel!.text)
         let cellAmount = (currentCell!.detailTextLabel!.text)
-        list.toggle(cellName! , cellAmount: cellAmount!)
+        //list.toggle(cellName! , cellAmount: cellAmount!)
+        
         self.tableView.reloadData()
 
 
@@ -130,10 +128,11 @@ class GListViewController: UIViewController, UITableViewDataSource {
         
        //alert actions
         let remove: UIAlertAction = UIAlertAction(title: "Remove", style: .Destructive) { action -> Void in
-            self.list.remove(cell!.textLabel!.text!, cellAmount: cell!.detailTextLabel!.text!)
+            //self.gModel.remove(cell!.textLabel!.text!, cellAmount: cell!.detailTextLabel!.text!)
             self.updateList(self.selector)
             self.tableView.reloadData()
         }
+        //cancel
         let cancel: UIAlertAction = UIAlertAction(title: "Cancel", style: .Default) {action -> Void in
             
         }
@@ -144,15 +143,15 @@ class GListViewController: UIViewController, UITableViewDataSource {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //long press gesture
         var gesture: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressGestureRecognized:")
         gesture.minimumPressDuration = 1.0
         self.view.addGestureRecognizer(gesture)
         
+        //update list
+        GListModel().updatePersonalList()
         
-        var brain =  GListBrain()
-        
-        brain.updatePersonalList()
-        var gList = brain.getAllTypes()
 
     }
 

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CoreData
+import RealmSwift
 class LoginViewController: UIViewController {
 
 
@@ -41,6 +41,22 @@ class LoginViewController: UIViewController {
                 PFUser.logInWithUsernameInBackground(userEmailAddress, password:userPassword) {
                     (user: PFUser?, error: NSError?) -> Void in
                     if user != nil {
+                        
+                        var newUser = User()
+                        
+//                        
+//                        newUser.username = userEmailAddress
+//                        newUser.email = user?.email?
+//                        newUser.id = user!.objectId
+//                        newUser.personalListID = pointer.objectId as String
+                        // Get the default Realm
+                        let realm = Realm()
+                        //write user to db
+                        realm.write {
+                            realm.add(newUser)
+                        }
+                        
+                        
                         dispatch_async(dispatch_get_main_queue()) {
                             
                           

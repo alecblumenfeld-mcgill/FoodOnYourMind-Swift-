@@ -48,13 +48,6 @@ class RegisterViewController: UIViewController {
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
             if error == nil {
-
-              
-                // You only need to do this once (per thread)
-                
-                // Add to the Realm inside a transaction
-                
-                //async save personal list
                 dispatch_async(dispatch_get_main_queue()) {
                     let pointer = PFObject(className:"PersonalLists")
                     
@@ -105,10 +98,8 @@ class RegisterViewController: UIViewController {
                 //Add failure pop up
                 let alertController = UIAlertController(title: nil, message:
                     "There was a Problem Registering your account", preferredStyle: UIAlertControllerStyle.Alert)
-                
                 //alert actions
                 let ok: UIAlertAction = UIAlertAction(title: "Ok", style: .Default) { action -> Void in
-                    
                 }
               
                 alertController.addAction(ok)

@@ -28,7 +28,6 @@
 		70136D461B62ED8B00D89B21 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70136D431B62ED8B00D89B21 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		70136D471B62ED8B00D89B21 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70136D441B62ED8B00D89B21 /* RealmSwift.framework */; };
 		70136D481B62ED8B00D89B21 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70136D441B62ED8B00D89B21 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		703BC6FA1B60FE4200873726 /* CoreDataWraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703BC6F91B60FE4200873726 /* CoreDataWraper.swift */; };
 		705FFC9A1B570EB500000399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705FFC991B570EB500000399 /* Main.storyboard */; };
 		705FFCA01B570EF200000399 /* listCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9B1B570EF200000399 /* listCell.swift */; };
 		705FFCA11B570EF200000399 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9C1B570EF200000399 /* AddViewController.swift */; };
@@ -39,6 +38,8 @@
 		706277241B58ABD30071E338 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		706277251B58ABD40071E338 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		706277261B58ABDE0071E338 /* Manifest.lock in Resources */ = {isa = PBXBuildFile; fileRef = D9F94619D883451ECBA9FA46 /* Manifest.lock */; };
+		7064CE281B6E95BB00FE5DC0 /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7064CE271B6E95BB00FE5DC0 /* ParseHelper.swift */; };
+		7064CE2A1B6F064F00FE5DC0 /* AutoCompleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7064CE291B6F064F00FE5DC0 /* AutoCompleteCell.swift */; };
 		707826441B57114A004F641C /* IQDropDownTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 707826431B57114A004F641C /* IQDropDownTextField.m */; };
 		707826461B5711CC004F641C /* AERecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707826451B5711CC004F641C /* AERecord.swift */; };
 		707826481B57133C004F641C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707826471B57133C004F641C /* LoginViewController.swift */; };
@@ -98,13 +99,14 @@
 		2BC397481AADE8ED001ABDF2 /* ParseiOSTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseiOSTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
 		70136D431B62ED8B00D89B21 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		70136D441B62ED8B00D89B21 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		703BC6F91B60FE4200873726 /* CoreDataWraper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataWraper.swift; sourceTree = "<group>"; };
 		705FFC991B570EB500000399 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		705FFC9B1B570EF200000399 /* listCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listCell.swift; sourceTree = "<group>"; };
 		705FFC9C1B570EF200000399 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		705FFC9D1B570EF200000399 /* recipieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipieModel.swift; sourceTree = "<group>"; };
 		705FFC9E1B570EF200000399 /* GListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GListViewController.swift; sourceTree = "<group>"; };
 		705FFC9F1B570EF200000399 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7064CE271B6E95BB00FE5DC0 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
+		7064CE291B6F064F00FE5DC0 /* AutoCompleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteCell.swift; sourceTree = "<group>"; };
 		707826421B57114A004F641C /* IQDropDownTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQDropDownTextField.h; sourceTree = "<group>"; };
 		707826431B57114A004F641C /* IQDropDownTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQDropDownTextField.m; sourceTree = "<group>"; };
 		707826451B5711CC004F641C /* AERecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AERecord.swift; sourceTree = "<group>"; };
@@ -253,9 +255,10 @@
 			isa = PBXGroup;
 			children = (
 				70FDA4D51B589E4200D40063 /* User.swift */,
+				7064CE271B6E95BB00FE5DC0 /* ParseHelper.swift */,
 				705FFC9D1B570EF200000399 /* recipieModel.swift */,
 				705FFC9B1B570EF200000399 /* listCell.swift */,
-				703BC6F91B60FE4200873726 /* CoreDataWraper.swift */,
+				7064CE291B6F064F00FE5DC0 /* AutoCompleteCell.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -393,7 +396,7 @@
 				707826461B5711CC004F641C /* AERecord.swift in Sources */,
 				705FFCA11B570EF200000399 /* AddViewController.swift in Sources */,
 				705FFCA21B570EF200000399 /* recipieModel.swift in Sources */,
-				703BC6FA1B60FE4200873726 /* CoreDataWraper.swift in Sources */,
+				7064CE2A1B6F064F00FE5DC0 /* AutoCompleteCell.swift in Sources */,
 				7078264A1B571D4F004F641C /* RegisterViewController.swift in Sources */,
 				705FFCA01B570EF200000399 /* listCell.swift in Sources */,
 				7078264C1B572461004F641C /* WelcomeViewController.swift in Sources */,
@@ -404,6 +407,7 @@
 				707826441B57114A004F641C /* IQDropDownTextField.m in Sources */,
 				705FFCA41B570EF200000399 /* SettingsViewController.swift in Sources */,
 				707826481B57133C004F641C /* LoginViewController.swift in Sources */,
+				7064CE281B6E95BB00FE5DC0 /* ParseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

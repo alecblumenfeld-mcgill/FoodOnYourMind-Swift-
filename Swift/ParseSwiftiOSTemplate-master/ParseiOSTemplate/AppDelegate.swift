@@ -23,8 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // higher than the previous version (oldSchemaVersion) or an RLMException is thrown
         setSchemaVersion(1, Realm.defaultPath, { migration, oldSchemaVersion in
             // We haven’t migrated anything yet, so oldSchemaVersion == 0
+            
+            
+            println(oldSchemaVersion)
             if oldSchemaVersion < 1 {
-                
+                migration.enumerate(ingred.className()) { oldObject, newObject in
+                    // combine name fields into a single field
+                    newObject!["checked"] = false
+                }
                 // Nothing to do!
                 // Realm will automatically detect new properties and removed properties
                 // And will update the schema on disk automatically

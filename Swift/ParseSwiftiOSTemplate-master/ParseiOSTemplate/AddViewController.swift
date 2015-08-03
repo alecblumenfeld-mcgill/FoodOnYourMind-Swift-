@@ -18,7 +18,8 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     let autocompleteTableView = UITableView(frame: CGRectMake(0,120,320,120), style: UITableViewStyle.Plain)
     
     var pastUrls = ["Men", "Women", "Cats", "Dogs", "Children"]
-    var autocompleteUrls = [String]()
+    
+    var autocompleteList = [PFObject]()
     
         
     override func viewDidLoad() {
@@ -50,21 +51,24 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     func searchAutocompleteEntriesWithSubstring(substring: String)
     {
-        autocompleteUrls.removeAll(keepCapacity: false)
+        autocompleteList.removeAll(keepCapacity: false)
         
-        for curString in pastUrls
-        {
-            var myString:NSString! = curString as NSString
+        // need to find a way to query with out capitlization
+        var query = PFQuery(className:"Ingredients")
+        query.whereKey("ingredient", containsString: substring)
+        //get array
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
             
-            var substringRange :NSRange! = myString.rangeOfString(substring)
-            
-            if (substringRange.location  == 0)
-            {
-                autocompleteUrls.append(curString)
+            if let ingredients = objects as? [PFObject]{
+                
+                for ingredient in ingredients{
+                    self.autocompleteList.append(ingredient )
+                }
             }
+            self.autocompleteTableView.reloadData()
         }
         
-        autocompleteTableView.reloadData()
     }
     
     
@@ -74,7 +78,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return autocompleteUrls.count
+        return autocompleteList.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -85,21 +89,68 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         var cell: UITableViewCell  = (tableView.dequeueReusableCellWithIdentifier(autoCompleteRowIdentifier) as? UITableViewCell)!
         let index = indexPath.row as Int
         
-        cell.textLabel!.text = autocompleteUrls[index]
+        cell.textLabel!.text = autocompleteList[index]["ingredient"] as? String
+        println(autocompleteList[index].objectId)
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedCell : UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
-        textField.text = selectedCell.textLabel!.text
-    }
-
-    @IBAction func Save(sender: AnyObject) {
-        //generate object under parse
+        //add to realm and to parse on id
+        
+        let index = indexPath.row as Int
+        let selectedId = autocompleteList[index].objectId
+        
+        
+        
         //get current user and add ingredient to the parse object
         let users = Realm(path: Realm.defaultPath).objects(User)
         let currentUser = users[0]
-        var newIngredID = "NO ID";
+        //var newIngredID = " ID";
+        
+        var query = PFQuery(className:"PersonalLists")
+        query.getObjectInBackgroundWithId(currentUser.personalListID) {
+            (personalList: PFObject?, error: NSError?) -> Void in
+            if error == nil && personalList != nil {
+                //add object id to parse
+                personalList?.addUniqueObject(selectedId, forKey: "ingredients")
+                personalList?.save()
+              
+            } else {
+                println(error)
+            }
+        }
+        
+        
+        //save new ingred to realm
+        let newIng = ingred()
+        newIng.name = autocompleteList[index]["ingredient"] as! String
+        newIng.type = autocompleteList[index]["ingredientType"] as! String
+        
+        //newIng.id = newIngredID
+        // Get the default Realm
+        let realm = Realm()
+        // Add to the Realm inside a transaction
+        realm.write {
+            realm.add(newIng)
+        }
+        
+        
+        //go back to list
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("MainNavigation") as! UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
+
+        
+        
+    }
+
+    @IBAction func Save(sender: AnyObject) {
+        //generate New object under parse
+        //get current user and add ingredient to the parse object
+        let users = Realm(path: Realm.defaultPath).objects(User)
+        let currentUser = users[0]
+        //var newIngredID = " ID";
         
         
         var query = PFQuery(className:"PersonalLists")
@@ -109,11 +160,12 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 var newIngredient = PFObject(className:"Ingredients")
                 newIngredient["ingredient"] = self.textField.text
                 newIngredient["ingredientType"] = self.catField.text
-                newIngredID = newIngredient.objectId
+               
+                //newIngredID = newIngredient.objectId
                 newIngredient.save()
                 personalList?.addUniqueObject(newIngredient, forKey: "ingredients")
                 personalList?.save()
-                
+                 println(newIngredient)
             } else {
                 println(error)
             }
@@ -124,7 +176,8 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let newIng = ingred()
         newIng.name = self.textField.text
         newIng.type = self.catField.text
-        newIng.id = newIngredID
+        
+        //newIng.id = newIngredID
         // Get the default Realm
         let realm = Realm()
         // Add to the Realm inside a transaction

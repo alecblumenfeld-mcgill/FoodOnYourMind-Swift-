@@ -12,75 +12,48 @@ import CoreData
 import RealmSwift
 
 
-//define new cell where recipie is linked in the cell value
-var potato = ingredient(Name: "potato", Amount: "1 lb", ingredientType: "vegtable")
-var tomato = ingredient(Name: "tomato", Amount: "1 lb", ingredientType: "vegtable")
-var corn = ingredient(Name: "corn", Amount: "4 ears ", ingredientType: "vegtable")
-//meat
-var chicken = ingredient(Name: "chicken", Amount: ".5 lb", ingredientType: "meat")
-var beef = ingredient(Name: "beef", Amount: ".25 lb", ingredientType: "meat")
-var pork  = ingredient(Name: "pork", Amount: "1 lb", ingredientType: "meat")
-//fruits
-var peach = ingredient(Name: "peach", Amount: "3 peaches", ingredientType: "fruit")
 
-
-//dummy data
-var cornBeef = recipie(recipieName: "Corned Beef", recipieIngredients:  [beef, corn] )
-var chickenStew = recipie(recipieName: "Chicken Stew", recipieIngredients:  [chicken, tomato, potato] )
 
 //personal List
 var personalList = recipie(recipieName: "Personal List", recipieIngredients:  [] )
 
 
-class GListBrain {
+class GListModel {
 
     func updatePersonalList(){
         let users = Realm(path: Realm.defaultPath).objects(User)
         let currentUser = users[0]
-        
+        //query parse for the username
         var query = PFQuery(className:"PersonalLists")
         query.whereKey("objectId", equalTo: currentUser.personalListID)
         query.includeKey("ingredients")
 
-      
-        
+        //save the object to local data store
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) in
             if (error == nil){
                 var toAddtoDB = [ingred]()
                 let realm = Realm()
 
-                for cardset in objects {
-                    
-                    
-                    if let ingredients = cardset["ingredients"] as? [PFObject]{
+                for list in objects {
+                    println(list["ingredients"])
+                    if let ingredients = list["ingredients"] as? [PFObject]{
                         for ingredient in ingredients{
                             var toSave = ingred()
                             toSave.id = ingredient.objectId
-                            
                             if let ingredName = ingredient["ingredient"] as? String{
                                 toSave.name = ingredName
                             }
-                            
                             if let ingredType =  ingredient["ingredientType"] as? String{
                                  toSave.type = ingredType
                             }
-                          
                             toAddtoDB += [toSave]
                         }
                         
                     }
+                    
+                    //save list to realm
                     for toSave in toAddtoDB{
-                        let exisists = realm.objects(ingred).filter("id = \(toSave.id)")
-                        println(exisists.count)
-                        if exisists.count > 0{
-                            
-                           
-                        
-                        }
-                        
-                        
                         realm.write {
-                            println(toSave)
                             realm.add(toSave)
                         }
                     }
@@ -89,43 +62,52 @@ class GListBrain {
         }
     }
     
-        func getAllTypes()-> [String: [ingred]] {
-            let ingredFromDB = Realm(path: Realm.defaultPath).objects(ingred)
-            println(ingredFromDB)
-            var typeList = [String: [ingred]]()
-                for ingredient in ingredFromDB{
-                    
-                    if let val =  typeList[ingredient.type]{
-                        typeList[ingredient.type]?.append(ingredient)
-                    }
-                    else{
-                        typeList[ingredient.type as String] = [ingredient]
-                    }
-                    
+    func getAllTypes()-> [String: [ingred]] {
+        let ingredFromDB = Realm(path: Realm.defaultPath).objects(ingred)
+        println(ingredFromDB)
+        var typeList = [String: [ingred]]()
+            for ingredient in ingredFromDB{
+                
+                if let val =  typeList[ingredient.type]{
+                    typeList[ingredient.type]?.append(ingredient)
                 }
-            
-            return typeList
-        }
+                else{
+                    typeList[ingredient.type as String] = [ingredient]
+                }
+                
+            }
         
-        
-        
-        
-        
-    
+        return typeList
     }
+    
+}
 
+class ingred: Object {
+    dynamic var name = ""
+    dynamic var type = ""
+    dynamic var quanity = ""
+    dynamic var id = ""
+    dynamic var checked = false
+    dynamic var owner: recip? // Can be optional
+}
+class recip: Object {
+    dynamic var name = ""
+    let ingredients = List<ingred>()
+}
+
+
+//DEPRECHIATED
+//
+//All of the following code will be excluded from the production build
+//it was only used for scalfolding of the app before parse/realm
 class recipieList {
-    
-    
-    
     
     var recipieList =  [recipie]()
     init () {
 
 
         self.updatePersonalList()
-        self.recipieList.append(cornBeef)
-        self.recipieList.append(chickenStew)
+
     }
     
     
@@ -327,14 +309,3 @@ class ingredient : PFObject, PFSubclassing {
 
 }
 
-class ingred: Object {
-    dynamic var name = ""
-    dynamic var type = ""
-    dynamic var quanity = ""
-    dynamic var id = ""
-    dynamic var owner: recip? // Can be optional
-}
-class recip: Object {
-    dynamic var name = ""
-    let ingredients = List<ingred>()
-}
