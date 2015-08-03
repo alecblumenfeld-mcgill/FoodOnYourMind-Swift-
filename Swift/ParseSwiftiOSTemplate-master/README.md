@@ -1,9 +1,6 @@
-# ParseSwiftiOSTemplate
-This is a template for a Swift Single View Application configured with Parse and all frameworks to start with.
+# Food On Your Mind Recipie List App
+This is the intal release the food on your mind shooping list, the goal of this app is to provide users with an app that syncs recipie lists and allows for the quick addition of grociery list items
 
-To initialize your project sign up for Parse.com, and get your applicationID and clientKey here: https://parse.com/apps/quickstart#parse_data/mobile/ios/native/new 
+the project uses some cocapod repos, realm, and parse.com  
 
-With that information, go to the AppDelegate.swift file and add the applicationID and clientKey in the didFinishLaunchingwithOptions block.
-
-There is a test in ViewController.swift to make sure your app is now hooked up, feel free to remove it before or after testing.
-
+This is probly not the final git repo for this progject, integrating realm and parse is messy
