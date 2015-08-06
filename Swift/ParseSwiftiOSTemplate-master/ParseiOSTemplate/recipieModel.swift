@@ -21,7 +21,12 @@ var personalList = recipie(recipieName: "Personal List", recipieIngredients:  []
 class GListModel {
 
     func updatePersonalList(){
+        let ingredlist = Realm(path: Realm.defaultPath).objects(ingred)
+        let realm = Realm()
+ 
+  
         let users = Realm(path: Realm.defaultPath).objects(User)
+        
         let currentUser = users[0]
         //query parse for the username
         var query = PFQuery(className:"PersonalLists")
@@ -29,42 +34,59 @@ class GListModel {
         query.includeKey("ingredients")
 
         //save the object to local data store
-        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) in
+        query.getFirstObjectInBackgroundWithBlock { (object: PFObject!, error: NSError!) in
             if (error == nil){
-                var toAddtoDB = [ingred]()
-                let realm = Realm()
-
-                for list in objects {
-                    println(list["ingredients"])
-                    if let ingredients = list["ingredients"] as? [PFObject]{
-                        for ingredient in ingredients{
-                            var toSave = ingred()
-                            toSave.id = ingredient.objectId
-                            if let ingredName = ingredient["ingredient"] as? String{
-                                toSave.name = ingredName
-                            }
-                            if let ingredType =  ingredient["ingredientType"] as? String{
-                                 toSave.type = ingredType
-                            }
-                            toAddtoDB += [toSave]
-                        }
-                        
+               
+                    var toAddtoDB = [ingred]()
+                    //add to queue for write
+                if let personalList = object["ingredients"] as? NSArray{
+                    println(personalList.count)
+                            for ingredient in personalList{
+                                //querry if it already exitists
+                                
+                                
+                                
+                                
+                                
+                                println("INGRE: \(ingredient)")
+                                var toSave = ingred()
+                                var query = PFQuery(className:"Ingredients")
+                                query.whereKey("objectId", equalTo:ingredient as! String)
+                                let fetechedIngred = query.getFirstObject()
+                                toSave.id = fetechedIngred.objectId
+                                
+                                println(toSave.id)
+                                if let ingredName = fetechedIngred["ingredient"] as? String{
+                                    toSave.name = ingredName
+                                }
+                                if let ingredType =  fetechedIngred["ingredientType"] as? String{
+                                     toSave.type = ingredType
+                                }
+                                toAddtoDB += [toSave]
+                            
+                            
                     }
                     
-                    //save list to realm
-                    for toSave in toAddtoDB{
-                        realm.write {
-                            realm.add(toSave)
-                        }
+                        //save list to realm
+                        for toSave in toAddtoDB{
+                            realm.write {
+                                
+                                realm.add(toSave)
+                            }
+                        
                     }
                 }
+
+            }
+            else{
+                println(error)
             }
         }
     }
     
     func getAllTypes()-> [String: [ingred]] {
         let ingredFromDB = Realm(path: Realm.defaultPath).objects(ingred)
-        println(ingredFromDB)
+
         var typeList = [String: [ingred]]()
             for ingredient in ingredFromDB{
                 
@@ -89,6 +111,7 @@ class ingred: Object {
     dynamic var id = ""
     dynamic var checked = false
     dynamic var owner: recip? // Can be optional
+
 }
 class recip: Object {
     dynamic var name = ""

@@ -45,10 +45,15 @@ class LoginViewController: UIViewController {
                         var newUser = User()
                         
 //                        
-//                        newUser.username = userEmailAddress
-//                        newUser.email = user?.email?
-//                        newUser.id = user!.objectId
-//                        newUser.personalListID = pointer.objectId as String
+                        newUser.username = userEmailAddress
+                        newUser.email = self.usernameFeild.text.lowercaseString
+                        newUser.id = user!.objectId
+                        //personal list has to be fetched seperatly becuse it does not exisit in pfusers only pf object
+                        var query = PFQuery(className:"_User")
+                        query.whereKey("objectId", equalTo: newUser.id)
+                        let personalistID = query.getFirstObject()
+                        newUser.personalListID = (personalistID["UsersPersonalList"].objectId)
+                        //newUser.personalListID = personalListID
                         // Get the default Realm
                         let realm = Realm()
                         //write user to db
@@ -118,47 +123,5 @@ class LoginViewController: UIViewController {
         let vc = storyboard.instantiateViewControllerWithIdentifier("WViewController") as! UIViewController
         self.presentViewController(vc, animated: false, completion: nil)
     }
-//@IBOutlet weak var loginUser: UIButton!
-//    @IBAction func login(sender: AnyObject) {
-////     
-////        
-////        var userEmailAddress = username.text.lowercaseString
-////        
-////        var userPassword = password.text
-////        
-////        PFUser.logInWithUsernameInBackground(userEmailAddress, password:userPassword) {
-////            (user: PFUser?, error: NSError?) -> Void in
-////            if user != nil {
-////                dispatch_async(dispatch_get_main_queue()) {
-////                    //self.performSegueWithIdentifier("signInToNavigation", sender: self)
-////                     println(user)
-////                    
-////                }
-////            } else {
-////                
-////                if let message: AnyObject = error!.userInfo!["error"] {
-////                    println("\(message)")
-////                }
-////            }
-////        }
-//    }
-    
-  //  @IBAction func goBack(sender: AnyObject) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewControllerWithIdentifier("WViewController") as! UIViewController
-//        self.presentViewController(vc, animated: false, completion: nil)
-   // }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

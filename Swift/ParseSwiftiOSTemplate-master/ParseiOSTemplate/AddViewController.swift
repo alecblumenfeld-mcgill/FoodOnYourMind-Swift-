@@ -113,6 +113,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             (personalList: PFObject?, error: NSError?) -> Void in
             if error == nil && personalList != nil {
                 //add object id to parse
+                
                 personalList?.addUniqueObject(selectedId, forKey: "ingredients")
                 personalList?.save()
               
@@ -126,7 +127,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let newIng = ingred()
         newIng.name = autocompleteList[index]["ingredient"] as! String
         newIng.type = autocompleteList[index]["ingredientType"] as! String
-        
+        newIng.id = selectedId
         //newIng.id = newIngredID
         // Get the default Realm
         let realm = Realm()
@@ -150,7 +151,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         //get current user and add ingredient to the parse object
         let users = Realm(path: Realm.defaultPath).objects(User)
         let currentUser = users[0]
-        //var newIngredID = " ID";
+        let newIng = ingred()
         
         
         var query = PFQuery(className:"PersonalLists")
@@ -163,7 +164,9 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                
                 //newIngredID = newIngredient.objectId
                 newIngredient.save()
-                personalList?.addUniqueObject(newIngredient, forKey: "ingredients")
+                
+                newIng.id = newIngredient.objectId
+                personalList?.addUniqueObject(newIngredient.objectId, forKey: "ingredients")
                 personalList?.save()
                  println(newIngredient)
             } else {
@@ -171,9 +174,8 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             }
         }
         
-        
+        println( newIng.id)
         //save new ingred to realm
-        let newIng = ingred()
         newIng.name = self.textField.text
         newIng.type = self.catField.text
         
