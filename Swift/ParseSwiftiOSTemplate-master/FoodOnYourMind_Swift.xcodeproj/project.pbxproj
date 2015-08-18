@@ -31,21 +31,19 @@
 		705FFC9A1B570EB500000399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705FFC991B570EB500000399 /* Main.storyboard */; };
 		705FFCA01B570EF200000399 /* listCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9B1B570EF200000399 /* listCell.swift */; };
 		705FFCA11B570EF200000399 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9C1B570EF200000399 /* AddViewController.swift */; };
-		705FFCA21B570EF200000399 /* recipieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9D1B570EF200000399 /* recipieModel.swift */; };
+		705FFCA21B570EF200000399 /* GListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9D1B570EF200000399 /* GListModel.swift */; };
 		705FFCA31B570EF200000399 /* GListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9E1B570EF200000399 /* GListViewController.swift */; };
 		705FFCA41B570EF200000399 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9F1B570EF200000399 /* SettingsViewController.swift */; };
 		706277221B58AB9B0071E338 /* Manifest.lock in Resources */ = {isa = PBXBuildFile; fileRef = D9F94619D883451ECBA9FA46 /* Manifest.lock */; };
 		706277241B58ABD30071E338 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		706277251B58ABD40071E338 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		706277261B58ABDE0071E338 /* Manifest.lock in Resources */ = {isa = PBXBuildFile; fileRef = D9F94619D883451ECBA9FA46 /* Manifest.lock */; };
-		7064CE281B6E95BB00FE5DC0 /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7064CE271B6E95BB00FE5DC0 /* ParseHelper.swift */; };
 		7064CE2A1B6F064F00FE5DC0 /* AutoCompleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7064CE291B6F064F00FE5DC0 /* AutoCompleteCell.swift */; };
 		707826441B57114A004F641C /* IQDropDownTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 707826431B57114A004F641C /* IQDropDownTextField.m */; };
 		707826461B5711CC004F641C /* AERecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707826451B5711CC004F641C /* AERecord.swift */; };
 		707826481B57133C004F641C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707826471B57133C004F641C /* LoginViewController.swift */; };
 		7078264A1B571D4F004F641C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707826491B571D4F004F641C /* RegisterViewController.swift */; };
 		7078264C1B572461004F641C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7078264B1B572461004F641C /* WelcomeViewController.swift */; };
-		70990E011B5C744B000A38F0 /* ingredientNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70990E001B5C744B000A38F0 /* ingredientNameViewController.swift */; };
 		70FDA4D61B589E4200D40063 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDA4D51B589E4200D40063 /* User.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,10 +100,9 @@
 		705FFC991B570EB500000399 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		705FFC9B1B570EF200000399 /* listCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listCell.swift; sourceTree = "<group>"; };
 		705FFC9C1B570EF200000399 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		705FFC9D1B570EF200000399 /* recipieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recipieModel.swift; sourceTree = "<group>"; };
+		705FFC9D1B570EF200000399 /* GListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GListModel.swift; sourceTree = "<group>"; };
 		705FFC9E1B570EF200000399 /* GListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GListViewController.swift; sourceTree = "<group>"; };
 		705FFC9F1B570EF200000399 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		7064CE271B6E95BB00FE5DC0 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		7064CE291B6F064F00FE5DC0 /* AutoCompleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteCell.swift; sourceTree = "<group>"; };
 		707826421B57114A004F641C /* IQDropDownTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQDropDownTextField.h; sourceTree = "<group>"; };
 		707826431B57114A004F641C /* IQDropDownTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQDropDownTextField.m; sourceTree = "<group>"; };
@@ -113,7 +110,6 @@
 		707826471B57133C004F641C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		707826491B571D4F004F641C /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7078264B1B572461004F641C /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		70990E001B5C744B000A38F0 /* ingredientNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ingredientNameViewController.swift; sourceTree = "<group>"; };
 		70FDA4D51B589E4200D40063 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D9F94619D883451ECBA9FA46 /* Manifest.lock */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Manifest.lock; path = Pods/Manifest.lock; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,21 +172,15 @@
 		2BC3970A1AADE837001ABDF2 /* FoodOnYourMind */ = {
 			isa = PBXGroup;
 			children = (
-				705FFC9C1B570EF200000399 /* AddViewController.swift */,
+				705C88281B82E058005FD08C /* Views */,
 				2BC3970D1AADE837001ABDF2 /* AppDelegate.swift */,
-				705FFC9E1B570EF200000399 /* GListViewController.swift */,
 				2BC397141AADE837001ABDF2 /* Images.xcassets */,
 				2BC397161AADE837001ABDF2 /* LaunchScreen.xib */,
 				707826411B57113B004F641C /* lib */,
-				707826471B57133C004F641C /* LoginViewController.swift */,
 				705FFC991B570EB500000399 /* Main.storyboard */,
-				70990E001B5C744B000A38F0 /* ingredientNameViewController.swift */,
-				7078264D1B574474004F641C /* Model */,
+				7078264D1B574474004F641C /* Models */,
 				2BC397481AADE8ED001ABDF2 /* ParseiOSTemplate-Bridging-Header.h */,
-				707826491B571D4F004F641C /* RegisterViewController.swift */,
-				705FFC9F1B570EF200000399 /* SettingsViewController.swift */,
 				2BC3970B1AADE837001ABDF2 /* Supporting Files */,
-				7078264B1B572461004F641C /* WelcomeViewController.swift */,
 			);
 			name = FoodOnYourMind;
 			path = ParseiOSTemplate;
@@ -241,6 +231,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		705C88281B82E058005FD08C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				705FFC9C1B570EF200000399 /* AddViewController.swift */,
+				705FFC9E1B570EF200000399 /* GListViewController.swift */,
+				707826471B57133C004F641C /* LoginViewController.swift */,
+				707826491B571D4F004F641C /* RegisterViewController.swift */,
+				705FFC9F1B570EF200000399 /* SettingsViewController.swift */,
+				7078264B1B572461004F641C /* WelcomeViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		707826411B57113B004F641C /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,16 +254,15 @@
 			name = lib;
 			sourceTree = "<group>";
 		};
-		7078264D1B574474004F641C /* Model */ = {
+		7078264D1B574474004F641C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				70FDA4D51B589E4200D40063 /* User.swift */,
-				7064CE271B6E95BB00FE5DC0 /* ParseHelper.swift */,
-				705FFC9D1B570EF200000399 /* recipieModel.swift */,
+				705FFC9D1B570EF200000399 /* GListModel.swift */,
 				705FFC9B1B570EF200000399 /* listCell.swift */,
 				7064CE291B6F064F00FE5DC0 /* AutoCompleteCell.swift */,
 			);
-			name = Model;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		97C4A4D799B10EE0E04BA1D2 /* Pods */ = {
@@ -395,19 +397,17 @@
 			files = (
 				707826461B5711CC004F641C /* AERecord.swift in Sources */,
 				705FFCA11B570EF200000399 /* AddViewController.swift in Sources */,
-				705FFCA21B570EF200000399 /* recipieModel.swift in Sources */,
+				705FFCA21B570EF200000399 /* GListModel.swift in Sources */,
 				7064CE2A1B6F064F00FE5DC0 /* AutoCompleteCell.swift in Sources */,
 				7078264A1B571D4F004F641C /* RegisterViewController.swift in Sources */,
 				705FFCA01B570EF200000399 /* listCell.swift in Sources */,
 				7078264C1B572461004F641C /* WelcomeViewController.swift in Sources */,
-				70990E011B5C744B000A38F0 /* ingredientNameViewController.swift in Sources */,
 				705FFCA31B570EF200000399 /* GListViewController.swift in Sources */,
 				70FDA4D61B589E4200D40063 /* User.swift in Sources */,
 				2BC3970E1AADE837001ABDF2 /* AppDelegate.swift in Sources */,
 				707826441B57114A004F641C /* IQDropDownTextField.m in Sources */,
 				705FFCA41B570EF200000399 /* SettingsViewController.swift in Sources */,
 				707826481B57133C004F641C /* LoginViewController.swift in Sources */,
-				7064CE281B6E95BB00FE5DC0 /* ParseHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

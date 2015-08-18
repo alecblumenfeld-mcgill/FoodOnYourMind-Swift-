@@ -10,9 +10,6 @@ import UIKit
 import RealmSwift
 class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate  {
     
-//    @IBOutlet weak var nameField: UITextField!
-//    @IBOutlet weak var qtyField: UITextField!
-//    @IBOutlet weak var unitField: IQDropDownTextField!
     @IBOutlet weak var catField: IQDropDownTextField!
     @IBOutlet weak var textField: UITextField!
     let autocompleteTableView = UITableView(frame: CGRectMake(0,120,320,120), style: UITableViewStyle.Plain)
@@ -39,8 +36,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
 
     }
 
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String ) -> Bool
-    {
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String ) -> Bool{
         autocompleteTableView.hidden = false
         var substring = (textField.text as NSString).stringByReplacingCharactersInRange(range, withString: string)
         

@@ -19,12 +19,10 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
@@ -35,7 +33,6 @@ class RegisterViewController: UIViewController {
         var firstname = firstName.text
         userEmailAddress = userEmailAddress.lowercaseString
         
-        //Add Agrement
         
         var user = PFUser()
         user.username = username
@@ -64,13 +61,10 @@ class RegisterViewController: UIViewController {
                         realm.write {
                             realm.add(newUser)
                         }
-
-                    
-                    
                     }
                     
                     
-                
+                    //Alert sucess
                     let alertController = UIAlertController(title: nil, message:
                         "Success! Lets Get Cooking.", preferredStyle: UIAlertControllerStyle.Alert)
                     let ok: UIAlertAction = UIAlertAction(title: "Ok", style: .Default) { action -> Void in
@@ -79,12 +73,6 @@ class RegisterViewController: UIViewController {
                         let vc = storyboard.instantiateViewControllerWithIdentifier("MainNavigation") as! UIViewController
                         self.presentViewController(vc, animated: true, completion: nil)
                     }
-                    println(user)
-                    
-                    
-                    
-                    
-                   
                     
                     //Add Success Modal
                     alertController.addAction(ok)
@@ -97,7 +85,7 @@ class RegisterViewController: UIViewController {
             } else {
                 //Add failure pop up
                 let alertController = UIAlertController(title: nil, message:
-                    "There was a Problem Registering your account", preferredStyle: UIAlertControllerStyle.Alert)
+                    "There was a Problem Registering your account: \(error)", preferredStyle: UIAlertControllerStyle.Alert)
                 //alert actions
                 let ok: UIAlertAction = UIAlertAction(title: "Ok", style: .Default) { action -> Void in
                 }
@@ -133,14 +121,5 @@ class RegisterViewController: UIViewController {
         let vc = storyboard.instantiateViewControllerWithIdentifier("WViewController") as! UIViewController
         self.presentViewController(vc, animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
