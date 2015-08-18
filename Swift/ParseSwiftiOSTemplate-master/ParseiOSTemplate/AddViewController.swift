@@ -17,7 +17,6 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var textField: UITextField!
     let autocompleteTableView = UITableView(frame: CGRectMake(0,120,320,120), style: UITableViewStyle.Plain)
     
-    var pastUrls = ["Men", "Women", "Cats", "Dogs", "Children"]
     
     var autocompleteList = [PFObject]()
     
@@ -51,7 +50,6 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     func searchAutocompleteEntriesWithSubstring(substring: String)
     {
-        autocompleteList.removeAll(keepCapacity: false)
         
         // need to find a way to query with out capitlization
         var query = PFQuery(className:"Ingredients")
@@ -61,6 +59,8 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             (objects: [AnyObject]?, error: NSError?) -> Void in
             
             if let ingredients = objects as? [PFObject]{
+                self.autocompleteList.removeAll(keepCapacity: false)
+
                 
                 for ingredient in ingredients{
                     self.autocompleteList.append(ingredient )

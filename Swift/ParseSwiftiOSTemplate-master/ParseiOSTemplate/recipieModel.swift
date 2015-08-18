@@ -66,7 +66,12 @@ class GListModel {
                             
                             
                     }
+                        //clear out old list
                     
+                        realm.write {
+                            let oldIngreds = realm.objects(ingred)
+                            realm.delete(oldIngreds)
+                        }
                         //save list to realm
                         for toSave in toAddtoDB{
                             realm.write {
