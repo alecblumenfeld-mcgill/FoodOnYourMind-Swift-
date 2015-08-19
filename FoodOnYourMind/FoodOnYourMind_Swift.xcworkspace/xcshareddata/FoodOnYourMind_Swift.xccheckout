@@ -14,11 +14,11 @@
 		<string>https://github.com/alecblumenfeld-mcgill/FoodOnYourMind-Swift-.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Swift/ParseSwiftiOSTemplate-master/FoodOnYourMind_Swift.xcworkspace</string>
+	<string>FoodOnYourMind/FoodOnYourMind_Swift.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>8C738B23D7378BF558683A6FF2F9B6ED60501448</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/alecblumenfeld-mcgill/FoodOnYourMind-Swift-.git</string>

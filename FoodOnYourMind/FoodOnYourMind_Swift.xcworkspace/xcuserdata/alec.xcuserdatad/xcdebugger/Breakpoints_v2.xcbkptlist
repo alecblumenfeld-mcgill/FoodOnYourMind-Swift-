@@ -9,7 +9,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/WelcomeViewController.swift"
+            filePath = "FoodOnYourMind/WelcomeViewController.swift"
             timestampString = "459628823.266211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -25,7 +25,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/WelcomeViewController.swift"
+            filePath = "FoodOnYourMind/WelcomeViewController.swift"
             timestampString = "459628823.266211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -41,7 +41,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/WelcomeViewController.swift"
+            filePath = "FoodOnYourMind/WelcomeViewController.swift"
             timestampString = "459557732.05471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -329,7 +329,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/LoginViewController.swift"
+            filePath = "FoodOnYourMind/LoginViewController.swift"
             timestampString = "459733689.48251"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -345,7 +345,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/LoginViewController.swift"
+            filePath = "FoodOnYourMind/LoginViewController.swift"
             timestampString = "460513781.56399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -361,7 +361,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/WelcomeViewController.swift"
+            filePath = "FoodOnYourMind/WelcomeViewController.swift"
             timestampString = "459628823.266211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -377,7 +377,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/WelcomeViewController.swift"
+            filePath = "FoodOnYourMind/WelcomeViewController.swift"
             timestampString = "459628823.266211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -425,7 +425,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/RegisterViewController.swift"
+            filePath = "FoodOnYourMind/RegisterViewController.swift"
             timestampString = "461561891.49354"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -441,7 +441,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/RegisterViewController.swift"
+            filePath = "FoodOnYourMind/RegisterViewController.swift"
             timestampString = "461561891.49354"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -457,14 +457,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/GListModel.swift"
+            filePath = "FoodOnYourMind/GListViewController.swift"
             timestampString = "461560956.444901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
             endingLineNumber = "109"
-            landmarkName = "GListModel"
-            landmarkType = "3">
+            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -473,12 +473,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/GListModel.swift"
+            filePath = "FoodOnYourMind/GListViewController.swift"
             timestampString = "461560956.444901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "125"
-            endingLineNumber = "125">
+            endingLineNumber = "125"
+            landmarkName = "longPressGestureRecognized(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -503,13 +505,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/GListModel.swift"
+            filePath = "FoodOnYourMind/GListViewController.swift"
             timestampString = "460512319.540806"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "updatePersonalList()"
+            landmarkName = "indexChanged(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -519,13 +521,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/GListModel.swift"
+            filePath = "FoodOnYourMind/GListViewController.swift"
             timestampString = "460512319.540806"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
             endingLineNumber = "37"
-            landmarkName = "updatePersonalList()"
+            landmarkName = "updateList(_:)"
             landmarkType = "5">
             <Locations>
                <Location
@@ -567,13 +569,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/GListModel.swift"
+            filePath = "FoodOnYourMind/GListViewController.swift"
             timestampString = "460512319.540806"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
             endingLineNumber = "38"
-            landmarkName = "updatePersonalList()"
+            landmarkName = "updateList(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -583,13 +585,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/GListModel.swift"
+            filePath = "FoodOnYourMind/GListViewController.swift"
             timestampString = "460514211.9682"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
-            landmarkName = "updatePersonalList()"
+            landmarkName = "updateList(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -599,13 +601,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/GListModel.swift"
+            filePath = "FoodOnYourMind/GListViewController.swift"
             timestampString = "460514211.9682"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "58"
             endingLineNumber = "58"
-            landmarkName = "updatePersonalList()"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -615,13 +617,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/GListModel.swift"
+            filePath = "FoodOnYourMind/GListViewController.swift"
             timestampString = "460514211.9682"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
             endingLineNumber = "56"
-            landmarkName = "updatePersonalList()"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -631,13 +633,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/GListModel.swift"
+            filePath = "FoodOnYourMind/GListViewController.swift"
             timestampString = "460514211.9682"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
             endingLineNumber = "59"
-            landmarkName = "updatePersonalList()"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -647,13 +649,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/GListModel.swift"
+            filePath = "FoodOnYourMind/GListViewController.swift"
             timestampString = "460512319.540806"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
             endingLineNumber = "30"
-            landmarkName = "updatePersonalList()"
+            landmarkName = "indexChanged(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -663,13 +665,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/GListModel.swift"
+            filePath = "FoodOnYourMind/GListViewController.swift"
             timestampString = "460512319.540806"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
             endingLineNumber = "31"
-            landmarkName = "updatePersonalList()"
+            landmarkName = "indexChanged(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -679,7 +681,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/LoginViewController.swift"
+            filePath = "FoodOnYourMind/LoginViewController.swift"
             timestampString = "460513760.127856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -695,13 +697,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/GListModel.swift"
+            filePath = "FoodOnYourMind/GListViewController.swift"
             timestampString = "460514319.340171"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
             endingLineNumber = "52"
-            landmarkName = "updatePersonalList()"
+            landmarkName = "numberOfSectionsInTableView(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -711,7 +713,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParseiOSTemplate/AddViewController.swift"
+            filePath = "FoodOnYourMind/AddViewController.swift"
             timestampString = "461561891.49354"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
