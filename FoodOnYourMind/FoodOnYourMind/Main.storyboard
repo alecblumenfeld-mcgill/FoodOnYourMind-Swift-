@@ -106,7 +106,7 @@
                                 <segue destination="C3l-NH-w3D" kind="show" id="2sg-uY-n3j"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="icon-add" id="ahR-Nc-ZXl">
+                        <barButtonItem key="rightBarButtonItem" image="icon-add-small" id="ahR-Nc-ZXl">
                             <connections>
                                 <segue destination="vaP-6y-44O" kind="show" id="5ov-f8-Wu4"/>
                             </connections>
@@ -595,7 +595,7 @@
         <image name="PasswordIcon" width="54" height="47"/>
         <image name="UserNameIcon" width="54" height="47"/>
         <image name="foym-bg" width="375" height="687"/>
-        <image name="icon-add" width="65" height="66"/>
+        <image name="icon-add-small" width="35" height="36"/>
         <image name="icon-check-grey" width="40" height="40"/>
         <image name="icon-menu" width="23" height="17"/>
     </resources>

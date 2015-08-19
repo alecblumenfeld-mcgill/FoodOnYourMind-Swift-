@@ -33,10 +33,9 @@ class IngredientListCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var subTitle: UILabel!
     @IBOutlet  var parseId: String?
-    
     @IBOutlet weak var checkedImage: UIImageView!
 
-
+    
    
     func toggle(){
 //        let realm = Realm()
@@ -55,20 +54,23 @@ class IngredientListCell: UITableViewCell {
         
     }
     func deleteLocal(){
-        
-        
-        let realm = Realm()
-        let searchString = "id = '\(self.parseId!)'"
-        
-        var toDelete = realm.objects(ingred).filter(searchString)
-       
-        realm.write {
-            realm.delete(toDelete)
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            let realm = Realm()
+            let searchString = "id = '\(self.parseId!)'"
+            
+            var toDelete = realm.objects(ingred).filter(searchString)
+            
+            realm.write {
+                realm.delete(toDelete)
+            }
+
+            
         }
         
     
     }
     func deleteParse(){
+        
         let currentUser = User().currentUser()
         
         var query = PFQuery(className:"PersonalLists")

@@ -108,10 +108,7 @@ class GListViewController: UIViewController, UITableViewDataSource {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
        
         var currentCell = tableView.cellForRowAtIndexPath(indexPath) as! IngredientListCell?
-        currentCell?.toggle()
-   
-        
-        self.tableView.reloadData()
+        println(currentCell?.parseId)
 
 
     }
@@ -128,16 +125,19 @@ class GListViewController: UIViewController, UITableViewDataSource {
         let alertController = UIAlertController(title: nil, message:    
             "Are you sure that you want to remove \(cell!.textLabel!.text!) from your shoping list?", preferredStyle: UIAlertControllerStyle.Alert)
         
-       //alert actions
         let remove: UIAlertAction = UIAlertAction(title: "Remove", style: .Destructive) { action -> Void in
             //self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
             
-          
-            
-            cell?.deleteLocal()
+            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+            dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                
             cell?.deleteParse()
+            }
+            cell?.deleteLocal()
             self.updateList(self.selector)
             self.tableView.reloadData()
+
+
             
             
         }
@@ -152,13 +152,14 @@ class GListViewController: UIViewController, UITableViewDataSource {
     override func  viewWillAppear(animated: Bool) {
         //update list
         GListModel().updatePersonalList()
+        self.tableView.reloadData()
+
     }
     
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //long press gesture
+        self.tableView.reloadData()
         var gesture: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressGestureRecognized:")
         gesture.minimumPressDuration = 1.0
         self.view.addGestureRecognizer(gesture)
