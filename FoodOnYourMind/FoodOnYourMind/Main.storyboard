@@ -37,7 +37,7 @@
                                 <color key="tintColor" red="0.45882352941176469" green="0.81176470588235294" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell" textLabel="YOv-KW-TNf" detailTextLabel="Omt-0B-IuU" imageView="W9A-Ge-p1Z" style="IBUITableViewCellStyleSubtitle" id="h9y-yh-G5l" customClass="listCell" customModule="FoodOnYourMind_Swift" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="cell" textLabel="YOv-KW-TNf" detailTextLabel="Omt-0B-IuU" imageView="W9A-Ge-p1Z" style="IBUITableViewCellStyleSubtitle" id="h9y-yh-G5l" customClass="IngredientListCell" customModule="FoodOnYourMind_Swift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h9y-yh-G5l" id="JF1-Ya-yxI">
@@ -101,12 +101,12 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Grocery List" id="5wM-4X-Z4n">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="59h-Dg-7yS">
+                        <barButtonItem key="leftBarButtonItem" image="icon-menu" id="59h-Dg-7yS">
                             <connections>
                                 <segue destination="C3l-NH-w3D" kind="show" id="2sg-uY-n3j"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ahR-Nc-ZXl">
+                        <barButtonItem key="rightBarButtonItem" image="icon-add" id="ahR-Nc-ZXl">
                             <connections>
                                 <segue destination="vaP-6y-44O" kind="show" id="5ov-f8-Wu4"/>
                             </connections>
@@ -595,7 +595,9 @@
         <image name="PasswordIcon" width="54" height="47"/>
         <image name="UserNameIcon" width="54" height="47"/>
         <image name="foym-bg" width="375" height="687"/>
+        <image name="icon-add" width="65" height="66"/>
         <image name="icon-check-grey" width="40" height="40"/>
+        <image name="icon-menu" width="23" height="17"/>
     </resources>
     <color key="tintColor" red="0.46666666666666667" green="0.75686274509803919" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -28,7 +28,7 @@
 		70136D471B62ED8B00D89B21 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70136D441B62ED8B00D89B21 /* RealmSwift.framework */; };
 		70136D481B62ED8B00D89B21 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70136D441B62ED8B00D89B21 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		705FFC9A1B570EB500000399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705FFC991B570EB500000399 /* Main.storyboard */; };
-		705FFCA01B570EF200000399 /* listCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9B1B570EF200000399 /* listCell.swift */; };
+		705FFCA01B570EF200000399 /* IngredientListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9B1B570EF200000399 /* IngredientListCell.swift */; };
 		705FFCA11B570EF200000399 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9C1B570EF200000399 /* AddViewController.swift */; };
 		705FFCA21B570EF200000399 /* GListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9D1B570EF200000399 /* GListModel.swift */; };
 		705FFCA31B570EF200000399 /* GListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705FFC9E1B570EF200000399 /* GListViewController.swift */; };
@@ -96,7 +96,7 @@
 		70136D431B62ED8B00D89B21 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		70136D441B62ED8B00D89B21 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		705FFC991B570EB500000399 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "/Users/alec/Documents/food on your mind shoping list/FoodOnYourMind/FoodOnYourMind/Main.storyboard"; sourceTree = "<absolute>"; };
-		705FFC9B1B570EF200000399 /* listCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = listCell.swift; path = "/Users/alec/Documents/food on your mind shoping list/FoodOnYourMind/FoodOnYourMind/listCell.swift"; sourceTree = "<absolute>"; };
+		705FFC9B1B570EF200000399 /* IngredientListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IngredientListCell.swift; path = "/Users/alec/Documents/food on your mind shoping list/FoodOnYourMind/FoodOnYourMind/IngredientListCell.swift"; sourceTree = "<absolute>"; };
 		705FFC9C1B570EF200000399 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddViewController.swift; path = "/Users/alec/Documents/food on your mind shoping list/FoodOnYourMind/FoodOnYourMind/AddViewController.swift"; sourceTree = "<absolute>"; };
 		705FFC9D1B570EF200000399 /* GListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GListModel.swift; path = "/Users/alec/Documents/food on your mind shoping list/FoodOnYourMind/FoodOnYourMind/GListModel.swift"; sourceTree = "<absolute>"; };
 		705FFC9E1B570EF200000399 /* GListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GListViewController.swift; path = "/Users/alec/Documents/food on your mind shoping list/FoodOnYourMind/FoodOnYourMind/GListViewController.swift"; sourceTree = "<absolute>"; };
@@ -256,7 +256,7 @@
 			children = (
 				70FDA4D51B589E4200D40063 /* User.swift */,
 				705FFC9D1B570EF200000399 /* GListModel.swift */,
-				705FFC9B1B570EF200000399 /* listCell.swift */,
+				705FFC9B1B570EF200000399 /* IngredientListCell.swift */,
 				7064CE291B6F064F00FE5DC0 /* AutoCompleteCell.swift */,
 			);
 			name = Models;
@@ -396,7 +396,7 @@
 				705FFCA21B570EF200000399 /* GListModel.swift in Sources */,
 				7064CE2A1B6F064F00FE5DC0 /* AutoCompleteCell.swift in Sources */,
 				7078264A1B571D4F004F641C /* RegisterViewController.swift in Sources */,
-				705FFCA01B570EF200000399 /* listCell.swift in Sources */,
+				705FFCA01B570EF200000399 /* IngredientListCell.swift in Sources */,
 				7078264C1B572461004F641C /* WelcomeViewController.swift in Sources */,
 				705FFCA31B570EF200000399 /* GListViewController.swift in Sources */,
 				70FDA4D61B589E4200D40063 /* User.swift in Sources */,

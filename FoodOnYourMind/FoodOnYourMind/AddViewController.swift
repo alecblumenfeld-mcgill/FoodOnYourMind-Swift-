@@ -49,7 +49,11 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         // need to find a way to query with out capitlization
         var query = PFQuery(className:"Ingredients")
+        
+        //TODO: Add query for verififactions
         query.whereKey("ingredient", containsString: substring)
+        
+        
         //get array
         query.findObjectsInBackgroundWithBlock {
             (objects: [AnyObject]?, error: NSError?) -> Void in
@@ -123,7 +127,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         let newIng = ingred()
         newIng.name = autocompleteList[index]["ingredient"] as! String
         newIng.type = autocompleteList[index]["ingredientType"] as! String
-        newIng.id = selectedId
+        newIng.parseId = selectedId
         //newIng.id = newIngredID
         // Get the default Realm
         let realm = Realm()
@@ -145,9 +149,9 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBAction func Save(sender: AnyObject) {
         //generate New object under parse
         //get current user and add ingredient to the parse object
-        let users = Realm(path: Realm.defaultPath).objects(User)
-        let currentUser = users[0]
+        
         let newIng = ingred()
+        let currentUser = User().currentUser()
         
         
         var query = PFQuery(className:"PersonalLists")
@@ -161,7 +165,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 //newIngredID = newIngredient.objectId
                 newIngredient.save()
                 
-                newIng.id = newIngredient.objectId
+                newIng.parseId = newIngredient.objectId
                 personalList?.addUniqueObject(newIngredient.objectId, forKey: "ingredients")
                 personalList?.save()
                  println(newIngredient)
@@ -170,7 +174,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             }
         }
         
-        println( newIng.id)
+        println( newIng.parseId)
         //save new ingred to realm
         newIng.name = self.textField.text
         newIng.type = self.catField.text

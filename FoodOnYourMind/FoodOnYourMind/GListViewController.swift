@@ -15,16 +15,16 @@ class GListViewController: UIViewController, UITableViewDataSource {
     @IBOutlet var listSelector: [UISegmentedControl]!
     @IBOutlet weak var tableView: UITableView!
    
-    //initalize list
-    //initilize catagory list
-    var typesList = GListModel().getAllTypes()
+
+    var gModel = GListModel()
+    var tableList = GListModel().getAllTypes()
+    
+
     //keep track of slector
     var selector = 0
     
     
     
-    var gModel = GListModel()
-    var gList = GListModel().getAllTypes()
     
     
     @IBAction func indexChanged(sender: UISegmentedControl) {
@@ -36,18 +36,20 @@ class GListViewController: UIViewController, UITableViewDataSource {
         selector = newSelector
         switch selector{
         case 0:
-            typesList = gList
+            tableList = GListModel().getAllTypes()
         default:
             var foo = "bar"
-            //typesList = list.getUncheckedTypes()
+            
         }
         self.tableView.reloadData()
     }
     
+    
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         switch selector{
         case 0,1:
-            return typesList.count
+            return tableList.count
         default:
             return 1
         }
@@ -55,26 +57,27 @@ class GListViewController: UIViewController, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
-            return Array(typesList.values)[section].count
+            return Array(tableList.values)[section].count
   
         
     }
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch selector{
         case 0,1:
-            return Array(typesList.keys)[section]
+            return Array(tableList.keys)[section]
         default:
             return nil
         }
+        
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: listCell
+        var cell: IngredientListCell
         switch selector{
                 case 0,1:
-                     cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! listCell
-                    let ingred = Array(typesList.values)[indexPath.section][indexPath.row]
+                     cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! IngredientListCell
+                    let ingred = Array(tableList.values)[indexPath.section][indexPath.row]
                     cell.textLabel!.text = ingred.name
-                    cell.id = ingred.id 
+                    cell.parseId = ingred.parseId 
                      
                     //if ingredient.checked == true
                     if ingred.checked{
@@ -94,7 +97,7 @@ class GListViewController: UIViewController, UITableViewDataSource {
                     }
                     return cell
                 default:
-                    cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! listCell
+                    cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! IngredientListCell
                     cell.textLabel!.text == "test"//list[0].name
                     return (cell)
         }
@@ -104,10 +107,9 @@ class GListViewController: UIViewController, UITableViewDataSource {
         
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
        
-        var currentCell = tableView.cellForRowAtIndexPath(indexPath) as UITableViewCell?
-        let cellName = (currentCell!.textLabel!.text)
-        let cellAmount = (currentCell!.detailTextLabel!.text)
-        //list.toggle(cellName! , cellAmount: cellAmount!)
+        var currentCell = tableView.cellForRowAtIndexPath(indexPath) as! IngredientListCell?
+        currentCell?.toggle()
+   
         
         self.tableView.reloadData()
 
@@ -120,17 +122,24 @@ class GListViewController: UIViewController, UITableViewDataSource {
         //get cell
         var locationInView = longPress.locationInView(tableView)
         var indexPath = tableView.indexPathForRowAtPoint(locationInView)
-        let cell = tableView.cellForRowAtIndexPath(indexPath!) as UITableViewCell?
-        
+        let cell = tableView.cellForRowAtIndexPath(indexPath!) as! IngredientListCell?
+
         //alert controller init
         let alertController = UIAlertController(title: nil, message:    
             "Are you sure that you want to remove \(cell!.textLabel!.text!) from your shoping list?", preferredStyle: UIAlertControllerStyle.Alert)
         
        //alert actions
         let remove: UIAlertAction = UIAlertAction(title: "Remove", style: .Destructive) { action -> Void in
-            //self.gModel.remove(cell!.textLabel!.text!, cellAmount: cell!.detailTextLabel!.text!)
+            //self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
+            
+          
+            
+            cell?.deleteLocal()
+            cell?.deleteParse()
             self.updateList(self.selector)
             self.tableView.reloadData()
+            
+            
         }
         //cancel
         let cancel: UIAlertAction = UIAlertAction(title: "Cancel", style: .Default) {action -> Void in
@@ -140,19 +149,20 @@ class GListViewController: UIViewController, UITableViewDataSource {
         alertController.addAction(remove)
         self.presentViewController(alertController, animated: true, completion: nil)
     }
+    override func  viewWillAppear(animated: Bool) {
+        //update list
+        GListModel().updatePersonalList()
+    }
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //long press gesture
         var gesture: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressGestureRecognized:")
         gesture.minimumPressDuration = 1.0
         self.view.addGestureRecognizer(gesture)
         
-        //update list
-        GListModel().updatePersonalList()
-        
-
     }
 
     override func didReceiveMemoryWarning() {

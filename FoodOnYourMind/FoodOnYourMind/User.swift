@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 
+
 class User: Object {
     dynamic var name = ""
     dynamic var username = ""
@@ -17,4 +18,9 @@ class User: Object {
     dynamic var personalListID = ""
     dynamic var email = ""
     
+    func currentUser()->User{
+        let users = Realm(path: Realm.defaultPath).objects(User)
+        return  users[0]
+        
+    }
 }
