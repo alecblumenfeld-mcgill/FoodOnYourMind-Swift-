@@ -92,12 +92,14 @@ class GListModel {
         
         return typeList
     }
-    func remove()-> [String: [ingred]] {
-        let ingredFromDB = Realm(path: Realm.defaultPath).objects(ingred)
+    func getUncheckedTypes()-> [String: [ingred]] {
+         let ingredFromDB = Realm(path: Realm.defaultPath).objects(ingred)
         
         var typeList = [String: [ingred]]()
         for ingredient in ingredFromDB{
-            
+            if ingredient.checked == true{
+                continue
+            }
             if let val =  typeList[ingredient.type]{
                 typeList[ingredient.type]?.append(ingredient)
             }
@@ -108,8 +110,12 @@ class GListModel {
         }
         
         return typeList
+       
+        
+        
+        
     }
-    
+       
 }
 
 class ingred: Object {

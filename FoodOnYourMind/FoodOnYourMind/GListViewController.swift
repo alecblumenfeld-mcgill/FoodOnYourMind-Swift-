@@ -38,7 +38,8 @@ class GListViewController: UIViewController, UITableViewDataSource {
         case 0:
             tableList = GListModel().getAllTypes()
         default:
-            var foo = "bar"
+            tableList = GListModel().getUncheckedTypes()
+
             
         }
         self.tableView.reloadData()
@@ -127,13 +128,15 @@ class GListViewController: UIViewController, UITableViewDataSource {
         
         let remove: UIAlertAction = UIAlertAction(title: "Remove", style: .Destructive) { action -> Void in
             //self.tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
-            
+            var currentCell = self.tableView.cellForRowAtIndexPath(indexPath!) as! IngredientListCell?
+            self.tableList[currentCell.t]
             let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
             dispatch_async(dispatch_get_global_queue(priority, 0)) {
                 
             cell?.deleteParse()
             }
             cell?.deleteLocal()
+            SwiftSpinner.show("Connecting to satellite...")
             self.updateList(self.selector)
             self.tableView.reloadData()
 
