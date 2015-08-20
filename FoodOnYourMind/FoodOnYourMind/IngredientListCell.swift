@@ -26,6 +26,23 @@ extension Array {
             self.removeAtIndex(index!)
         }
     }
+    
+}
+extension Array{
+    mutating func findObject<U: Equatable>(object: U) -> Int? {
+        var index: Int?
+        for (idx, objectToCompare) in enumerate(self) {
+            if let to = objectToCompare as? U {
+                if object == to {
+                    index = idx
+                    return index
+                }
+            }
+        }
+        return nil
+        
+        
+    }
 }
 
 class IngredientListCell: UITableViewCell {
@@ -38,6 +55,12 @@ class IngredientListCell: UITableViewCell {
     
    
     func toggle(){
+        self.toggleDB()
+        self.toggleParse()
+        
+
+    }
+    func toggleDB(){
         let realm = Realm()
         let searchString = "parseId = '\(self.parseId!)'"
         
@@ -47,15 +70,62 @@ class IngredientListCell: UITableViewCell {
             realm.commitWrite()
             println("Updated Local")
             
-            
-            
         }
+            
+            
         else{
             println("COULD NOT UP DATE LOCAL")
             
         }
+    
+    }
+    
+    func toggleParse(){
+        let newIng = ingred()
+        let currentUser = User().currentUser()
+        
+        
+        var query = PFQuery(className:"PersonalLists")
+        query.getObjectInBackgroundWithId(currentUser.personalListID) {
+            (personalList: PFObject?, error: NSError?) -> Void in
+            if error == nil && personalList != nil {
+                
+                if let existing = personalList?["checkedIngredients"]  as? NSMutableArray{
+                    //check if it is existing
+                    var index: Int?
+                    for (idx, objectid) in enumerate(existing){
+                        if objectid as! String == self.parseId!{
+                            index = idx
+                        }
+                    }
+                    //if true remove add key else add key
+                    if((index) != nil){
+                        existing.removeObjectAtIndex(index!)
+                        personalList?.save()
+                        
+                    }
+                    else{
+                        personalList?.addUniqueObject(self.parseId, forKey: "checkedIngredients")
+                        println(personalList)
+                        personalList?.save()
+
+                    }
+                }
+                else{
+                    personalList?["checkedIngredients"] = [] as NSMutableArray
+                    personalList?.addUniqueObject(self.parseId, forKey: "CheckedIngredients")
+                    personalList?.save()
+                }
+            } else {
+                //Alert ERROR
+                println(error)
+            }
+        }
+        
+        
         
     }
+    
     func deleteLocal(){
         let realm = Realm()
         let searchString = "parseId = '\(self.parseId!)'"

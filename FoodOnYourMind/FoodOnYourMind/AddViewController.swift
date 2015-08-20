@@ -158,7 +158,6 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 newIngredient["ingredient"] = self.textField.text
                 newIngredient["ingredientType"] = self.catField.text
                
-                //newIngredID = newIngredient.objectId
                 newIngredient.save()
                 
                 newIng.parseId = newIngredient.objectId
@@ -166,6 +165,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 personalList?.save()
                  println(newIngredient)
             } else {
+                //Alert ERROR
                 println(error)
             }
         }
