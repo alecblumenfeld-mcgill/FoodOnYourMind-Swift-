@@ -33,8 +33,7 @@ class GListModel {
         if let personalList = object["ingredients"] as? NSArray{
             for ingredient in personalList{
                 
-                
-                println("INGRE: \(ingredient)")
+                //get realm
                 var toSave = ingred()
                 var query = PFQuery(className:"Ingredients")
                 query.whereKey("objectId", equalTo:ingredient as! String)
@@ -52,6 +51,26 @@ class GListModel {
                 
                 
             }
+            
+            
+            
+            
+            
+            //admitidly adds to complexity but
+            if let checkedItems = object["checkedIngredients"] as? NSArray{
+                for checkedId in checkedItems{
+                    for entry in toAddtoDB{
+                        if checkedId as! String == toAddtoDB[0].parseId {
+                            toAddtoDB[0].checked = true
+                        }
+                    }
+                    
+                    
+                    
+                }
+            }
+            
+        
             //clear out old list
             
             realm.write {
