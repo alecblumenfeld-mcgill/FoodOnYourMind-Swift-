@@ -13,6 +13,8 @@ var personalList = recipie(recipieName: "Personal List", recipieIngredients:  []
 
 class GListModel {
     
+   
+    
     func updatePersonalList(){
         let ingredlist = Realm(path: Realm.defaultPath).objects(ingred)
         let realm = Realm()
@@ -24,55 +26,54 @@ class GListModel {
         query.includeKey("ingredients")
         
         //save the object to local data store
-        query.getFirstObjectInBackgroundWithBlock { (object: PFObject!, error: NSError!) in
-            if (error == nil){
+        var object = query.getFirstObject()
+
+        var toAddtoDB = [ingred]()
+        //add to qqueryueue for write
+        if let personalList = object["ingredients"] as? NSArray{
+            for ingredient in personalList{
                 
-                var toAddtoDB = [ingred]()
-                //add to qqueryueue for write
-                if let personalList = object["ingredients"] as? NSArray{
-                    for ingredient in personalList{
-                        //query if it already exitists
-                        
-                        
-                        println("INGRE: \(ingredient)")
-                        var toSave = ingred()
-                        var query = PFQuery(className:"Ingredients")
-                        query.whereKey("objectId", equalTo:ingredient as! String)
-                        let fetechedIngred = query.getFirstObject()
-                        toSave.parseId = fetechedIngred.objectId
-                        
-                        println(toSave.parseId)
-                        if let ingredName = fetechedIngred["ingredient"] as? String{
-                            toSave.name = ingredName
-                        }
-                        if let ingredType =  fetechedIngred["ingredientType"] as? String{
-                            toSave.type = ingredType
-                        }
-                        toAddtoDB += [toSave]
-                        
-                        
-                    }
-                    //clear out old list
+                
+                println("INGRE: \(ingredient)")
+                var toSave = ingred()
+                var query = PFQuery(className:"Ingredients")
+                query.whereKey("objectId", equalTo:ingredient as! String)
+                let fetechedIngred = query.getFirstObject()
+                toSave.parseId = fetechedIngred.objectId
+                
+                println(toSave.parseId)
+                if let ingredName = fetechedIngred["ingredient"] as? String{
+                    toSave.name = ingredName
+                }
+                if let ingredType =  fetechedIngred["ingredientType"] as? String{
+                    toSave.type = ingredType
+                }
+                toAddtoDB += [toSave]
+                
+                
+            }
+            //clear out old list
+            
+            realm.write {
+                let oldIngreds = realm.objects(ingred)
+                realm.delete(oldIngreds)
+            }
+            //save list to realm
+            for toSave in toAddtoDB{
+                realm.write {
                     
-                    realm.write {
-                        let oldIngreds = realm.objects(ingred)
-                        realm.delete(oldIngreds)
-                    }
-                    //save list to realm
-                    for toSave in toAddtoDB{
-                        realm.write {
-                            
-                            realm.add(toSave)
-                        }
-                        
-                    }
+                    realm.add(toSave)
                 }
                 
             }
-            else{
-                println(error)
-            }
         }
+        else{
+            //TODO: ADD ALEART, COULD NOT GET ACOUNT INFO< NO INTERNET OR LOGOUT
+        
+        }
+        
+
+        
     }
     
     func getAllTypes()-> [String: [ingred]] {

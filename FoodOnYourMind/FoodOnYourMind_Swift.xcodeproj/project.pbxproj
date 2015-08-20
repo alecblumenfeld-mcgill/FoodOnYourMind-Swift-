@@ -44,6 +44,10 @@
 		7078264C1B572461004F641C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7078264B1B572461004F641C /* WelcomeViewController.swift */; };
 		70A1252C1B843C5300B11723 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70A1252A1B843C5300B11723 /* LaunchScreen.xib */; };
 		70F8C7451B84F60400C837F2 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F8C7441B84F60400C837F2 /* SwiftSpinner.swift */; };
+		70F8C74D1B84FA7E00C837F2 /* pulltorefresharrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 70F8C7491B84FA7E00C837F2 /* pulltorefresharrow.png */; };
+		70F8C74E1B84FA7E00C837F2 /* PullToRefreshOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F8C74A1B84FA7E00C837F2 /* PullToRefreshOption.swift */; };
+		70F8C74F1B84FA7F00C837F2 /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F8C74B1B84FA7E00C837F2 /* PullToRefreshView.swift */; };
+		70F8C7501B84FA7F00C837F2 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F8C74C1B84FA7E00C837F2 /* UIScrollViewExtension.swift */; };
 		70FDA4D61B589E4200D40063 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FDA4D51B589E4200D40063 /* User.swift */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +114,10 @@
 		7078264B1B572461004F641C /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = "/Users/alec/Documents/food on your mind shoping list/FoodOnYourMind/FoodOnYourMind/WelcomeViewController.swift"; sourceTree = "<absolute>"; };
 		70A1252B1B843C5300B11723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = FoodOnYourMind/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		70F8C7441B84F60400C837F2 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftSpinner.swift; path = /Users/alec/foodonyourmind/FoodOnMyMind/SwiftSpinner.swift; sourceTree = "<absolute>"; };
+		70F8C7491B84FA7E00C837F2 /* pulltorefresharrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pulltorefresharrow.png; sourceTree = "<group>"; };
+		70F8C74A1B84FA7E00C837F2 /* PullToRefreshOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshOption.swift; sourceTree = "<group>"; };
+		70F8C74B1B84FA7E00C837F2 /* PullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
+		70F8C74C1B84FA7E00C837F2 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 		70FDA4D51B589E4200D40063 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = "/Users/alec/Documents/food on your mind shoping list/FoodOnYourMind/FoodOnYourMind/User.swift"; sourceTree = "<absolute>"; };
 		D9F94619D883451ECBA9FA46 /* Manifest.lock */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Manifest.lock; path = Pods/Manifest.lock; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,7 +183,7 @@
 				2BC3970D1AADE837001ABDF2 /* AppDelegate.swift */,
 				2BC397481AADE8ED001ABDF2 /* FoodOnYourMind-Bridging-Header.h */,
 				2BC397141AADE837001ABDF2 /* Images.xcassets */,
-				70F8C7441B84F60400C837F2 /* SwiftSpinner.swift */,
+				70F8C7481B84FA7E00C837F2 /* pulltorefresh */,
 				70A1252A1B843C5300B11723 /* LaunchScreen.xib */,
 				707826411B57113B004F641C /* lib */,
 				705FFC991B570EB500000399 /* Main.storyboard */,
@@ -248,6 +256,7 @@
 		707826411B57113B004F641C /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				70F8C7441B84F60400C837F2 /* SwiftSpinner.swift */,
 				707826421B57114A004F641C /* IQDropDownTextField.h */,
 				707826431B57114A004F641C /* IQDropDownTextField.m */,
 			);
@@ -264,6 +273,18 @@
 			);
 			name = Models;
 			sourceTree = "<group>";
+		};
+		70F8C7481B84FA7E00C837F2 /* pulltorefresh */ = {
+			isa = PBXGroup;
+			children = (
+				70F8C7491B84FA7E00C837F2 /* pulltorefresharrow.png */,
+				70F8C74A1B84FA7E00C837F2 /* PullToRefreshOption.swift */,
+				70F8C74B1B84FA7E00C837F2 /* PullToRefreshView.swift */,
+				70F8C74C1B84FA7E00C837F2 /* UIScrollViewExtension.swift */,
+			);
+			name = pulltorefresh;
+			path = FoodOnYourMind/pulltorefresh;
+			sourceTree = SOURCE_ROOT;
 		};
 		97C4A4D799B10EE0E04BA1D2 /* Pods */ = {
 			isa = PBXGroup;
@@ -358,6 +379,7 @@
 				706277241B58ABD30071E338 /* (null) in Resources */,
 				2BC397151AADE837001ABDF2 /* Images.xcassets in Resources */,
 				705FFC9A1B570EB500000399 /* Main.storyboard in Resources */,
+				70F8C74D1B84FA7E00C837F2 /* pulltorefresharrow.png in Resources */,
 				70A1252C1B843C5300B11723 /* LaunchScreen.xib in Resources */,
 				706277221B58AB9B0071E338 /* Manifest.lock in Resources */,
 			);
@@ -397,6 +419,7 @@
 			files = (
 				705FFCA11B570EF200000399 /* AddViewController.swift in Sources */,
 				705FFCA21B570EF200000399 /* GListModel.swift in Sources */,
+				70F8C74E1B84FA7E00C837F2 /* PullToRefreshOption.swift in Sources */,
 				7064CE2A1B6F064F00FE5DC0 /* AutoCompleteCell.swift in Sources */,
 				7078264A1B571D4F004F641C /* RegisterViewController.swift in Sources */,
 				705FFCA01B570EF200000399 /* IngredientListCell.swift in Sources */,
@@ -405,9 +428,11 @@
 				705FFCA31B570EF200000399 /* GListViewController.swift in Sources */,
 				70FDA4D61B589E4200D40063 /* User.swift in Sources */,
 				2BC3970E1AADE837001ABDF2 /* AppDelegate.swift in Sources */,
+				70F8C7501B84FA7F00C837F2 /* UIScrollViewExtension.swift in Sources */,
 				707826441B57114A004F641C /* IQDropDownTextField.m in Sources */,
 				705FFCA41B570EF200000399 /* SettingsViewController.swift in Sources */,
 				707826481B57133C004F641C /* LoginViewController.swift in Sources */,
+				70F8C74F1B84FA7F00C837F2 /* PullToRefreshView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

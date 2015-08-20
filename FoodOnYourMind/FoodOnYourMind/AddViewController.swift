@@ -84,7 +84,7 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let autoCompleteRowIdentifier = "AutoCompleteRowIdentifier"
-        //var cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier(autoCompleteRowIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        
         
         var cell: UITableViewCell  = (tableView.dequeueReusableCellWithIdentifier(autoCompleteRowIdentifier) as? UITableViewCell)!
         let index = indexPath.row as Int
@@ -106,21 +106,17 @@ class AddViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         //get current user and add ingredient to the parse object
         let users = Realm(path: Realm.defaultPath).objects(User)
         let currentUser = users[0]
-        //var newIngredID = " ID";
+        
+        
         
         var query = PFQuery(className:"PersonalLists")
-        query.getObjectInBackgroundWithId(currentUser.personalListID) {
-            (personalList: PFObject?, error: NSError?) -> Void in
-            if error == nil && personalList != nil {
-                //add object id to parse
-                
-                personalList?.addUniqueObject(selectedId, forKey: "ingredients")
-                personalList?.save()
-              
-            } else {
-                println(error)
-            }
+        query.whereKey("objectId", equalTo: currentUser.personalListID)
+        if var personalList = query.getFirstObject(){
+            personalList.addUniqueObject(selectedId, forKey: "ingredients")
+            personalList.save()
+            
         }
+
         
         
         //save new ingred to realm

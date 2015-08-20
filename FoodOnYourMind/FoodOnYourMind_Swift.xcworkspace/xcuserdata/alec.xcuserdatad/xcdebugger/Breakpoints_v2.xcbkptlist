@@ -554,11 +554,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodOnYourMind/GListViewController.swift"
-            timestampString = "461697695.902266"
+            timestampString = "461711617.036663"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "updateList(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -570,11 +570,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodOnYourMind/GListViewController.swift"
-            timestampString = "461697695.902266"
+            timestampString = "461711790.284222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -586,11 +586,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodOnYourMind/GListViewController.swift"
-            timestampString = "461697695.902266"
+            timestampString = "461711790.284222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -602,11 +602,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodOnYourMind/GListViewController.swift"
-            timestampString = "461697695.902266"
+            timestampString = "461711790.284222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -665,28 +665,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FoodOnYourMind/GListViewController.swift"
-            timestampString = "461697695.902266"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "numberOfSectionsInTableView(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "FoodOnYourMind/AddViewController.swift"
-            timestampString = "461682170.996358"
+            timestampString = "461728804.126926"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "Save(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -698,11 +682,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodOnYourMind/GListViewController.swift"
-            timestampString = "461697695.902266"
+            timestampString = "461729928.660667"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -714,76 +698,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodOnYourMind/GListViewController.swift"
-            timestampString = "461697695.902266"
+            timestampString = "461729928.660667"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "longPressGestureRecognized(_:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FoodOnYourMind_Swift.GListViewController.longPressGestureRecognized (FoodOnYourMind_Swift.GListViewController)(ObjectiveC.UIGestureRecognizer) -&gt; ()"
-                  moduleName = "FoodOnYourMind_Swift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alec/Documents/food%20on%20your%20mind%20shoping%20list/FoodOnYourMind/FoodOnYourMind/GListViewController.swift"
-                  timestampString = "461689407.501484"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136"
-                  offsetFromSymbolStart = "2557">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FoodOnYourMind_Swift.GListViewController.(longPressGestureRecognized (FoodOnYourMind_Swift.GListViewController) -&gt; (ObjectiveC.UIGestureRecognizer) -&gt; ()).(closure #1)"
-                  moduleName = "FoodOnYourMind_Swift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alec/Documents/food%20on%20your%20mind%20shoping%20list/FoodOnYourMind/FoodOnYourMind/GListViewController.swift"
-                  timestampString = "461689407.501836"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136"
-                  offsetFromSymbolStart = "104">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodOnYourMind/GListViewController.swift"
-            timestampString = "461697695.902266"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodOnYourMind/GListViewController.swift"
-            timestampString = "461697695.902266"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "longPressGestureRecognized(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -794,11 +714,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodOnYourMind/IngredientListCell.swift"
-            timestampString = "461696372.629679"
+            timestampString = "461729781.931939"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "deleteLocal()"
             landmarkType = "5">
             <Locations>
@@ -838,65 +758,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodOnYourMind/IngredientListCell.swift"
-            timestampString = "461696406.762636"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "deleteLocal()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodOnYourMind/IngredientListCell.swift"
-            timestampString = "461696407.467136"
+            timestampString = "461729781.931939"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "deleteLocal()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FoodOnYourMind_Swift.IngredientListCell.(deleteLocal (FoodOnYourMind_Swift.IngredientListCell) -&gt; () -&gt; ()).(closure #1)"
-                  moduleName = "FoodOnYourMind_Swift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alec/Documents/food%20on%20your%20mind%20shoping%20list/FoodOnYourMind/FoodOnYourMind/IngredientListCell.swift"
-                  timestampString = "461696412.916541"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "782">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "function signature specialization &lt;Arg[1] = Dead, Arg[2] = Value Promoted from InOut&gt; of FoodOnYourMind_Swift.IngredientListCell.(deleteLocal (FoodOnYourMind_Swift.IngredientListCell) -&gt; () -&gt; ()).(closure #1).(closure #1)"
-                  moduleName = "FoodOnYourMind_Swift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alec/Documents/food%20on%20your%20mind%20shoping%20list/FoodOnYourMind/FoodOnYourMind/IngredientListCell.swift"
-                  timestampString = "461696412.91678"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -905,46 +777,30 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FoodOnYourMind/IngredientListCell.swift"
-            timestampString = "461696408.502196"
+            filePath = "FoodOnYourMind/GListModel.swift"
+            timestampString = "461729928.660667"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "deleteLocal()"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "updatePersonalList()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FoodOnYourMind_Swift.IngredientListCell.(deleteLocal (FoodOnYourMind_Swift.IngredientListCell) -&gt; () -&gt; ()).(closure #1)"
-                  moduleName = "FoodOnYourMind_Swift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alec/Documents/food%20on%20your%20mind%20shoping%20list/FoodOnYourMind/FoodOnYourMind/IngredientListCell.swift"
-                  timestampString = "461696408.504364"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "902">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "function signature specialization &lt;Arg[1] = Dead, Arg[2] = Value Promoted from InOut&gt; of FoodOnYourMind_Swift.IngredientListCell.(deleteLocal (FoodOnYourMind_Swift.IngredientListCell) -&gt; () -&gt; ()).(closure #1).(closure #1)"
-                  moduleName = "FoodOnYourMind_Swift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alec/Documents/food%20on%20your%20mind%20shoping%20list/FoodOnYourMind/FoodOnYourMind/IngredientListCell.swift"
-                  timestampString = "461696408.504605"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "60">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodOnYourMind/GListViewController.swift"
+            timestampString = "461729928.660667"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

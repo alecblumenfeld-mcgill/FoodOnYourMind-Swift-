@@ -12,6 +12,8 @@
 	<dict>
 		<key>8C738B23D7378BF558683A6FF2F9B6ED60501448</key>
 		<string>https://github.com/alecblumenfeld-mcgill/FoodOnYourMind-Swift-.git</string>
+		<key>F8516A1FF649D75F32A656318CFEF917AD359805</key>
+		<string>https://github.com/amiteasow/foodonyourmind.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>FoodOnYourMind/FoodOnYourMind_Swift.xcworkspace</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>8C738B23D7378BF558683A6FF2F9B6ED60501448</key>
 		<string>../..</string>
+		<key>F8516A1FF649D75F32A656318CFEF917AD359805</key>
+		<string>../../../../foodonyourmind</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/alecblumenfeld-mcgill/FoodOnYourMind-Swift-.git</string>
@@ -35,6 +39,14 @@
 			<string>8C738B23D7378BF558683A6FF2F9B6ED60501448</string>
 			<key>IDESourceControlWCCName</key>
 			<string>food%20on%20your%20mind%20shoping%20list</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F8516A1FF649D75F32A656318CFEF917AD359805</string>
+			<key>IDESourceControlWCCName</key>
+			<string>foodonyourmind</string>
 		</dict>
 	</array>
 </dict>

@@ -38,63 +38,87 @@ class IngredientListCell: UITableViewCell {
     
    
     func toggle(){
-//        let realm = Realm()
-//        realm.beginWrite()
-//        
-//        let searchString = "parseId = '\(self.parseId!)'"
-//        
-//        var toToggle = Realm().objects(ingred).filter(searchString).first!
-//        
-//        toToggle.checked = !toToggle.checked
-//        
-//        realm.commitWrite()
-        //Realm().add(toToggle, update: true)
+        let realm = Realm()
+        let searchString = "parseId = '\(self.parseId!)'"
         
-        
+        if let toUpdate = realm.objects(ingred).filter(searchString).first {
+            realm.beginWrite()
+            toUpdate.checked = !toUpdate.checked
+            realm.commitWrite()
+            println("Updated Local")
+            
+            
+            
+        }
+        else{
+            println("COULD NOT UP DATE LOCAL")
+            
+        }
         
     }
     func deleteLocal(){
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-            let realm = Realm()
-            let searchString = "id = '\(self.parseId!)'"
+        let realm = Realm()
+        let searchString = "parseId = '\(self.parseId!)'"
             
-            var toDelete = realm.objects(ingred).filter(searchString)
-            
+        if let toDelete = realm.objects(ingred).filter(searchString).first {
             realm.write {
                 realm.delete(toDelete)
             }
-
-            
+             println("DELTED LOCAL")
+        
+        
+        
         }
+        else{
+            println("NOT DELTED LOCAL")
+
+        }
+        
+        
+        
+
+        
+        //}
         
     
     }
     func deleteParse(){
-        
-        let currentUser = User().currentUser()
-        
-        var query = PFQuery(className:"PersonalLists")
-        query.whereKey("objectId", equalTo: currentUser.personalListID)
-        query.includeKey("ingredients")
-        
-        //save the object to local data store
-        query.getFirstObjectInBackgroundWithBlock { (personalList: PFObject!, error: NSError!) in
-            if (error == nil) && personalList != nil{
-                if let personalListIngredients = personalList["ingredients"] as? NSArray{
-                    for ingredientID in personalListIngredients{
-                        //query if it already exitists
-                        //confirm removed from list
-                        if(ingredientID as? String == self.parseId ){
-                            (personalListIngredients as! NSMutableArray).removeObject(self.parseId!)
-                            personalList.save()
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+
+            let currentUser = User().currentUser()
+            
+            var query = PFQuery(className:"PersonalLists")
+            query.whereKey("objectId", equalTo: currentUser.personalListID)
+            query.includeKey("ingredients")
+            
+            //save the object to local data store
+            query.getFirstObjectInBackgroundWithBlock { (personalList: PFObject!, error: NSError!) in
+                if (error == nil) && personalList != nil{
+                    if let personalListIngredients = personalList["ingredients"] as? NSArray{
+                        for ingredientID in personalListIngredients{
+                            //query if it already exitists
+                            //confirm removed from list
+                            if(ingredientID as? String == self.parseId ){
+                                (personalListIngredients as! NSMutableArray).removeObject(self.parseId!)
+                                personalList.save()
+                                println("DELTED PARSE")
+
+                            }
                         }
                     }
-                }
-                else {
-                    println(error)
+                    else {
+                        println(error)
+                    }
                 }
             }
         }
+    }
+    
+    //delete taken
+    func userDelete(completionHandler:(success:Bool) -> Void) {
+        self.deleteLocal()
+        self.deleteParse()
+        completionHandler(success:true)
     }
     
     var recipie:String = ""
