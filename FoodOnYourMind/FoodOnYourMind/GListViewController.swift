@@ -98,7 +98,6 @@ class GListViewController: UIViewController, UITableViewDataSource {
         //TODO: ADD SOME SYNC FUNCTION FOR WHICH ITEAM ARE CHECKed
         self.updateList(self.selector)
         self.tableView.reloadData()
-
     }
     
     //on longpress

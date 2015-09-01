@@ -31,6 +31,13 @@ class GListModel {
         var toAddtoDB = [ingred]()
         //add to qqueryueue for write
         if let personalList = object["ingredients"] as? NSArray{
+            if let personalListChecked = object["checkedIngredients"] as? NSArray{
+                let set1 = Set(arrayLiteral: personalList)
+                let set2 = Set(arrayLiteral: personalList)
+                
+                println("INTERSECT \(set1.intersect(set2))")
+                //TODO: FINISH IMPLMENTING INTERSECT METHODS
+            }
             for ingredient in personalList{
                 
                 //get realm

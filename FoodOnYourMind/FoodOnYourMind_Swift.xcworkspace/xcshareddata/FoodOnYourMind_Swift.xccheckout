@@ -22,7 +22,7 @@
 		<key>8C738B23D7378BF558683A6FF2F9B6ED60501448</key>
 		<string>../..</string>
 		<key>F8516A1FF649D75F32A656318CFEF917AD359805</key>
-		<string>../../../../foodonyourmind</string>
+		<string>../../../foodonyourmind</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/alecblumenfeld-mcgill/FoodOnYourMind-Swift-.git</string>
